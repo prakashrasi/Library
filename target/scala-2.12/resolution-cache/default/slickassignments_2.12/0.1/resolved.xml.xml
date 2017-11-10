@@ -4,7 +4,7 @@
 		module="slickassignments_2.12"
 		revision="0.1"
 		status="integration"
-		publication="20171110175657"
+		publication="20171110182254"
 	>
 		<description>
 		SlickAssignments
@@ -32,5 +32,16 @@
 	<dependencies>
 		<dependency org="org.scala-lang" name="scala-compiler" rev="2.12.3" conf="scala-tool->default,optional(default)"/>
 		<dependency org="org.scala-lang" name="scala-library" rev="2.12.3" conf="scala-tool->default,optional(default);compile->default(compile)"/>
+		<dependency org="joda-time" name="joda-time" rev="2.9.9" conf="compile->default(compile)"/>
+		<dependency org="org.scalatest" name="scalatest_2.12" rev="3.0.4" conf="test->default(compile)"/>
+		<dependency org="org.mockito" name="mockito-all" rev="1.10.19" conf="test->default(compile)"/>
+		<dependency org="org.json4s" name="json4s-native_2.12" rev="3.5.3" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.akka" name="akka-http_2.12" rev="10.0.10" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.akka" name="akka-http-testkit_2.12" rev="10.0.10" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.slick" name="slick_2.12" rev="3.2.1" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.slick" name="slick-codegen_2.12" rev="3.2.1" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.slick" name="slick-testkit_2.12" rev="3.2.1" conf="test->default(compile)"/>
+		<dependency org="org.postgresql" name="postgresql" rev="9.4-1201-jdbc41" conf="compile->default(compile)"/>
+		<dependency org="com.zaxxer" name="HikariCP" rev="2.4.3" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>
