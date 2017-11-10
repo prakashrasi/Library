@@ -12,7 +12,6 @@ trait VehicleFacadeComponent {
 
 trait VehicleFacade extends VehicleFacadeComponent {
    override lazy val vehicleTypeRepository = ImplVehicleTypeRepository
-
    override lazy val companyRepository = ImplCompanyRepository
 }
 
