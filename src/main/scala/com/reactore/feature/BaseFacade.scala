@@ -5,15 +5,18 @@ package com.reactore.feature
   */
 
 trait VehicleFacadeComponent {
+   def vehicleRepository: VehiclesRepository
+
    def vehicleTypeRepository: VehicleTypeRepository
 
    def companyRepository: CompanyRepository
 }
 
 trait VehicleFacade extends VehicleFacadeComponent {
-   override lazy val vehicleTypeRepository = ImplVehicleTypeRepository
 
-   override lazy val companyRepository = ImplCompanyRepository
+   override lazy val vehicleRepository     = ImplVehiclesRepository
+   override lazy val vehicleTypeRepository = ImplVehicleTypeRepository
+   override lazy val companyRepository     = ImplCompanyRepository
 }
 
 trait CompanyFacadeComponent {
@@ -25,7 +28,20 @@ trait CompanyFacadeComponent {
 }
 
 trait CompanyFacade extends CompanyFacadeComponent {
-   override lazy val companyRepository: CompanyRepository = ImplCompanyRepository
-   override lazy val countryRepository: CountryRepository = ImplCountryRepository
+   override lazy val companyRepository: CompanyRepository  = ImplCompanyRepository
+   override lazy val countryRepository: CountryRepository  = ImplCountryRepository
    override lazy val vehicleRepository: VehiclesRepository = ImplVehiclesRepository
+}
+
+trait VehicleTypeFacadeComponent {
+   def vehicleTypeRepository: VehicleTypeRepository
+
+   def vehicleCategoryRepository: VehicleCategoryRepository
+}
+
+trait VehicleTypeFacade extends VehicleTypeFacadeComponent {
+
+   override lazy val vehicleTypeRepository = ImplVehicleTypeRepository
+
+   override lazy val vehicleCategoryRepository = ImplVehicleCategoryRepository
 }
