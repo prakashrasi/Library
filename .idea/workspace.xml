@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <list default="true" id="57bfb5f0-c8f1-4bf1-8481-3d63c9a9af76" name="Default" comment="" />
 =======
+=======
+>>>>>>> 46324f4884c672a709fda2b88df62eadd93bfcf8
     <list default="true" id="57bfb5f0-c8f1-4bf1-8481-3d63c9a9af76" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/reactore/feature/BaseFacade.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/reactore/feature/BaseFacade.scala" />
     </list>
@@ -47,7 +50,11 @@
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/CompanyApi.scala">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <state relative-caret-position="75">
+=======
+            <state relative-caret-position="0">
+>>>>>>> 46324f4884c672a709fda2b88df62eadd93bfcf8
 =======
             <state relative-caret-position="0">
 >>>>>>> 46324f4884c672a709fda2b88df62eadd93bfcf8
@@ -61,8 +68,13 @@
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/BaseFacade.scala">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <state relative-caret-position="195">
               <caret line="15" column="21" lean-forward="false" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+=======
+            <state relative-caret-position="547">
+              <caret line="43" column="20" lean-forward="false" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
+>>>>>>> 46324f4884c672a709fda2b88df62eadd93bfcf8
 =======
             <state relative-caret-position="547">
               <caret line="43" column="20" lean-forward="false" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
@@ -170,6 +182,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="scala" type="462c0819:PsiDirectoryNode" />
               <item name="feature" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
             </path>
             <path>
               <item name="SlickAssignments" type="b2602c69:ProjectViewProjectNode" />
@@ -178,6 +191,8 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="scala" type="462c0819:PsiDirectoryNode" />
               <item name="generator" type="462c0819:PsiDirectoryNode" />
+=======
+>>>>>>> 46324f4884c672a709fda2b88df62eadd93bfcf8
             </path>
             <path>
               <item name="SlickAssignments" type="b2602c69:ProjectViewProjectNode" />
@@ -185,7 +200,10 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="scala" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="reactore" type="462c0819:PsiDirectoryNode" />
+=======
+>>>>>>> 46324f4884c672a709fda2b88df62eadd93bfcf8
               <item name="generator" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -399,17 +417,23 @@
     </task>
     <task id="LOCAL-00006" summary="seperated packages">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <created>1510320900189</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
       <updated>1510320900189</updated>
 =======
+=======
+>>>>>>> 46324f4884c672a709fda2b88df62eadd93bfcf8
       <created>1510332991843</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
       <updated>1510332991843</updated>
+<<<<<<< HEAD
+>>>>>>> 46324f4884c672a709fda2b88df62eadd93bfcf8
+=======
 >>>>>>> 46324f4884c672a709fda2b88df62eadd93bfcf8
     </task>
     <option name="localTasksCounter" value="7" />
@@ -422,6 +446,10 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+>>>>>>> 46324f4884c672a709fda2b88df62eadd93bfcf8
 =======
       <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
 >>>>>>> 46324f4884c672a709fda2b88df62eadd93bfcf8
@@ -433,6 +461,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.9177632" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -440,6 +469,8 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22692889" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="sbt-shell-toolwindow" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
 =======
+=======
+>>>>>>> 46324f4884c672a709fda2b88df62eadd93bfcf8
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -447,6 +478,9 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.118003026" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="sbt-shell-toolwindow" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="SBT Execute" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+<<<<<<< HEAD
+>>>>>>> 46324f4884c672a709fda2b88df62eadd93bfcf8
+=======
 >>>>>>> 46324f4884c672a709fda2b88df62eadd93bfcf8
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -459,7 +493,11 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+>>>>>>> 46324f4884c672a709fda2b88df62eadd93bfcf8
 =======
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
 >>>>>>> 46324f4884c672a709fda2b88df62eadd93bfcf8
@@ -511,7 +549,11 @@
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/CompanyApi.scala">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state relative-caret-position="105">
+=======
+        <state relative-caret-position="90">
+>>>>>>> 46324f4884c672a709fda2b88df62eadd93bfcf8
 =======
         <state relative-caret-position="90">
 >>>>>>> 46324f4884c672a709fda2b88df62eadd93bfcf8
@@ -523,7 +565,11 @@
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/BaseFacade.scala">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state relative-caret-position="225">
+=======
+        <state relative-caret-position="234">
+>>>>>>> 46324f4884c672a709fda2b88df62eadd93bfcf8
 =======
         <state relative-caret-position="234">
 >>>>>>> 46324f4884c672a709fda2b88df62eadd93bfcf8
@@ -566,6 +612,7 @@
         <state relative-caret-position="465">
           <caret line="32" column="33" lean-forward="true" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
 <<<<<<< HEAD
+<<<<<<< HEAD
         </state>
       </provider>
     </entry>
@@ -573,6 +620,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="6" column="26" lean-forward="false" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+=======
+>>>>>>> 46324f4884c672a709fda2b88df62eadd93bfcf8
 =======
 >>>>>>> 46324f4884c672a709fda2b88df62eadd93bfcf8
         </state>
@@ -602,9 +651,12 @@
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/CompanyApi.scala">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state relative-caret-position="75">
           <caret line="7" column="25" lean-forward="false" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
 =======
+=======
+>>>>>>> 46324f4884c672a709fda2b88df62eadd93bfcf8
         <state relative-caret-position="0">
           <caret line="7" column="25" lean-forward="false" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
           <folding />
@@ -615,6 +667,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="6" column="26" lean-forward="false" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+<<<<<<< HEAD
+>>>>>>> 46324f4884c672a709fda2b88df62eadd93bfcf8
+=======
 >>>>>>> 46324f4884c672a709fda2b88df62eadd93bfcf8
           <folding />
         </state>
@@ -623,8 +678,13 @@
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/BaseFacade.scala">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state relative-caret-position="195">
           <caret line="15" column="21" lean-forward="false" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+=======
+        <state relative-caret-position="547">
+          <caret line="43" column="20" lean-forward="false" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
+>>>>>>> 46324f4884c672a709fda2b88df62eadd93bfcf8
 =======
         <state relative-caret-position="547">
           <caret line="43" column="20" lean-forward="false" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
