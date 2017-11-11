@@ -65,7 +65,7 @@ class CountryServiceTestSpec extends WordSpec with ScalaFutures with Matchers {
          val result = MockCountryService.updateCountryById(3, updatedCountry)
          result.failed.futureValue shouldBe an[FieldNotDefinedException]
       }
-      "throw exception for update "
+      "throw exception for update"
 
    }
 }

@@ -20,8 +20,8 @@
       <file leaf-file-name="CountryServiceTestSpec.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/scala/com/reactore/feature/CountryServiceTestSpec.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="553">
-              <caret line="67" column="34" lean-forward="false" selection-start-line="67" selection-start-column="34" selection-end-line="67" selection-end-column="34" />
+            <state relative-caret-position="298">
+              <caret line="50" column="7" lean-forward="true" selection-start-line="50" selection-start-column="7" selection-end-line="50" selection-end-column="7" />
               <folding>
                 <element signature="e#30#56#0" expanded="true" />
               </folding>
@@ -399,7 +399,14 @@
       <option name="project" value="LOCAL" />
       <updated>1510426700164</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="test cases updated">
+      <created>1510430645211</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1510430645211</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -456,7 +463,8 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="test cases updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="test cases updated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -531,8 +539,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/com/reactore/feature/CountryServiceTestSpec.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="67" column="34" lean-forward="false" selection-start-line="67" selection-start-column="34" selection-end-line="67" selection-end-column="34" />
+        <state relative-caret-position="298">
+          <caret line="50" column="7" lean-forward="true" selection-start-line="50" selection-start-column="7" selection-end-line="50" selection-end-column="7" />
           <folding>
             <element signature="e#30#56#0" expanded="true" />
           </folding>
