@@ -25,9 +25,9 @@ class CompanyService extends DBProperties {
                   if (companyList.nonEmpty) {
                      val uniqueCountry = companyList.find(comp => comp.name.toLowerCase == company.name.toLowerCase && comp.licenceNumber.toLowerCase == company.licenceNumber.toLowerCase)
                      if (uniqueCountry.isEmpty) {
-                        db.run(companyRepository.companyQuery += company)
+                        companyRepository.insert(company)
                      } else throw DuplicateEntityException(exception = new Exception("Company already defined!!"))
-                  } else db.run(companyRepository.companyQuery += company)
+                  } else companyRepository.insert(company)
                } else throw NoSuchEntityException(exception = new Exception("Country does not exists!!"))
             } else throw EmptyListException(exception = new Exception("Country list is Empty!!"))
          } else throw FieldNotDefinedException(exception = new Exception("Fields are not defined!!"))
