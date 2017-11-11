@@ -50,7 +50,7 @@ class CountryService {
                val companiesForGivenCountry = companyList.filter(_.country == id)
                if (companiesForGivenCountry.isEmpty) {
                   countryRepository.delete(id)
-               } else throw ForeignKeyRelationFoundException(exception = new Exception("Foreign key relation found!!"))
+               } else throw ForeignKeyRelationFoundException(exception = new Exception("Foreign key relation found in company table!!"))
             } else throw NoSuchEntityException(exception = new Exception("Country for given id doesn't exists!!"))
          } else throw EmptyListException(exception = new Exception("Country list is empty!!"))
       } yield res
