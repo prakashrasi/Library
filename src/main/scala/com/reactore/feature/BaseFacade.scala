@@ -14,9 +14,9 @@ trait VehicleFacadeComponent {
 
 trait VehicleFacade extends VehicleFacadeComponent {
 
-   override lazy val vehicleRepository    : ImplVehiclesRepository.type    = ImplVehiclesRepository
-   override lazy val vehicleTypeRepository: ImplVehicleTypeRepository.type = ImplVehicleTypeRepository
-   override lazy val companyRepository    : ImplCompanyRepository.type     = ImplCompanyRepository
+   override lazy val vehicleRepository    : VehiclesRepository    = ImplVehiclesRepository
+   override lazy val vehicleTypeRepository: VehicleTypeRepository = ImplVehicleTypeRepository
+   override lazy val companyRepository    : CompanyRepository     = ImplCompanyRepository
 }
 
 trait CompanyFacadeComponent {
@@ -36,14 +36,16 @@ trait CompanyFacade extends CompanyFacadeComponent {
 trait VehicleTypeFacadeComponent {
    def vehicleTypeRepository: VehicleTypeRepository
 
+   def vehicleRepository: VehiclesRepository
+
    def vehicleCategoryRepository: VehicleCategoryRepository
 }
 
 trait VehicleTypeFacade extends VehicleTypeFacadeComponent {
 
-   override lazy val vehicleTypeRepository: ImplVehicleTypeRepository.type = ImplVehicleTypeRepository
-
-   override lazy val vehicleCategoryRepository: ImplVehicleCategoryRepository.type = ImplVehicleCategoryRepository
+   override lazy val vehicleTypeRepository    : VehicleTypeRepository     = ImplVehicleTypeRepository
+   override lazy val vehicleRepository        : VehiclesRepository        = ImplVehiclesRepository
+   override lazy val vehicleCategoryRepository: VehicleCategoryRepository = ImplVehicleCategoryRepository
 }
 
 trait VehicleCategoryFacadeComponent {
@@ -53,9 +55,8 @@ trait VehicleCategoryFacadeComponent {
 }
 
 trait VehicleCategoryFacade extends VehicleCategoryFacadeComponent {
-   override lazy val vehicleCategoryRepository: ImplVehicleCategoryRepository.type = ImplVehicleCategoryRepository
-
-   override lazy val vehicleTypeRepository: ImplVehicleTypeRepository.type = ImplVehicleTypeRepository
+   override lazy val vehicleCategoryRepository: VehicleCategoryRepository = ImplVehicleCategoryRepository
+   override lazy val vehicleTypeRepository    : VehicleTypeRepository     = ImplVehicleTypeRepository
 }
 
 trait CountryFacadeComponent {
@@ -65,7 +66,6 @@ trait CountryFacadeComponent {
 }
 
 trait CountryFacade extends CountryFacadeComponent {
-   override lazy val countryRepository: ImplCountryRepository.type = ImplCountryRepository
-
-   override lazy val companyRepository: ImplCompanyRepository.type = ImplCompanyRepository
+   override lazy val countryRepository: CountryRepository = ImplCountryRepository
+   override lazy val companyRepository: CompanyRepository = ImplCompanyRepository
 }

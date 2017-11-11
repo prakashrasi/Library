@@ -4,14 +4,13 @@ package com.reactore.feature
   * created by Kartik on 10-11-2017
   */
 
+import com.reactore.core.HandleExceptions._
 import com.reactore.core._
-import HandleExceptions._
-import slick.jdbc.PostgresProfile.api._
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
 
-class CompanyService extends DBProperties {
+class CompanyService  {
    self: CompanyFacadeComponent =>
 
    def insertCompany(company: Company): Future[Int] = {
@@ -57,7 +56,7 @@ class CompanyService extends DBProperties {
             if (companyOption.isDefined) {
                val vehiclesForGivenCompany = vehicleList.filter(_.company == id)
                if (vehiclesForGivenCompany.isEmpty) {
-                  db.run(vehicleRepository.companyQuery.filter(_.companyId == id).delete)
+                  companyRepository.delete(id)
                } else throw ForeignKeyRelationFoundException(exception = new Exception("Foreign key relation exists!!"))
             } else throw NoSuchEntityException(exception = new Exception("Company not found!!"))
          } else throw EmptyListException(exception = new Exception("Company list is empty!!"))
