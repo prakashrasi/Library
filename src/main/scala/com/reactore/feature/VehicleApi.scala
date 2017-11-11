@@ -4,6 +4,7 @@ import com.reactore.core.HandleExceptions._
 import com.reactore.core._
 
 import scala.concurrent.Future
+import scala.concurrent.ExecutionContext.Implicits.global
 
 /**
   * created by Kartik on 11-11-2017

@@ -17,11 +17,11 @@ class CompanyRepository extends DBProperties with BaseTables {
    }
 
    def update(id: Long, updatedCompany: Company): Future[Int] = {
-      db.run(companyQuery.filter(_.companyId == id).update(updatedCompany))
+      db.run(companyQuery.filter(_.companyId === id).update(updatedCompany))
    }
 
    def delete(id: Long): Future[Int] = {
-      db.run(companyQuery.filter(_.companyId == id).delete)
+      db.run(companyQuery.filter(_.companyId === id).delete)
    }
 }
 
@@ -35,11 +35,11 @@ class CountryRepository extends DBProperties with BaseTables {
    }
 
    def delete(id: Long): Future[Int] = {
-      db.run(countryQuery.filter(_.countryId == id).delete)
+      db.run(countryQuery.filter(_.countryId === id).delete)
    }
 
    def update(id: Long, updatedCountry: Country): Future[Int] = {
-      db.run(countryQuery.filter(_.countryId == id).update(updatedCountry))
+      db.run(countryQuery.filter(_.countryId === id).update(updatedCountry))
    }
 }
 
@@ -53,11 +53,11 @@ class VehiclesRepository extends DBProperties with BaseTables {
    }
 
    def update(id: Long, updatedVehicle: Vehicle): Future[Int] = {
-      db.run(vehicleQuery.filter(_.vehicleId == id).update(updatedVehicle))
+      db.run(vehicleQuery.filter(_.vehicleId === id).update(updatedVehicle))
    }
 
    def delete(id: Long): Future[Int] = {
-      db.run(vehicleQuery.filter(_.vehicleId == id).delete)
+      db.run(vehicleQuery.filter(_.vehicleId === id).delete)
    }
 }
 
@@ -71,11 +71,11 @@ class VehicleTypeRepository extends DBProperties with BaseTables {
    }
 
    def delete(id: Long): Future[Int] = {
-      db.run(vehicleTypeQuery.filter(_.vehicleTypeId == id).delete)
+      db.run(vehicleTypeQuery.filter(_.vehicleTypeId === id).delete)
    }
 
    def update(id: Long, updatedVehicleTpe: VehicleType): Future[Int] = {
-      db.run(vehicleTypeQuery.filter(_.vehicleTypeId == id).update(updatedVehicleTpe))
+      db.run(vehicleTypeQuery.filter(_.vehicleTypeId === id).update(updatedVehicleTpe))
    }
 }
 
@@ -89,11 +89,11 @@ class VehicleCategoryRepository extends DBProperties with BaseTables {
    }
 
    def delete(id: Long): Future[Int] = {
-      db.run(vehicleCategoryQuery.filter(_.vehicleCategoryId == id).delete)
+      db.run(vehicleCategoryQuery.filter(_.vehicleCategoryId === id).delete)
    }
 
    def update(id: Long, updatedVehicleCategory: VehicleCategory): Future[Int] = {
-      db.run(vehicleCategoryQuery.filter(_.vehicleCategoryId == id).update(updatedVehicleCategory))
+      db.run(vehicleCategoryQuery.filter(_.vehicleCategoryId === id).update(updatedVehicleCategory))
    }
 }
 

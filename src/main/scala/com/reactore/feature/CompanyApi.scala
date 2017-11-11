@@ -9,6 +9,7 @@ import com.reactore.core._
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
+import scala.concurrent.ExecutionContext.Implicits.global
 
 class CompanyService {
    self: CompanyFacadeComponent =>

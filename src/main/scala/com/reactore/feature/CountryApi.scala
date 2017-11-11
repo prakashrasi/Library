@@ -3,6 +3,7 @@ package com.reactore.feature
 import com.reactore.core._
 import HandleExceptions._
 import scala.concurrent.Future
+import scala.concurrent.ExecutionContext.Implicits.global
 
 /**
   * created by Kartik on 11-11-2017
