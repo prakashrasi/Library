@@ -45,8 +45,8 @@ trait BaseTables {
       val modelNumber: Rep[String]         = column[String]("modelNumber", O.Length(200, varying = true))
       val vehicleType: Rep[Long]           = column[Long]("vehicleType")
       val company    : Rep[Long]           = column[Long]("company")
-      val quantity   : Rep[Long]           = column[Long]("quantity")
-      val weight     : Rep[Long]           = column[Long]("weight")
+      val quantity   : Rep[Long]           = column[Long]("quantity",O.Default(0))
+      val weight     : Rep[Long]           = column[Long]("weight",O.Default(0))
 
       lazy val companyFk     = foreignKey("Vehicle_company_fkey", company, companyQuery)(r => r.companyId, onUpdate = ForeignKeyAction.NoAction, onDelete = ForeignKeyAction.NoAction)
       lazy val vehicleTypeFk = foreignKey("Vehicle_vehicleType_fkey", vehicleType, vehicleTypeQuery)(r => r.vehicleTypeId, onUpdate = ForeignKeyAction.NoAction, onDelete = ForeignKeyAction.NoAction)
