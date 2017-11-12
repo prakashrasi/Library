@@ -9,7 +9,6 @@ import com.reactore.core._
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
-import scala.concurrent.ExecutionContext.Implicits.global
 
 class CompanyService {
    self: CompanyFacadeComponent =>
@@ -65,7 +64,7 @@ class CompanyService {
    }.flatten.recover { case ex => handleExceptions(ex) }
 
    //update company by id
-   def updateCompanyById(id: Long, updatedCompany: Company): Unit = {
+   def updateCompanyById(id: Long, updatedCompany: Company): Future[Int] = {
       for {
          companyList <- companyRepository.companyFuture
          countryList <- countryRepository.countryFuture
@@ -76,14 +75,13 @@ class CompanyService {
                if (validCountry.isDefined) {
                   val uniqueCompany = companyList.find(company => company.name.equalsIgnoreCase(updatedCompany.name) && company.licenceNumber.equalsIgnoreCase(updatedCompany.licenceNumber) && company.country == updatedCompany.country)
                   if (uniqueCompany.isEmpty) {
-                     companyRepository.update(id, updatedCompany)
+                     companyRepository.update(id,updatedCompany)
                   } else throw DuplicateEntityException(exception = new Exception("Updated company is already present!!"))
                } else throw NoSuchEntityException(exception = new Exception("No country found!!"))
             } else throw NoSuchEntityException(exception = new Exception("No company found for given id!!"))
          } else throw FieldNotDefinedException(exception = new Exception("Fields not defined!!"))
       } yield res
-
-   }
+   }.flatten.recover{case ex=>handleExceptions(ex)}
 }
 
 object ImplCompanyService extends CompanyService with CompanyFacade

@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="07e0413e-6afb-4dc9-9527-7ca5752d77ec" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/scala/com/reactore/feature/CompanyServiceTestSpec.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleCategoryServiceTestSpec.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/reactore/feature/BaseRepository.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/reactore/feature/BaseRepository.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/reactore/feature/CompanyApi.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/reactore/feature/CompanyApi.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/reactore/feature/CountryApi.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/reactore/feature/CountryApi.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleApi.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleApi.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleCategoryApi.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleCategoryApi.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleTypeApi.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleTypeApi.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/com/reactore/feature/CountryServiceTestSpec.scala" afterPath="$PROJECT_DIR$/src/test/scala/com/reactore/feature/CountryServiceTestSpec.scala" />
     </list>
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -17,33 +25,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CountryServiceTestSpec.scala" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/scala/com/reactore/feature/CountryServiceTestSpec.scala">
+      <file leaf-file-name="MockRepository.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/scala/com/reactore/feature/MockRepository.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="50" column="7" lean-forward="true" selection-start-line="50" selection-start-column="7" selection-end-line="50" selection-end-column="7" />
-              <folding>
-                <element signature="e#30#56#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseRepository.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/BaseRepository.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="99" column="70" lean-forward="false" selection-start-line="99" selection-start-column="70" selection-end-line="99" selection-end-column="70" />
+            <state relative-caret-position="523">
+              <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CountryApi.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/CountryApi.scala">
+      <file leaf-file-name="VehicleCategoryServiceTestSpec.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleCategoryServiceTestSpec.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="553">
-              <caret line="78" column="0" lean-forward="true" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+            <state relative-caret-position="150">
+              <caret line="12" column="33" lean-forward="true" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
               <folding>
                 <element signature="e#30#56#0" expanded="true" />
               </folding>
@@ -51,25 +47,56 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CompanyApi.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/CompanyApi.scala">
+      <file leaf-file-name="CompanyServiceTestSpec.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/scala/com/reactore/feature/CompanyServiceTestSpec.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="11" column="57" lean-forward="false" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
+            <state relative-caret-position="90">
+              <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
               <folding>
-                <element signature="e#76#119#0" expanded="true" />
+                <element signature="e#30#56#0" expanded="true" />
+                <element signature="e#501#796#0" expanded="false" />
+                <element signature="e#862#1107#0" expanded="false" />
+                <element signature="e#1173#1425#0" expanded="false" />
+                <element signature="e#1517#2052#0" expanded="false" />
+                <element signature="e#2137#2588#0" expanded="false" />
+                <element signature="e#2661#3122#0" expanded="false" />
+                <element signature="e#3195#3646#0" expanded="false" />
+                <element signature="e#3726#4186#0" expanded="false" />
+                <element signature="e#4300#4742#0" expanded="false" />
+                <element signature="e#4811#5174#0" expanded="false" />
+                <element signature="e#5240#5610#0" expanded="false" />
+                <element signature="e#5687#6068#0" expanded="false" />
+                <element signature="e#6170#6729#0" expanded="false" />
+                <element signature="e#6814#7280#0" expanded="false" />
+                <element signature="e#7346#7819#0" expanded="false" />
+                <element signature="e#7892#8365#0" expanded="false" />
+                <element signature="e#8441#8916#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VehicleApi.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleApi.scala">
+      <file leaf-file-name="CountryServiceTestSpec.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/scala/com/reactore/feature/CountryServiceTestSpec.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="6" column="57" lean-forward="false" selection-start-line="6" selection-start-column="57" selection-end-line="6" selection-end-column="57" />
+            <state relative-caret-position="180">
+              <caret line="14" column="26" lean-forward="false" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
               <folding>
-                <element signature="e#30#73#0" expanded="true" />
+                <element signature="e#30#56#0" expanded="true" />
+                <element signature="e#483#778#0" expanded="false" />
+                <element signature="e#841#1093#0" expanded="false" />
+                <element signature="e#1166#1411#0" expanded="false" />
+                <element signature="e#1495#1894#0" expanded="false" />
+                <element signature="e#1982#2297#0" expanded="false" />
+                <element signature="e#2370#2704#0" expanded="false" />
+                <element signature="e#3428#3758#0" expanded="false" />
+                <element signature="e#3823#4164#0" expanded="false" />
+                <element signature="e#4240#4574#0" expanded="false" />
+                <element signature="e#4654#5003#0" expanded="false" />
+                <element signature="e#5116#5557#0" expanded="false" />
+                <element signature="e#5627#5989#0" expanded="false" />
+                <element signature="e#6056#6425#0" expanded="false" />
+                <element signature="e#6508#6888#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -78,20 +105,8 @@
       <file leaf-file-name="VehicleCategoryApi.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleCategoryApi.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="5" column="57" lean-forward="false" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
-              <folding>
-                <element signature="e#30#56#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VehicleTypeApi.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleTypeApi.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="5" column="57" lean-forward="false" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
+            <state relative-caret-position="360">
+              <caret line="33" column="25" lean-forward="true" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
               <folding>
                 <element signature="e#30#56#0" expanded="true" />
               </folding>
@@ -107,6 +122,7 @@
         <option value="KartikSD &lt;ksdeshamukh@gmail.com&gt;" />
       </list>
     </option>
+    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
@@ -117,15 +133,25 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/scala/com/reactore/feature/BaseRepository.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/reactore/feature/CountryApi.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/reactore/feature/CompanyApi.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleApi.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleCategoryApi.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleTypeApi.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/com/reactore/feature/CountryServiceTestSpec.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/reactore/feature/BaseRepository.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/reactore/feature/CompanyApi.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleCategoryServiceTestSpec.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/com/reactore/feature/CompanyServiceTestSpec.scala" />
       </list>
     </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="676" />
+    <option name="width" value="697" />
+    <option name="height" value="735" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -227,7 +253,43 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="ScalaTest.CountryServiceTestSpec">
+  <component name="RunManager" selected="ScalaTest.VehicleCategoryServiceTestSpec.Vehicle Category Service should return vehicle category in get category by id for id as 1&#10;Vehicle Category Service should throw exception in get category by id for id as 5&#10;Vehicle Category Service should throw exception in get category for empty category list">
+    <configuration name="CompanyServiceTestSpec" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="slickassignments" />
+      <setting name="path" value="com.reactore.feature.CompanyServiceTestSpec" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <setting name="useSbt" value="false" />
+      <setting name="useUiWithSbt" value="false" />
+      <classRegexps />
+      <testRegexps />
+      <envs />
+    </configuration>
+    <configuration name="CompanyServiceTestSpec.Company Service should return a company in get company for company id as 1&#10;Company Service should throw exception in get company for empty company list&#10;Company Service should throw exception in get company by id for company id 5&#10;Company Service should insert company in insert company&#10;Company Service should throw exception in insert company if name and licence number not defined&#10;Company Service should throw exception in insert company if country does not exists&#10;Company Service should throw exception for insert company if country list is empty&#10;Company Service should throw exception for insert company if duplicate country is inserted&#10;Company Service should delete company in delete company for company id as 3&#10;Company Service should throw exception in delete company for empty company list&#10;Company Service should throw exception in delete company for company id as 5&#10;Company Service should throw exception in delete company if foreign key relation exists&#10;Company Service should update company by id for company id as 1&#10;Company Service should throw exception in update company if name and licence number not defined&#10;Company Service should throw exception in update company for company id as 5&#10;Company Service should throw exception in update company if country does not exists&#10;Company Service should throw exception in update company for duplicate company details" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="slickassignments" />
+      <setting name="path" value="com.reactore.feature.CompanyServiceTestSpec" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="Company Service should return a company in get company for company id as 1&#10;Company Service should throw exception in get company for empty company list&#10;Company Service should throw exception in get company by id for company id 5&#10;Company Service should insert company in insert company&#10;Company Service should throw exception in insert company if name and licence number not defined&#10;Company Service should throw exception in insert company if country does not exists&#10;Company Service should throw exception for insert company if country list is empty&#10;Company Service should throw exception for insert company if duplicate country is inserted&#10;Company Service should delete company in delete company for company id as 3&#10;Company Service should throw exception in delete company for empty company list&#10;Company Service should throw exception in delete company for company id as 5&#10;Company Service should throw exception in delete company if foreign key relation exists&#10;Company Service should update company by id for company id as 1&#10;Company Service should throw exception in update company if name and licence number not defined&#10;Company Service should throw exception in update company for company id as 5&#10;Company Service should throw exception in update company if country does not exists&#10;Company Service should throw exception in update company for duplicate company details" />
+      <setting name="testKind" value="Test name" />
+      <setting name="showProgressMessages" value="true" />
+      <setting name="useSbt" value="false" />
+      <setting name="useUiWithSbt" value="false" />
+      <classRegexps />
+      <testRegexps />
+      <envs />
+    </configuration>
     <configuration name="CountryServiceTestSpec" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="slickassignments" />
@@ -246,7 +308,7 @@
       <testRegexps />
       <envs />
     </configuration>
-    <configuration name="CountryServiceTestSpec.Country Service should return a country in get by id for id as 1" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
+    <configuration name="CountryServiceTestSpec.Country Service should return a country in get by id for id as 1&#10;Country Service should throw exception for get country by id for id as 4&#10;Country Service should throw exception for get country by id for empty country list&#10;Country Service should insert the country to list&#10;Country Service should throw exception in insert company for country name and language not defined&#10;Country Service should throw exception in insert country for duplicate country code&#10;Country Service should update country by id for country id as 3&#10;Country Service should throw exception for update country for name and language not defined&#10;Country Service should throw exception for update by id for country id as 5&#10;Country Service should throw exception for update country by id for empty country list&#10;Country Service should throw exception for update country by id for duplicate country code&#10;Country Service should delete country in delete country by id for id as 3&#10;Country Service should throw exception for delete country for empty country list&#10;Country Service should throw exception for delete country for country id as 5&#10;Country Service should throw exception for delete country by id if foreign key relation found" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="slickassignments" />
       <setting name="path" value="com.reactore.feature.CountryServiceTestSpec" />
@@ -255,7 +317,7 @@
       <setting name="params" value="" />
       <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
       <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="Country Service should return a country in get by id for id as 1" />
+      <setting name="testName" value="Country Service should return a country in get by id for id as 1&#10;Country Service should throw exception for get country by id for id as 4&#10;Country Service should throw exception for get country by id for empty country list&#10;Country Service should insert the country to list&#10;Country Service should throw exception in insert company for country name and language not defined&#10;Country Service should throw exception in insert country for duplicate country code&#10;Country Service should update country by id for country id as 3&#10;Country Service should throw exception for update country for name and language not defined&#10;Country Service should throw exception for update by id for country id as 5&#10;Country Service should throw exception for update country by id for empty country list&#10;Country Service should throw exception for update country by id for duplicate country code&#10;Country Service should delete country in delete country by id for id as 3&#10;Country Service should throw exception for delete country for empty country list&#10;Country Service should throw exception for delete country for country id as 5&#10;Country Service should throw exception for delete country by id if foreign key relation found" />
       <setting name="testKind" value="Test name" />
       <setting name="showProgressMessages" value="true" />
       <setting name="useSbt" value="false" />
@@ -264,16 +326,16 @@
       <testRegexps />
       <envs />
     </configuration>
-    <configuration name="CountryServiceTestSpec.Country Service should return a country in get by id for id as 1&#10;Country Service should throw exception for get country by id for id as 4&#10;Country Service should throw exception for get country by id for empty country list&#10;Country Service should insert the country to list&#10;Country Service should throw exception in insert company for country name and language not defined&#10;Country Service should throw exception in insert country for duplicate country code&#10;Country Service should update country by id" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
+    <configuration name="VehicleCategoryServiceTestSpec.Vehicle Category Service should return vehicle category in get category by id for id as 1&#10;Vehicle Category Service should throw exception in get category by id for id as 5&#10;Vehicle Category Service should throw exception in get category for empty category list" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="slickassignments" />
-      <setting name="path" value="com.reactore.feature.CountryServiceTestSpec" />
+      <setting name="path" value="com.reactore.feature.VehicleCategoryServiceTestSpec" />
       <setting name="package" value="" />
       <setting name="vmparams" value="" />
       <setting name="params" value="" />
       <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
       <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="Country Service should return a country in get by id for id as 1&#10;Country Service should throw exception for get country by id for id as 4&#10;Country Service should throw exception for get country by id for empty country list&#10;Country Service should insert the country to list&#10;Country Service should throw exception in insert company for country name and language not defined&#10;Country Service should throw exception in insert country for duplicate country code&#10;Country Service should update country by id" />
+      <setting name="testName" value="Vehicle Category Service should return vehicle category in get category by id for id as 1&#10;Vehicle Category Service should throw exception in get category by id for id as 5&#10;Vehicle Category Service should throw exception in get category for empty category list" />
       <setting name="testKind" value="Test name" />
       <setting name="showProgressMessages" value="true" />
       <setting name="useSbt" value="false" />
@@ -363,16 +425,20 @@
       <properties />
       <listeners />
     </configuration>
-    <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="ScalaTest.CountryServiceTestSpec.Country Service should return a country in get by id for id as 1" />
-      <item index="1" class="java.lang.String" itemvalue="ScalaTest.CountryServiceTestSpec" />
-      <item index="2" class="java.lang.String" itemvalue="ScalaTest.CountryServiceTestSpec.Country Service should return a country in get by id for id as 1&#10;Country Service should throw exception for get country by id for id as 4&#10;Country Service should throw exception for get country by id for empty country list&#10;Country Service should insert the country to list&#10;Country Service should throw exception in insert company for country name and language not defined&#10;Country Service should throw exception in insert country for duplicate country code&#10;Country Service should update country by id" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="ScalaTest.CountryServiceTestSpec" />
+      <item index="1" class="java.lang.String" itemvalue="ScalaTest.CountryServiceTestSpec.Country Service should return a country in get by id for id as 1&#10;Country Service should throw exception for get country by id for id as 4&#10;Country Service should throw exception for get country by id for empty country list&#10;Country Service should insert the country to list&#10;Country Service should throw exception in insert company for country name and language not defined&#10;Country Service should throw exception in insert country for duplicate country code&#10;Country Service should update country by id for country id as 3&#10;Country Service should throw exception for update country for name and language not defined&#10;Country Service should throw exception for update by id for country id as 5&#10;Country Service should throw exception for update country by id for empty country list&#10;Country Service should throw exception for update country by id for duplicate country code&#10;Country Service should delete country in delete country by id for id as 3&#10;Country Service should throw exception for delete country for empty country list&#10;Country Service should throw exception for delete country for country id as 5&#10;Country Service should throw exception for delete country by id if foreign key relation found" />
+      <item index="2" class="java.lang.String" itemvalue="ScalaTest.CompanyServiceTestSpec" />
+      <item index="3" class="java.lang.String" itemvalue="ScalaTest.CompanyServiceTestSpec.Company Service should return a company in get company for company id as 1&#10;Company Service should throw exception in get company for empty company list&#10;Company Service should throw exception in get company by id for company id 5&#10;Company Service should insert company in insert company&#10;Company Service should throw exception in insert company if name and licence number not defined&#10;Company Service should throw exception in insert company if country does not exists&#10;Company Service should throw exception for insert company if country list is empty&#10;Company Service should throw exception for insert company if duplicate country is inserted&#10;Company Service should delete company in delete company for company id as 3&#10;Company Service should throw exception in delete company for empty company list&#10;Company Service should throw exception in delete company for company id as 5&#10;Company Service should throw exception in delete company if foreign key relation exists&#10;Company Service should update company by id for company id as 1&#10;Company Service should throw exception in update company if name and licence number not defined&#10;Company Service should throw exception in update company for company id as 5&#10;Company Service should throw exception in update company if country does not exists&#10;Company Service should throw exception in update company for duplicate company details" />
+      <item index="4" class="java.lang.String" itemvalue="ScalaTest.VehicleCategoryServiceTestSpec.Vehicle Category Service should return vehicle category in get category by id for id as 1&#10;Vehicle Category Service should throw exception in get category by id for id as 5&#10;Vehicle Category Service should throw exception in get category for empty category list" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="ScalaTest.CountryServiceTestSpec" />
-        <item index="1" class="java.lang.String" itemvalue="ScalaTest.CountryServiceTestSpec.Country Service should return a country in get by id for id as 1&#10;Country Service should throw exception for get country by id for id as 4&#10;Country Service should throw exception for get country by id for empty country list&#10;Country Service should insert the country to list&#10;Country Service should throw exception in insert company for country name and language not defined&#10;Country Service should throw exception in insert country for duplicate country code&#10;Country Service should update country by id" />
-        <item index="2" class="java.lang.String" itemvalue="ScalaTest.CountryServiceTestSpec.Country Service should return a country in get by id for id as 1" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="ScalaTest.VehicleCategoryServiceTestSpec.Vehicle Category Service should return vehicle category in get category by id for id as 1&#10;Vehicle Category Service should throw exception in get category by id for id as 5&#10;Vehicle Category Service should throw exception in get category for empty category list" />
+        <item index="1" class="java.lang.String" itemvalue="ScalaTest.CountryServiceTestSpec" />
+        <item index="2" class="java.lang.String" itemvalue="ScalaTest.CountryServiceTestSpec.Country Service should return a country in get by id for id as 1&#10;Country Service should throw exception for get country by id for id as 4&#10;Country Service should throw exception for get country by id for empty country list&#10;Country Service should insert the country to list&#10;Country Service should throw exception in insert company for country name and language not defined&#10;Country Service should throw exception in insert country for duplicate country code&#10;Country Service should update country by id for country id as 3&#10;Country Service should throw exception for update country for name and language not defined&#10;Country Service should throw exception for update by id for country id as 5&#10;Country Service should throw exception for update country by id for empty country list&#10;Country Service should throw exception for update country by id for duplicate country code&#10;Country Service should delete country in delete country by id for id as 3&#10;Country Service should throw exception for delete country for empty country list&#10;Country Service should throw exception for delete country for country id as 5&#10;Country Service should throw exception for delete country by id if foreign key relation found" />
+        <item index="3" class="java.lang.String" itemvalue="ScalaTest.CompanyServiceTestSpec" />
+        <item index="4" class="java.lang.String" itemvalue="ScalaTest.CompanyServiceTestSpec.Company Service should return a company in get company for company id as 1&#10;Company Service should throw exception in get company for empty company list&#10;Company Service should throw exception in get company by id for company id 5&#10;Company Service should insert company in insert company&#10;Company Service should throw exception in insert company if name and licence number not defined&#10;Company Service should throw exception in insert company if country does not exists&#10;Company Service should throw exception for insert company if country list is empty&#10;Company Service should throw exception for insert company if duplicate country is inserted&#10;Company Service should delete company in delete company for company id as 3&#10;Company Service should throw exception in delete company for empty company list&#10;Company Service should throw exception in delete company for company id as 5&#10;Company Service should throw exception in delete company if foreign key relation exists&#10;Company Service should update company by id for company id as 1&#10;Company Service should throw exception in update company if name and licence number not defined&#10;Company Service should throw exception in update company for company id as 5&#10;Company Service should throw exception in update company if country does not exists&#10;Company Service should throw exception in update company for duplicate company details" />
       </list>
     </recent_temporary>
   </component>
@@ -406,29 +472,70 @@
       <option name="project" value="LOCAL" />
       <updated>1510430645211</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="test cases updated">
+      <created>1510430747415</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1510430747415</updated>
+    </task>
+    <task id="LOCAL-00004" summary="test cases updated">
+      <created>1510472006203</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1510472006203</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CountryServiceTestSpec - 2017.11.12 at 00h 27m 16s.xml">
+    <history-entry file="CompanyServiceTestSpec - 2017.11.12 at 14h 36m 06s.xml">
+      <configuration name="CompanyServiceTestSpec" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="CompanyServiceTestSpec - 2017.11.12 at 16h 20m 26s.xml">
+      <configuration name="CompanyServiceTestSpec" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="CompanyServiceTestSpec - 2017.11.12 at 18h 32m 21s.xml">
+      <configuration name="CompanyServiceTestSpec" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="CompanyServiceTestSpec_Company_Service_should_throw_exception_for_insert_company_if_duplicate_country_is_inserted - 2017.11.12 at 14h 36m 00s.xml">
+      <configuration name="CompanyServiceTestSpec.Company Service should throw exception for insert company if duplicate country is inserted" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="CompanyServiceTestSpec_Company_Service_should_throw_exception_in_update_company_for_duplicate_company_details - 2017.11.12 at 16h 20m 13s.xml">
+      <configuration name="CompanyServiceTestSpec.Company Service should throw exception in update company for duplicate company details" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="CountryServiceTestSpec - 2017.11.12 at 13h 16m 02s.xml">
       <configuration name="CountryServiceTestSpec" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="CountryServiceTestSpec - 2017.11.12 at 01h 09m 54s.xml">
+    <history-entry file="CountryServiceTestSpec - 2017.11.12 at 14h 05m 26s.xml">
       <configuration name="CountryServiceTestSpec" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="CountryServiceTestSpec_Country_Service_should_return_a_country_in_get_by_id_for_id_as_1 - 2017.11.12 at 00h 26m 08s.xml">
-      <configuration name="CountryServiceTestSpec.Country Service should return a country in get by id for id as 1" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="CountryServiceTestSpec - 2017.11.12 at 15h 41m 13s.xml">
+      <configuration name="CountryServiceTestSpec" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="CountryServiceTestSpec_Country_Service_should_return_a_country_in_get_by_id_for_id_as_1 - 2017.11.12 at 00h 26m 54s.xml">
-      <configuration name="CountryServiceTestSpec.Country Service should return a country in get by id for id as 1" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="CountryServiceTestSpec - 2017.11.12 at 18h 32m 44s.xml">
+      <configuration name="CountryServiceTestSpec" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
+    <history-entry file="CountryServiceTestSpec_Country_Service_should_delete_country_in_delete_country_by_id_for_id_as_3 - 2017.11.12 at 13h 15m 54s.xml">
+      <configuration name="CountryServiceTestSpec.Country Service should delete country in delete country by id for id as 3" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="SBT" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -436,13 +543,14 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7944079" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42105263" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21875" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13086233" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="sbt-shell-toolwindow" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -453,9 +561,34 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -479,68 +612,138 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/BaseRepository.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/BaseFacade.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="99" column="70" lean-forward="false" selection-start-line="99" selection-start-column="70" selection-end-line="99" selection-end-column="70" />
+        <state relative-caret-position="194">
+          <caret line="22" column="31" lean-forward="true" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/CompanyApi.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/BaseRepository.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="11" column="57" lean-forward="false" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
+        <state relative-caret-position="195">
+          <caret line="18" column="10" lean-forward="false" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/CountryApi.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="69" column="49" lean-forward="false" selection-start-line="69" selection-start-column="49" selection-end-line="69" selection-end-column="49" />
           <folding>
-            <element signature="e#76#119#0" expanded="true" />
+            <element signature="e#30#56#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleApi.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="6" column="57" lean-forward="false" selection-start-line="6" selection-start-column="57" selection-end-line="6" selection-end-column="57" />
+        <state relative-caret-position="404">
+          <caret line="81" column="52" lean-forward="false" selection-start-line="81" selection-start-column="52" selection-end-line="81" selection-end-column="52" />
           <folding>
             <element signature="e#30#73#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleCategoryApi.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="5" column="57" lean-forward="false" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
-          <folding>
-            <element signature="e#30#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleTypeApi.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="5" column="57" lean-forward="false" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
+        <state relative-caret-position="493">
+          <caret line="75" column="50" lean-forward="false" selection-start-line="75" selection-start-column="50" selection-end-line="75" selection-end-column="50" />
           <folding>
             <element signature="e#30#56#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/CountryApi.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/CompanyApi.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="78" column="0" lean-forward="true" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+        <state relative-caret-position="194">
+          <caret line="66" column="11" lean-forward="false" selection-start-line="66" selection-start-column="11" selection-end-line="66" selection-end-column="11" />
+          <folding>
+            <element signature="e#76#119#0" expanded="true" />
+            <element signature="e#300#1619#0" expanded="false" />
+            <element signature="e#1624#2210#0" expanded="false" />
+            <element signature="e#2215#3154#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/com/reactore/feature/MockRepository.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="523">
+          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleCategoryApi.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="33" column="25" lean-forward="true" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
           <folding>
             <element signature="e#30#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/com/reactore/feature/CompanyServiceTestSpec.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+          <folding>
+            <element signature="e#30#56#0" expanded="true" />
+            <element signature="e#501#796#0" expanded="false" />
+            <element signature="e#862#1107#0" expanded="false" />
+            <element signature="e#1173#1425#0" expanded="false" />
+            <element signature="e#1517#2052#0" expanded="false" />
+            <element signature="e#2137#2588#0" expanded="false" />
+            <element signature="e#2661#3122#0" expanded="false" />
+            <element signature="e#3195#3646#0" expanded="false" />
+            <element signature="e#3726#4186#0" expanded="false" />
+            <element signature="e#4300#4742#0" expanded="false" />
+            <element signature="e#4811#5174#0" expanded="false" />
+            <element signature="e#5240#5610#0" expanded="false" />
+            <element signature="e#5687#6068#0" expanded="false" />
+            <element signature="e#6170#6729#0" expanded="false" />
+            <element signature="e#6814#7280#0" expanded="false" />
+            <element signature="e#7346#7819#0" expanded="false" />
+            <element signature="e#7892#8365#0" expanded="false" />
+            <element signature="e#8441#8916#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/com/reactore/feature/CountryServiceTestSpec.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="50" column="7" lean-forward="true" selection-start-line="50" selection-start-column="7" selection-end-line="50" selection-end-column="7" />
+        <state relative-caret-position="180">
+          <caret line="14" column="26" lean-forward="false" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+          <folding>
+            <element signature="e#30#56#0" expanded="true" />
+            <element signature="e#483#778#0" expanded="false" />
+            <element signature="e#841#1093#0" expanded="false" />
+            <element signature="e#1166#1411#0" expanded="false" />
+            <element signature="e#1495#1894#0" expanded="false" />
+            <element signature="e#1982#2297#0" expanded="false" />
+            <element signature="e#2370#2704#0" expanded="false" />
+            <element signature="e#3428#3758#0" expanded="false" />
+            <element signature="e#3823#4164#0" expanded="false" />
+            <element signature="e#4240#4574#0" expanded="false" />
+            <element signature="e#4654#5003#0" expanded="false" />
+            <element signature="e#5116#5557#0" expanded="false" />
+            <element signature="e#5627#5989#0" expanded="false" />
+            <element signature="e#6056#6425#0" expanded="false" />
+            <element signature="e#6508#6888#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleCategoryServiceTestSpec.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" column="33" lean-forward="true" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
           <folding>
             <element signature="e#30#56#0" expanded="true" />
           </folding>

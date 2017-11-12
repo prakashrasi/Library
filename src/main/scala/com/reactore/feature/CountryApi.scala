@@ -67,7 +67,7 @@ class CountryService {
                if (countryOption.isDefined) {
                   val uniqueCountryCode = countryList.find(_.code.equalsIgnoreCase(updatedCountry.code))
                   if (uniqueCountryCode.isEmpty) {
-                     countryRepository.update(id, updatedCountry)
+                     countryRepository.update(id,updatedCountry)
                   } else throw UniqueKeyViolationException(exception = new Exception("Updated country has duplicate code!!"))
                } else throw NoSuchEntityException(exception = new Exception("Country for given id doesn't exists!!"))
             } else throw EmptyListException(exception = new Exception("Country list is empty!!"))

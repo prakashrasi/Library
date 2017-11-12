@@ -26,7 +26,6 @@ class VehicleCategoryService {
       } yield res
    }.flatten.recover { case ex => handleExceptions(ex) }
 
-   // todo get,update,delete
    // get vehicle category by id
    def getVehicleCategoryById(id: Long): Future[VehicleCategory] = {
       for {
@@ -65,7 +64,7 @@ class VehicleCategoryService {
             if (vehicleCategoryList.nonEmpty) {
                val vehicleCategoryOption = vehicleCategoryList.find(_.vehicleCategoryId == id)
                if (vehicleCategoryOption.isDefined) {
-                  vehicleCategoryRepository.update(id, updatedVehicleCategory)
+                  vehicleCategoryRepository.update(id,updatedVehicleCategory)
                } else throw NoSuchEntityException(exception = new Exception("Vehicle category not found for given id!!"))
             } else throw EmptyListException(exception = new Exception("Vehicle category list is empty!!"))
          } else throw FieldNotDefinedException(exception = new Exception("Fields are not defined!!"))
