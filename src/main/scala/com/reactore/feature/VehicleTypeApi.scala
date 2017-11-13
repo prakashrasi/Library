@@ -1,5 +1,9 @@
 package com.reactore.feature
 
+/**
+  * created by Kartik on 11-11-2017
+  */
+
 import org.json4s.native.Serialization._
 import com.reactore.core._
 import HandleExceptions._
@@ -7,10 +11,6 @@ import akka.http.scaladsl.server.Route
 
 import scala.concurrent.Future
 import scala.concurrent.ExecutionContext.Implicits.global
-
-/**
-  * created by Kartik on 11-11-2017
-  */
 class VehicleTypeService {
    self: VehicleTypeFacadeComponent =>
 
@@ -55,12 +55,12 @@ class VehicleTypeService {
          vehicleTypeList <- vehicleTypeRepository.vehicleTypeFuture
          _ = if (vehicleTypeList.isEmpty) throw EmptyListException(exception = new Exception("Vehicle type list is empty!!"), message = "Vehicle type list is empty!!")
          vehicleTypeOption = vehicleTypeList.find(_.vehicleTypeId == id)
-         _ = if (vehicleTypeOption.isEmpty) throw NoSuchEntityException(exception = new Exception("Vehicle type not found for given id!!"))
+         _ = if (vehicleTypeOption.isEmpty) throw NoSuchEntityException(exception = new Exception("Vehicle type not found for given id!!"), message = "Vehicle type not found for given id!!")
          res <- {
             val vehicleForGivenType = vehicleList.filter(_.vehicleType == id)
             if (vehicleForGivenType.isEmpty) {
                vehicleTypeRepository.delete(id).map { x => "Deleted vehicle type successfully" }
-            } else Future.failed(ForeignKeyRelationFoundException(exception = new Exception("Foreign key relation found in vehicle table!!")))
+            } else Future.failed(ForeignKeyRelationFoundException(exception = new Exception("Foreign key relation found in vehicle table!!"), message = "Foreign key relation found in vehicle table!!"))
          }
       } yield res
       result.recover { case ex => handleExceptions(ex) }
@@ -102,7 +102,7 @@ class VehicleTypeRest(vehicleTypeService: VehicleTypeService) extends CustomDire
          get {
             val result = vehicleTypeService.getAll
             complete(respond(result))
-         } ~ put {
+         } ~ post {
             entity(as[String]) {
                vehiclType =>
                   val newType = read[VehicleType](vehiclType)
@@ -116,7 +116,7 @@ class VehicleTypeRest(vehicleTypeService: VehicleTypeService) extends CustomDire
          get {
             val result = vehicleTypeService.getVehicleTypeById(id)
             complete(respond(result))
-         } ~ post {
+         } ~ put {
             entity(as[String]) {
                vehicleType =>
                   val updateType = read[VehicleType](vehicleType)
