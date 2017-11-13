@@ -31,6 +31,18 @@ class CountryRestTestSpec extends WordSpec with Matchers with ScalatestRouteTest
             responseAs[String] shouldBe "Country list is empty!!".asJson
          }
       }
+      "return a country for id as 1"in{
+         when(MockCountryService.countryRepository.countryFuture).thenReturn(MockCountryRepository.countryFuture)
+         Get("/country/1") ~> testRoute ~> check {
+            responseAs[String] shouldBe MockCountryRepository.country1.asJson
+         }
+      }
+      "throw exception for get country by id for country id as 6"in{
+         when(MockCountryService.countryRepository.countryFuture).thenReturn(MockCountryRepository.countryFuture)
+         Get("/country/6") ~> testRoute ~> check {
+            responseAs[String] shouldBe "Country not found!!".asJson
+         }
+      }
       "insert country to list" in {
          val newCountry = Country(4, "FRANCE", language = "FRENCH", code = "FRA").asJson
          when(MockCountryService.countryRepository.countryFuture).thenReturn(MockCountryRepository.countryFuture)

@@ -38,7 +38,7 @@ class VehicleTypeServiceTestSpec extends WordSpec with Matchers with ScalaFuture
          when(MockVehicleTypeService.vehicleTypeRepository.insert(any[VehicleType])).thenReturn(Future.successful(1))
          val newType = VehicleType(6, "Bus", vehicleCategoryId = 2)
          val result = MockVehicleTypeService.insertVehicleType(newType)
-         result.futureValue shouldBe 1
+         result.futureValue shouldBe "Inserted vehicle type successfully"
       }
       "throw exception in insert vehicle type if name is not defined" in {
          when(MockVehicleTypeService.vehicleCategoryRepository.vehicleCategoryFuture).thenReturn(MockVehicleCategoryRepository.vehicleCategoryFuture)
@@ -75,7 +75,7 @@ class VehicleTypeServiceTestSpec extends WordSpec with Matchers with ScalaFuture
          when(MockVehicleTypeService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.vehicleTypeFuture)
          when(MockVehicleTypeService.vehicleTypeRepository.delete(anyLong)).thenReturn(Future.successful(1))
          val result = MockVehicleTypeService.deleteVehicleTypeById(5)
-         result.futureValue shouldBe 1
+         result.futureValue shouldBe "Deleted vehicle type successfully"
       }
       "throw exception in delete type if vehicle type list is empty" in {
          when(MockVehicleTypeService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
@@ -103,7 +103,7 @@ class VehicleTypeServiceTestSpec extends WordSpec with Matchers with ScalaFuture
          when(MockVehicleTypeService.vehicleTypeRepository.update(anyLong, any[VehicleType])).thenReturn(Future.successful(1))
          val updatedType = VehicleType(3, "Big Van", vehicleCategoryId = 1)
          val result = MockVehicleTypeService.updateVehicleTypeById(3, updatedType)
-         result.futureValue shouldBe 1
+         result.futureValue shouldBe "Updated vehicle type successfully"
       }
       "throw exception in update vehicle type if vehicle type list is empty" in {
          when(MockVehicleTypeService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.emptyList)

@@ -37,7 +37,7 @@ class VehicleCategoryServiceTestSpec extends WordSpec with Matchers with ScalaFu
          when(MockVehicleCategoryService.vehicleCategoryRepository.insert(any[VehicleCategory])).thenReturn(Future.successful(1))
          val newCategory = VehicleCategory(4, "3-Wheeler", maxCapacity = 2.0)
          val result = MockVehicleCategoryService.insertVehicleCategory(newCategory)
-         result.futureValue shouldBe 1
+         result.futureValue shouldBe "Inserted vehicle category successfully"
       }
       "throw exception in insert category if category name is undefined" in {
          when(MockVehicleCategoryService.vehicleCategoryRepository.vehicleCategoryFuture).thenReturn(MockVehicleCategoryRepository.vehicleCategoryFuture)
@@ -58,7 +58,7 @@ class VehicleCategoryServiceTestSpec extends WordSpec with Matchers with ScalaFu
          when(MockVehicleCategoryService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.vehicleTypeFuture)
          when(MockVehicleCategoryService.vehicleCategoryRepository.delete(any[Long])).thenReturn(Future.successful(1))
          val result = MockVehicleCategoryService.deleteVehicleCategoryById(3)
-         result.futureValue shouldBe 1
+         result.futureValue shouldBe "Deleted vehicle category successfully"
       }
       "throw exception in delete vehicle category for category id as 4" in {
          when(MockVehicleCategoryService.vehicleCategoryRepository.vehicleCategoryFuture).thenReturn(MockVehicleCategoryRepository.vehicleCategoryFuture)
@@ -85,7 +85,7 @@ class VehicleCategoryServiceTestSpec extends WordSpec with Matchers with ScalaFu
          when(MockVehicleCategoryService.vehicleCategoryRepository.update(any[Long], any[VehicleCategory])).thenReturn(Future.successful(1))
          val updatedCategory = VehicleCategory(1, "10-Wheeler", maxCapacity = 2.0)
          val result = MockVehicleCategoryService.updateVehicleCategoryById(1, updatedCategory)
-         result.futureValue shouldBe 1
+         result.futureValue shouldBe "Updated vehicle category successfully"
       }
       "throw exception in update category if name is undefined" in {
          when(MockVehicleCategoryService.vehicleCategoryRepository.vehicleCategoryFuture).thenReturn(MockVehicleCategoryRepository.vehicleCategoryFuture)
