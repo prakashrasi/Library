@@ -1,7 +1,10 @@
 package com.reactore.feature
 
+import org.json4s.native.Serialization._
 import com.reactore.core._
 import HandleExceptions._
+import akka.http.scaladsl.server.Route
+
 import scala.concurrent.Future
 import scala.concurrent.ExecutionContext.Implicits.global
 
@@ -64,7 +67,7 @@ class VehicleCategoryService {
             if (vehicleCategoryList.nonEmpty) {
                val vehicleCategoryOption = vehicleCategoryList.find(_.vehicleCategoryId == id)
                if (vehicleCategoryOption.isDefined) {
-                  vehicleCategoryRepository.update(id,updatedVehicleCategory)
+                  vehicleCategoryRepository.update(id, updatedVehicleCategory)
                } else throw NoSuchEntityException(exception = new Exception("Vehicle category not found for given id!!"))
             } else throw EmptyListException(exception = new Exception("Vehicle category list is empty!!"))
          } else throw FieldNotDefinedException(exception = new Exception("Fields are not defined!!"))
@@ -72,6 +75,41 @@ class VehicleCategoryService {
    }.flatten.recover { case ex => handleExceptions(ex) }
 }
 
-class VehicleCategoryRest {
+object ImplVehicleCategoryService extends VehicleCategoryService with VehicleCategoryFacade
 
+class VehicleCategoryRest(vehicleCategoryService: VehicleCategoryService) extends CustomDirectives {
+
+   val categoryServiceObj = new VehicleCategoryService with VehicleCategoryFacade
+
+   val vehicleCategoryRoute: Route = path("vehiclecategory") {
+      pathEndOrSingleSlash {
+         get {
+            val result = categoryServiceObj.vehicleCategoryRepository.vehicleCategoryFuture
+            complete(respond(result))
+         } ~ post {
+            entity(as[String]) {
+               category =>
+                  val newCategory = read[VehicleCategory](category)
+                  val result = categoryServiceObj.insertVehicleCategory(newCategory)
+                  complete(respond(result))
+            }
+         }
+      }
+   } ~ path("vehiclecategory" / LongNumber) {
+      id =>
+         get {
+            val result = categoryServiceObj.getVehicleCategoryById(id)
+            complete(respond(result))
+         } ~ put {
+            entity(as[String]) {
+               category =>
+                  val updateCategory = read[VehicleCategory](category)
+                  val result = categoryServiceObj.updateVehicleCategoryById(id, updateCategory)
+                  complete(respond(result))
+            }
+         } ~ delete {
+            val result = categoryServiceObj.deleteVehicleCategoryById(id)
+            complete(respond(result))
+         }
+   }
 }

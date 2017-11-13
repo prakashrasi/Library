@@ -27,15 +27,15 @@ case class ForeignKeyRelationFoundException(errorCode: String = "1008", message:
 object HandleExceptions {
    def handleExceptions(exception: Throwable): Nothing = {
       exception match {
-         case ex: BatchUpdateException             => throw DuplicateEntityException(exception = new Exception("DUPLICATE_ENTITY_EXCEPTION"))
-         case ex: DuplicateEntityException         => throw DuplicateEntityException(exception = new Exception("DUPLICATE_ENTITY_EXCEPTION"))
-         case ex: SQLException                     => throw OtherDatabaseException(exception = new Exception("OTHER_DATABASE_EXCEPTION"))
+         case ex: DuplicateEntityException         => throw DuplicateEntityException(exception = new Exception(ex.message), message = ex.message)
+         case ex: NoSuchEntityException            => throw NoSuchEntityException(message = ex.message, exception = new Exception(ex.message))
+         case ex: EmptyListException               => throw EmptyListException(exception = new Exception(ex.message), message = ex.message)
+         case ex: UniqueKeyViolationException      => throw UniqueKeyViolationException(exception = new Exception(ex.message), message = ex.message)
+         case ex: FieldNotDefinedException         => throw FieldNotDefinedException(exception = new Exception(ex.message), message = ex.message)
+         case ex: ForeignKeyRelationFoundException => throw ForeignKeyRelationFoundException(exception = new Exception(ex.message), message = ex.message)
          case ex: NoSuchElementException           => throw NoSuchEntityException(exception = new Exception("NO_SUCH_ENTITY"))
-         case ex: NoSuchEntityException            => throw NoSuchEntityException(exception = new Exception("NO_SUCH_ENTITY"))
-         case ex: EmptyListException               => throw EmptyListException(exception = new Exception("EMPTY_LIST_EXCEPTION"))
-         case ex: UniqueKeyViolationException      => throw UniqueKeyViolationException(exception = new Exception("UNIQUE_KEY_VIOLATION_EXCEPTION"))
-         case ex: FieldNotDefinedException         => throw FieldNotDefinedException(exception = new Exception("FIELD_NOT_DEFINED_EXCEPTION"))
-         case ex: ForeignKeyRelationFoundException => throw ForeignKeyRelationFoundException(exception = new Exception("FOREIGN_KEY_RELATION_EXCEPTION"))
+         case ex: SQLException                     => throw OtherDatabaseException(exception = new Exception("OTHER_DATABASE_EXCEPTION"))
+         case ex: BatchUpdateException             => throw DuplicateEntityException(exception = new Exception("DUPLICATE_ENTITY_EXCEPTION"))
          case _                                    => throw GenericException(exception = new Exception("SOME_OTHER_EXCEPTION"))
       }
    }

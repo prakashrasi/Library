@@ -1,7 +1,10 @@
 package com.reactore.feature
 
+import org.json4s.native.Serialization._
 import com.reactore.core._
 import HandleExceptions._
+import akka.http.scaladsl.server.Route
+
 import scala.concurrent.Future
 import scala.concurrent.ExecutionContext.Implicits.global
 
@@ -84,7 +87,40 @@ class VehicleTypeService {
 
 }
 
+object ImplVehicleTypeService extends VehicleTypeService with VehicleTypeFacade
 
-class VehicleTypeRest {
+class VehicleTypeRest(vehicleTypeService: VehicleTypeService) extends CustomDirectives {
+   val typeServiceObj = new VehicleTypeService with VehicleTypeFacade
 
+   val vehicleTypeRoute: Route = path("vehiclecategory") {
+      pathEndOrSingleSlash {
+         get {
+            val result = typeServiceObj.vehicleTypeRepository.vehicleTypeFuture
+            complete(respond(result))
+         } ~ put {
+            entity(as[String]) {
+               vehiclType =>
+                  val newType = read[VehicleType](vehiclType)
+                  val result = typeServiceObj.insertVehicleType(newType)
+                  complete(respond(result))
+            }
+         }
+      }
+   } ~ path("vehiclecategory" / LongNumber) {
+      id =>
+         get {
+            val result = typeServiceObj.getVehicleTypeById(id)
+            complete(respond(result))
+         } ~ post {
+            entity(as[String]) {
+               vehicleType =>
+                  val updateType = read[VehicleType](vehicleType)
+                  val result = typeServiceObj.updateVehicleTypeById(id, updateType)
+                  complete(respond(result))
+            }
+         } ~ delete {
+            val result = typeServiceObj.deleteVehicleTypeById(id)
+            complete(respond(result))
+         }
+   }
 }

@@ -1,5 +1,9 @@
 package com.reactore.feature
 
+/**
+  * created by Kartik on 12-11-2017
+  */
+
 import com.reactore.core._
 import org.mockito.Matchers._
 import org.mockito.Mockito._
@@ -8,9 +12,6 @@ import org.scalatest.{Matchers, WordSpec}
 
 import scala.concurrent.Future
 
-/**
-  * created by Kartik on 12-11-2017
-  */
 class CompanyServiceTestSpec extends WordSpec with Matchers with ScalaFutures {
    "Company Service " should {
       // test cases for getCompanyById method
