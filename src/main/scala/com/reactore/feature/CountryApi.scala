@@ -38,14 +38,14 @@ class CountryService {
             val countryOption = countryList.find(_.countryId == id)
             if (countryOption.isDefined) {
                countryOption.get
-            } else throw NoSuchEntityException(exception = new Exception("Country not found!!"))
+            } else throw NoSuchEntityException(exception = new Exception("Country not found!!"),message = "Country not found!!")
             //countryOption.getOrElse(throw NoSuchEntityException(exception = new Exception("Country not found!!")))
-         } else throw EmptyListException(exception = new Exception("Country list is empty!!"))
+         } else throw EmptyListException(exception = new Exception("Country list is empty!!"),message = "Country list is empty!!")
       } yield res
    }.recover { case ex => handleExceptions(ex) }
 
    //delete country by id
-   def deleteCountryById(id: Long): Future[Int] = {
+   def deleteCountryById(id: Long): Future[String] = {
       for {
          countryList <- countryRepository.countryFuture
          companyList <- companyRepository.companyFuture
@@ -55,14 +55,15 @@ class CountryService {
                val companiesForGivenCountry = companyList.filter(_.country == id)
                if (companiesForGivenCountry.isEmpty) {
                   countryRepository.delete(id)
-               } else throw ForeignKeyRelationFoundException(exception = new Exception("Foreign key relation found in company table!!"))
-            } else throw NoSuchEntityException(exception = new Exception("Country for given id doesn't exists!!"))
-         } else throw EmptyListException(exception = new Exception("Country list is empty!!"))
+                  Future.successful("Deleted country successfully")
+               } else throw ForeignKeyRelationFoundException(exception = new Exception("Foreign key relation found in company table!!"), message = "Foreign key relation found in company table!!")
+            } else throw NoSuchEntityException(exception = new Exception("Country for given id doesn't exists!!"), message = "Country for given id doesn't exists!!")
+         } else throw EmptyListException(exception = new Exception("Country list is empty!!"), message = "Country list is empty!!")
       } yield res
    }.flatten.recover { case ex => handleExceptions(ex) }
 
    // update country by id
-   def updateCountryById(id: Long, updatedCountry: Country): Future[Int] = {
+   def updateCountryById(id: Long, updatedCountry: Country): Future[String] = {
       for {
          countryList <- countryRepository.countryFuture
          res = if (updatedCountry.name.nonEmpty && updatedCountry.language.nonEmpty && updatedCountry.code.nonEmpty) {
@@ -72,10 +73,11 @@ class CountryService {
                   val uniqueCountryCode = countryList.find(_.code.equalsIgnoreCase(updatedCountry.code))
                   if (uniqueCountryCode.isEmpty) {
                      countryRepository.update(id, updatedCountry)
-                  } else throw UniqueKeyViolationException(exception = new Exception("Updated country has duplicate code!!"))
-               } else throw NoSuchEntityException(exception = new Exception("Country for given id doesn't exists!!"))
-            } else throw EmptyListException(exception = new Exception("Country list is empty!!"))
-         } else throw FieldNotDefinedException(exception = new Exception("Fields are not defined!!"))
+                     Future.successful("Updated country successfully")
+                  } else throw UniqueKeyViolationException(exception = new Exception("Updated country has duplicate code!!"), message = "Updated country has duplicate code!!")
+               } else throw NoSuchEntityException(exception = new Exception("Country for given id doesn't exists!!"), message = "Country for given id doesn't exists!!")
+            } else throw EmptyListException(exception = new Exception("Country list is empty!!"), message = "Country list is empty!!")
+         } else throw FieldNotDefinedException(exception = new Exception("Fields are not defined!!"), message = "Fields are not defined!!")
       } yield res
    }.flatten.recover { case ex => handleExceptions(ex) }
 

@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="07e0413e-6afb-4dc9-9527-7ca5752d77ec" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/scala/com/reactore/feature/CountryRestTestSpec.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/reactore/feature/CountryApi.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/reactore/feature/CountryApi.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/com/reactore/feature/CompanyRestTestSpec.scala" afterPath="$PROJECT_DIR$/src/test/scala/com/reactore/feature/CompanyRestTestSpec.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/com/reactore/feature/CompanyServiceTestSpec.scala" afterPath="$PROJECT_DIR$/src/test/scala/com/reactore/feature/CompanyServiceTestSpec.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/com/reactore/feature/CountryRestTestSpec.scala" afterPath="$PROJECT_DIR$/src/test/scala/com/reactore/feature/CountryRestTestSpec.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/com/reactore/feature/CountryServiceTestSpec.scala" afterPath="$PROJECT_DIR$/src/test/scala/com/reactore/feature/CountryServiceTestSpec.scala" />
     </list>
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -48,50 +46,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CountryRestTestSpec.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CountryRestTestSpec.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/scala/com/reactore/feature/CountryRestTestSpec.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="37" column="41" lean-forward="false" selection-start-line="37" selection-start-column="41" selection-end-line="37" selection-end-column="41" />
+            <state relative-caret-position="-677">
+              <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
               <folding>
                 <element signature="e#30#73#0" expanded="true" />
+                <element signature="e#675#939#0" expanded="false" />
+                <element signature="e#999#1305#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CountryApi.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CountryApi.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/CountryApi.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="17" column="12" lean-forward="true" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+            <state relative-caret-position="334">
+              <caret line="76" column="69" lean-forward="true" selection-start-line="76" selection-start-column="69" selection-end-line="76" selection-end-column="69" />
               <folding>
                 <element signature="e#30#70#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CountryServiceTestSpec.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/scala/com/reactore/feature/CountryServiceTestSpec.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="39" column="68" lean-forward="false" selection-start-line="39" selection-start-column="68" selection-end-line="39" selection-end-column="68" />
-              <folding>
-                <element signature="e#30#56#0" expanded="true" />
-                <element signature="e#483#778#0" expanded="false" />
-                <element signature="e#841#1093#0" expanded="false" />
-                <element signature="e#1166#1411#0" expanded="false" />
-                <element signature="e#2012#2327#0" expanded="false" />
-                <element signature="e#2400#2734#0" expanded="false" />
-                <element signature="e#3458#3788#0" expanded="false" />
-                <element signature="e#3853#4194#0" expanded="false" />
-                <element signature="e#4270#4604#0" expanded="false" />
-                <element signature="e#4684#5033#0" expanded="false" />
-                <element signature="e#5146#5587#0" expanded="false" />
-                <element signature="e#5657#6019#0" expanded="false" />
-                <element signature="e#6086#6455#0" expanded="false" />
-                <element signature="e#6538#6918#0" expanded="false" />
+                <element signature="e#1343#2114#0" expanded="false" />
+                <element signature="e#5192#6237#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -131,10 +108,10 @@
         <option value="$PROJECT_DIR$/src/main/scala/com/reactore/core/CustomDirectives.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/reactore/feature/CompanyApi.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/com/reactore/feature/CompanyRestTestSpec.scala" />
-        <option value="$PROJECT_DIR$/src/test/scala/com/reactore/feature/CountryRestTestSpec.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/com/reactore/feature/CompanyServiceTestSpec.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/reactore/feature/CountryApi.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/com/reactore/feature/CountryServiceTestSpec.scala" />
-        <option value="$PROJECT_DIR$/src/test/scala/com/reactore/feature/CompanyServiceTestSpec.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/com/reactore/feature/CountryRestTestSpec.scala" />
       </list>
     </option>
   </component>
@@ -255,7 +232,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="ScalaTest.CompanyRestTestSpec.Company Rest should return a company list&#10;Company Rest should return company for company id as 2&#10;Company Rest should throw exception in get company by id for company id 5&#10;Company Rest should throw exception for empty company list&#10;Company Rest should insert a company to database&#10;Company Rest should throw exception if country list is empty&#10;Company Rest should delete company for company id as 3&#10;Company Rest should throw exception in delete route for empty company list&#10;Company Rest should update company details&#10;Company Rest should throw exception company id as 5&#10;Company Rest should throw exception if country is not found">
+  <component name="RunManager" selected="ScalaTest.CountryRestTestSpec.Country Rest should return list of countries&#10;Country Rest should throw exception in get if country list is empty&#10;Country Rest should insert country to list&#10;Country Rest should throw exception in insert if duplicate code is inserted&#10;Country Rest should delete country by id for id as 3&#10;Country Rest should throw exception if country list is empty&#10;Country Rest should throw exception in delete country if foreign key relation exists&#10;Country Rest should update country details&#10;Country Rest should throw exception in update if country list is empty&#10;Country Rest should throw exception if unique code is violated&#10;Country Rest should throw exception if country for country id as 4">
     <configuration name="CompanyRestTestSpec.Company Rest should return a company list&#10;Company Rest should return company for company id as 2&#10;Company Rest should throw exception in get company by id for company id 5&#10;Company Rest should throw exception for empty company list&#10;Company Rest should insert a company to database&#10;Company Rest should throw exception if country list is empty&#10;Company Rest should delete company for company id as 3&#10;Company Rest should throw exception in delete route for empty company list&#10;Company Rest should update company details&#10;Company Rest should throw exception company id as 5&#10;Company Rest should throw exception if country is not found" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="slickassignments" />
@@ -266,24 +243,6 @@
       <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
       <setting name="searchForTest" value="Across module dependencies" />
       <setting name="testName" value="Company Rest should return a company list&#10;Company Rest should return company for company id as 2&#10;Company Rest should throw exception in get company by id for company id 5&#10;Company Rest should throw exception for empty company list&#10;Company Rest should insert a company to database&#10;Company Rest should throw exception if country list is empty&#10;Company Rest should delete company for company id as 3&#10;Company Rest should throw exception in delete route for empty company list&#10;Company Rest should update company details&#10;Company Rest should throw exception company id as 5&#10;Company Rest should throw exception if country is not found" />
-      <setting name="testKind" value="Test name" />
-      <setting name="showProgressMessages" value="true" />
-      <setting name="useSbt" value="false" />
-      <setting name="useUiWithSbt" value="false" />
-      <classRegexps />
-      <testRegexps />
-      <envs />
-    </configuration>
-    <configuration name="CompanyRestTestSpec.Company Rest should throw exception in delete route for empty company list" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="slickassignments" />
-      <setting name="path" value="com.reactore.feature.CompanyRestTestSpec" />
-      <setting name="package" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
-      <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="Company Rest should throw exception in delete route for empty company list" />
       <setting name="testKind" value="Test name" />
       <setting name="showProgressMessages" value="true" />
       <setting name="useSbt" value="false" />
@@ -310,25 +269,7 @@
       <testRegexps />
       <envs />
     </configuration>
-    <configuration name="CompanyServiceTestSpec.Company Service should return a company in get company for company id as 1&#10;Company Service should throw exception in get company for empty company list&#10;Company Service should throw exception in get company by id for company id 5&#10;Company Service should insert company in insert company&#10;Company Service should throw exception in insert company if name and licence number not defined&#10;Company Service should throw exception in insert company if country does not exists&#10;Company Service should throw exception for insert company if country list is empty&#10;Company Service should throw exception for insert company if duplicate country is inserted&#10;Company Service should delete company in delete company for company id as 3&#10;Company Service should throw exception in delete company for empty company list&#10;Company Service should throw exception in delete company for company id as 5&#10;Company Service should throw exception in delete company if foreign key relation exists&#10;Company Service should update company by id for company id as 1&#10;Company Service should throw exception in update company if name and licence number not defined&#10;Company Service should throw exception in update company for company id as 5&#10;Company Service should throw exception in update company if country does not exists&#10;Company Service should throw exception in update company for duplicate company details" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="slickassignments" />
-      <setting name="path" value="com.reactore.feature.CompanyServiceTestSpec" />
-      <setting name="package" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
-      <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="Company Service should return a company in get company for company id as 1&#10;Company Service should throw exception in get company for empty company list&#10;Company Service should throw exception in get company by id for company id 5&#10;Company Service should insert company in insert company&#10;Company Service should throw exception in insert company if name and licence number not defined&#10;Company Service should throw exception in insert company if country does not exists&#10;Company Service should throw exception for insert company if country list is empty&#10;Company Service should throw exception for insert company if duplicate country is inserted&#10;Company Service should delete company in delete company for company id as 3&#10;Company Service should throw exception in delete company for empty company list&#10;Company Service should throw exception in delete company for company id as 5&#10;Company Service should throw exception in delete company if foreign key relation exists&#10;Company Service should update company by id for company id as 1&#10;Company Service should throw exception in update company if name and licence number not defined&#10;Company Service should throw exception in update company for company id as 5&#10;Company Service should throw exception in update company if country does not exists&#10;Company Service should throw exception in update company for duplicate company details" />
-      <setting name="testKind" value="Test name" />
-      <setting name="showProgressMessages" value="true" />
-      <setting name="useSbt" value="false" />
-      <setting name="useUiWithSbt" value="false" />
-      <classRegexps />
-      <testRegexps />
-      <envs />
-    </configuration>
-    <configuration name="CountryRestTestSpec.Country Rest should return list of countries" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
+    <configuration name="CountryRestTestSpec.Country Rest should return list of countries&#10;Country Rest should throw exception if country list is empty&#10;Country Rest should insert country to list&#10;Country Rest should throw exception in insert if duplicate code is inserted" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="slickassignments" />
       <setting name="path" value="com.reactore.feature.CountryRestTestSpec" />
@@ -337,7 +278,43 @@
       <setting name="params" value="" />
       <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
       <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="Country Rest should return list of countries" />
+      <setting name="testName" value="Country Rest should return list of countries&#10;Country Rest should throw exception if country list is empty&#10;Country Rest should insert country to list&#10;Country Rest should throw exception in insert if duplicate code is inserted" />
+      <setting name="testKind" value="Test name" />
+      <setting name="showProgressMessages" value="true" />
+      <setting name="useSbt" value="false" />
+      <setting name="useUiWithSbt" value="false" />
+      <classRegexps />
+      <testRegexps />
+      <envs />
+    </configuration>
+    <configuration name="CountryRestTestSpec.Country Rest should return list of countries&#10;Country Rest should throw exception if country list is empty&#10;Country Rest should insert country to list&#10;Country Rest should throw exception in insert if duplicate code is inserted&#10;Country Rest should delete country by id for id as 3&#10;Country Rest should throw exception if country list is empty&#10;Country Rest should throw exception in delete countryif foreign key relation exists&#10;Country Rest should update country details&#10;Country Rest should throw exception if country list is empty&#10;Country Rest should throw exception if unique code is violated&#10;Country Rest should throw exception if country for country id as 4" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="slickassignments" />
+      <setting name="path" value="com.reactore.feature.CountryRestTestSpec" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="Country Rest should return list of countries&#10;Country Rest should throw exception if country list is empty&#10;Country Rest should insert country to list&#10;Country Rest should throw exception in insert if duplicate code is inserted&#10;Country Rest should delete country by id for id as 3&#10;Country Rest should throw exception if country list is empty&#10;Country Rest should throw exception in delete countryif foreign key relation exists&#10;Country Rest should update country details&#10;Country Rest should throw exception if country list is empty&#10;Country Rest should throw exception if unique code is violated&#10;Country Rest should throw exception if country for country id as 4" />
+      <setting name="testKind" value="Test name" />
+      <setting name="showProgressMessages" value="true" />
+      <setting name="useSbt" value="false" />
+      <setting name="useUiWithSbt" value="false" />
+      <classRegexps />
+      <testRegexps />
+      <envs />
+    </configuration>
+    <configuration name="CountryRestTestSpec.Country Rest should return list of countries&#10;Country Rest should throw exception in get if country list is empty&#10;Country Rest should insert country to list&#10;Country Rest should throw exception in insert if duplicate code is inserted&#10;Country Rest should delete country by id for id as 3&#10;Country Rest should throw exception if country list is empty&#10;Country Rest should throw exception in delete country if foreign key relation exists&#10;Country Rest should update country details&#10;Country Rest should throw exception in update if country list is empty&#10;Country Rest should throw exception if unique code is violated&#10;Country Rest should throw exception if country for country id as 4" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="slickassignments" />
+      <setting name="path" value="com.reactore.feature.CountryRestTestSpec" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="Country Rest should return list of countries&#10;Country Rest should throw exception in get if country list is empty&#10;Country Rest should insert country to list&#10;Country Rest should throw exception in insert if duplicate code is inserted&#10;Country Rest should delete country by id for id as 3&#10;Country Rest should throw exception if country list is empty&#10;Country Rest should throw exception in delete country if foreign key relation exists&#10;Country Rest should update country details&#10;Country Rest should throw exception in update if country list is empty&#10;Country Rest should throw exception if unique code is violated&#10;Country Rest should throw exception if country for country id as 4" />
       <setting name="testKind" value="Test name" />
       <setting name="showProgressMessages" value="true" />
       <setting name="useSbt" value="false" />
@@ -428,19 +405,19 @@
       <listeners />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="ScalaTest.CompanyRestTestSpec.Company Rest should throw exception in delete route for empty company list" />
-      <item index="1" class="java.lang.String" itemvalue="ScalaTest.CompanyRestTestSpec.Company Rest should return a company list&#10;Company Rest should return company for company id as 2&#10;Company Rest should throw exception in get company by id for company id 5&#10;Company Rest should throw exception for empty company list&#10;Company Rest should insert a company to database&#10;Company Rest should throw exception if country list is empty&#10;Company Rest should delete company for company id as 3&#10;Company Rest should throw exception in delete route for empty company list&#10;Company Rest should update company details&#10;Company Rest should throw exception company id as 5&#10;Company Rest should throw exception if country is not found" />
-      <item index="2" class="java.lang.String" itemvalue="ScalaTest.CountryRestTestSpec.Country Rest should return list of countries" />
-      <item index="3" class="java.lang.String" itemvalue="ScalaTest.CompanyServiceTestSpec.Company Service should return a company in get company for company id as 1&#10;Company Service should throw exception in get company for empty company list&#10;Company Service should throw exception in get company by id for company id 5&#10;Company Service should insert company in insert company&#10;Company Service should throw exception in insert company if name and licence number not defined&#10;Company Service should throw exception in insert company if country does not exists&#10;Company Service should throw exception for insert company if country list is empty&#10;Company Service should throw exception for insert company if duplicate country is inserted&#10;Company Service should delete company in delete company for company id as 3&#10;Company Service should throw exception in delete company for empty company list&#10;Company Service should throw exception in delete company for company id as 5&#10;Company Service should throw exception in delete company if foreign key relation exists&#10;Company Service should update company by id for company id as 1&#10;Company Service should throw exception in update company if name and licence number not defined&#10;Company Service should throw exception in update company for company id as 5&#10;Company Service should throw exception in update company if country does not exists&#10;Company Service should throw exception in update company for duplicate company details" />
-      <item index="4" class="java.lang.String" itemvalue="ScalaTest.CompanyServiceTestSpec" />
+      <item index="0" class="java.lang.String" itemvalue="ScalaTest.CompanyRestTestSpec.Company Rest should return a company list&#10;Company Rest should return company for company id as 2&#10;Company Rest should throw exception in get company by id for company id 5&#10;Company Rest should throw exception for empty company list&#10;Company Rest should insert a company to database&#10;Company Rest should throw exception if country list is empty&#10;Company Rest should delete company for company id as 3&#10;Company Rest should throw exception in delete route for empty company list&#10;Company Rest should update company details&#10;Company Rest should throw exception company id as 5&#10;Company Rest should throw exception if country is not found" />
+      <item index="1" class="java.lang.String" itemvalue="ScalaTest.CompanyServiceTestSpec" />
+      <item index="2" class="java.lang.String" itemvalue="ScalaTest.CountryRestTestSpec.Country Rest should return list of countries&#10;Country Rest should throw exception if country list is empty&#10;Country Rest should insert country to list&#10;Country Rest should throw exception in insert if duplicate code is inserted" />
+      <item index="3" class="java.lang.String" itemvalue="ScalaTest.CountryRestTestSpec.Country Rest should return list of countries&#10;Country Rest should throw exception if country list is empty&#10;Country Rest should insert country to list&#10;Country Rest should throw exception in insert if duplicate code is inserted&#10;Country Rest should delete country by id for id as 3&#10;Country Rest should throw exception if country list is empty&#10;Country Rest should throw exception in delete countryif foreign key relation exists&#10;Country Rest should update country details&#10;Country Rest should throw exception if country list is empty&#10;Country Rest should throw exception if unique code is violated&#10;Country Rest should throw exception if country for country id as 4" />
+      <item index="4" class="java.lang.String" itemvalue="ScalaTest.CountryRestTestSpec.Country Rest should return list of countries&#10;Country Rest should throw exception in get if country list is empty&#10;Country Rest should insert country to list&#10;Country Rest should throw exception in insert if duplicate code is inserted&#10;Country Rest should delete country by id for id as 3&#10;Country Rest should throw exception if country list is empty&#10;Country Rest should throw exception in delete country if foreign key relation exists&#10;Country Rest should update country details&#10;Country Rest should throw exception in update if country list is empty&#10;Country Rest should throw exception if unique code is violated&#10;Country Rest should throw exception if country for country id as 4" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="ScalaTest.CompanyRestTestSpec.Company Rest should return a company list&#10;Company Rest should return company for company id as 2&#10;Company Rest should throw exception in get company by id for company id 5&#10;Company Rest should throw exception for empty company list&#10;Company Rest should insert a company to database&#10;Company Rest should throw exception if country list is empty&#10;Company Rest should delete company for company id as 3&#10;Company Rest should throw exception in delete route for empty company list&#10;Company Rest should update company details&#10;Company Rest should throw exception company id as 5&#10;Company Rest should throw exception if country is not found" />
-        <item index="1" class="java.lang.String" itemvalue="ScalaTest.CompanyServiceTestSpec" />
-        <item index="2" class="java.lang.String" itemvalue="ScalaTest.CompanyServiceTestSpec.Company Service should return a company in get company for company id as 1&#10;Company Service should throw exception in get company for empty company list&#10;Company Service should throw exception in get company by id for company id 5&#10;Company Service should insert company in insert company&#10;Company Service should throw exception in insert company if name and licence number not defined&#10;Company Service should throw exception in insert company if country does not exists&#10;Company Service should throw exception for insert company if country list is empty&#10;Company Service should throw exception for insert company if duplicate country is inserted&#10;Company Service should delete company in delete company for company id as 3&#10;Company Service should throw exception in delete company for empty company list&#10;Company Service should throw exception in delete company for company id as 5&#10;Company Service should throw exception in delete company if foreign key relation exists&#10;Company Service should update company by id for company id as 1&#10;Company Service should throw exception in update company if name and licence number not defined&#10;Company Service should throw exception in update company for company id as 5&#10;Company Service should throw exception in update company if country does not exists&#10;Company Service should throw exception in update company for duplicate company details" />
-        <item index="3" class="java.lang.String" itemvalue="ScalaTest.CountryRestTestSpec.Country Rest should return list of countries" />
-        <item index="4" class="java.lang.String" itemvalue="ScalaTest.CompanyRestTestSpec.Company Rest should throw exception in delete route for empty company list" />
+        <item index="0" class="java.lang.String" itemvalue="ScalaTest.CountryRestTestSpec.Country Rest should return list of countries&#10;Country Rest should throw exception in get if country list is empty&#10;Country Rest should insert country to list&#10;Country Rest should throw exception in insert if duplicate code is inserted&#10;Country Rest should delete country by id for id as 3&#10;Country Rest should throw exception if country list is empty&#10;Country Rest should throw exception in delete country if foreign key relation exists&#10;Country Rest should update country details&#10;Country Rest should throw exception in update if country list is empty&#10;Country Rest should throw exception if unique code is violated&#10;Country Rest should throw exception if country for country id as 4" />
+        <item index="1" class="java.lang.String" itemvalue="ScalaTest.CountryRestTestSpec.Country Rest should return list of countries&#10;Country Rest should throw exception if country list is empty&#10;Country Rest should insert country to list&#10;Country Rest should throw exception in insert if duplicate code is inserted&#10;Country Rest should delete country by id for id as 3&#10;Country Rest should throw exception if country list is empty&#10;Country Rest should throw exception in delete countryif foreign key relation exists&#10;Country Rest should update country details&#10;Country Rest should throw exception if country list is empty&#10;Country Rest should throw exception if unique code is violated&#10;Country Rest should throw exception if country for country id as 4" />
+        <item index="2" class="java.lang.String" itemvalue="ScalaTest.CountryRestTestSpec.Country Rest should return list of countries&#10;Country Rest should throw exception if country list is empty&#10;Country Rest should insert country to list&#10;Country Rest should throw exception in insert if duplicate code is inserted" />
+        <item index="3" class="java.lang.String" itemvalue="ScalaTest.CompanyRestTestSpec.Company Rest should return a company list&#10;Company Rest should return company for company id as 2&#10;Company Rest should throw exception in get company by id for company id 5&#10;Company Rest should throw exception for empty company list&#10;Company Rest should insert a company to database&#10;Company Rest should throw exception if country list is empty&#10;Company Rest should delete company for company id as 3&#10;Company Rest should throw exception in delete route for empty company list&#10;Company Rest should update company details&#10;Company Rest should throw exception company id as 5&#10;Company Rest should throw exception if country is not found" />
+        <item index="4" class="java.lang.String" itemvalue="ScalaTest.CompanyServiceTestSpec" />
       </list>
     </recent_temporary>
   </component>
@@ -516,7 +493,14 @@
       <option name="project" value="LOCAL" />
       <updated>1510569658170</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="test cases updated">
+      <created>1510570908080</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1510570908080</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -573,7 +557,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5427632" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.60361844" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21875" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -816,16 +800,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/core/CustomDirectives.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="37" column="45" lean-forward="false" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="45" />
-          <folding>
-            <element signature="e#73#106#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/BaseRepository.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
@@ -847,16 +821,6 @@
         <state relative-caret-position="194">
           <caret line="32" column="6" lean-forward="false" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/CountryApi.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="17" column="12" lean-forward="true" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
-          <folding>
-            <element signature="e#30#70#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -894,10 +858,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/com/reactore/feature/CompanyRestTestSpec.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+          <folding>
+            <element signature="e#30#73#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/com/reactore/feature/CountryServiceTestSpec.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="39" column="68" lean-forward="false" selection-start-line="39" selection-start-column="68" selection-end-line="39" selection-end-column="68" />
+        <state relative-caret-position="677">
+          <caret line="94" column="45" lean-forward="false" selection-start-line="94" selection-start-column="45" selection-end-line="94" selection-end-column="45" />
           <folding>
             <element signature="e#30#56#0" expanded="true" />
             <element signature="e#483#778#0" expanded="false" />
@@ -905,24 +879,23 @@
             <element signature="e#1166#1411#0" expanded="false" />
             <element signature="e#2012#2327#0" expanded="false" />
             <element signature="e#2400#2734#0" expanded="false" />
-            <element signature="e#3458#3788#0" expanded="false" />
-            <element signature="e#3853#4194#0" expanded="false" />
-            <element signature="e#4270#4604#0" expanded="false" />
-            <element signature="e#4684#5033#0" expanded="false" />
-            <element signature="e#5146#5587#0" expanded="false" />
-            <element signature="e#5657#6019#0" expanded="false" />
-            <element signature="e#6086#6455#0" expanded="false" />
-            <element signature="e#6538#6918#0" expanded="false" />
+            <element signature="e#3487#3817#0" expanded="false" />
+            <element signature="e#3882#4223#0" expanded="false" />
+            <element signature="e#4299#4633#0" expanded="false" />
+            <element signature="e#4713#5062#0" expanded="false" />
+            <element signature="e#5715#6077#0" expanded="false" />
+            <element signature="e#6144#6513#0" expanded="false" />
+            <element signature="e#6596#6976#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/com/reactore/feature/CompanyRestTestSpec.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/core/CustomDirectives.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+        <state relative-caret-position="90">
+          <caret line="37" column="45" lean-forward="false" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="45" />
           <folding>
-            <element signature="e#30#73#0" expanded="true" />
+            <element signature="e#73#106#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -937,10 +910,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/com/reactore/feature/CountryRestTestSpec.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="37" column="41" lean-forward="false" selection-start-line="37" selection-start-column="41" selection-end-line="37" selection-end-column="41" />
+        <state relative-caret-position="-677">
+          <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
           <folding>
             <element signature="e#30#73#0" expanded="true" />
+            <element signature="e#675#939#0" expanded="false" />
+            <element signature="e#999#1305#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/CountryApi.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="76" column="69" lean-forward="true" selection-start-line="76" selection-start-column="69" selection-end-line="76" selection-end-column="69" />
+          <folding>
+            <element signature="e#30#70#0" expanded="true" />
+            <element signature="e#1343#2114#0" expanded="false" />
+            <element signature="e#5192#6237#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -59,7 +59,7 @@ class CountryServiceTestSpec extends WordSpec with ScalaFutures with Matchers {
          when(MockCountryService.countryRepository.update(any[Long], any[Country])).thenReturn(Future.successful(1))
          val updatedCountry = Country(3, "Germany", "English", "GRM")
          val result = MockCountryService.updateCountryById(3, updatedCountry)
-         result.futureValue shouldBe 1
+         result.futureValue shouldBe "Updated country successfully"
       }
       "throw exception for update country for name and language not defined" in {
          when(MockCountryService.countryRepository.countryFuture).thenReturn(MockCountryRepository.countryFuture)
@@ -92,7 +92,7 @@ class CountryServiceTestSpec extends WordSpec with ScalaFutures with Matchers {
          when(MockCountryService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
          when(MockCountryService.countryRepository.delete(any[Long])).thenReturn(Future.successful(1))
          val result = MockCountryService.deleteCountryById(3)
-         result.futureValue shouldBe 1
+         result.futureValue shouldBe "Deleted country successfully"
       }
       "throw exception for delete country for empty country list" in {
          when(MockCountryService.countryRepository.countryFuture).thenReturn(MockCountryRepository.emptyList)
