@@ -13,6 +13,18 @@ import scala.concurrent.Future
   */
 class CountryServiceTestSpec extends WordSpec with ScalaFutures with Matchers {
    "Country Service " should {
+      // test cases for getAll method
+      "return all country list " in {
+         when(MockCountryService.countryRepository.countryFuture).thenReturn(MockCountryRepository.countryFuture)
+         val result = MockCountryService.getAll
+         val expectedResult = MockCountryRepository.countryList
+         result.futureValue shouldBe expectedResult
+      }
+      "throw exception in get all for empty country list" in {
+         when(MockCountryService.countryRepository.countryFuture).thenReturn(MockCountryRepository.emptyList)
+         val result = MockCountryService.getAll
+         result.failed.futureValue shouldBe an[EmptyListException]
+      }
       //test cases for getCountryById
       "return a country in get by id for id as 1" in {
          when(MockCountryService.countryRepository.countryFuture).thenReturn(MockCountryRepository.countryFuture)
@@ -63,7 +75,7 @@ class CountryServiceTestSpec extends WordSpec with ScalaFutures with Matchers {
       }
       "throw exception for update country for name and language not defined" in {
          when(MockCountryService.countryRepository.countryFuture).thenReturn(MockCountryRepository.countryFuture)
-         val updatedCountry = Country(3, "", "", "GRM")
+         val updatedCountry = Country(3, "", "", "")
          val result = MockCountryService.updateCountryById(3, updatedCountry)
          result.failed.futureValue shouldBe an[FieldNotDefinedException]
       }

@@ -16,76 +16,70 @@ class CountryService {
 
    // save country
    def insertCountry(country: Country): Future[String] = {
-      for {
+      val result = for {
          countryList <- countryRepository.countryFuture
-         res = if (country.name.nonEmpty && country.language.nonEmpty) {
-            if (countryList.nonEmpty) {
-               val uniqueCodeOption = countryList.find(_.code == country.code)
-               if (uniqueCodeOption.isEmpty) {
-                  countryRepository.insert(country)
-                  Future.successful("Inserted country successfully")
-               } else throw UniqueKeyViolationException(exception = new Exception("Unique country code violated!!"), message = "Unique country code violated!!")
-            } else {countryRepository.insert(country); Future.successful("Inserted country successfully")}
-         } else throw FieldNotDefinedException(exception = new Exception("Fields not defined!!"), message = "Fields not defined!!")
+         _ = if (country.name.isEmpty && country.language.isEmpty) throw FieldNotDefinedException(exception = new Exception("Fields not defined!!"), message = "Fields not defined!!")
+         _ = if (countryList.isEmpty) countryRepository.insert(country).map { x => "Inserted country successfully" }
+         uniqueCodeOption = countryList.find(_.code == country.code)
+         res <- if (uniqueCodeOption.isEmpty) {
+            countryRepository.insert(country).map { x => "Inserted country successfully" }
+         } else Future.failed(UniqueKeyViolationException(exception = new Exception("Unique country code violated!!"), message = "Unique country code violated!!"))
       } yield res
-   }.flatten.recover { case ex => handleExceptions(ex) }
+      result.recover { case ex => handleExceptions(ex) }
+   }
 
    //get country by id
    def getCountryById(id: Long): Future[Country] = {
-      for {
+      val result = for {
          countryList <- countryRepository.countryFuture
-         res = if (countryList.nonEmpty) {
-            val countryOption = countryList.find(_.countryId == id)
-            if (countryOption.isDefined) {
-               countryOption.get
-            } else throw NoSuchEntityException(exception = new Exception("Country not found!!"),message = "Country not found!!")
-            //countryOption.getOrElse(throw NoSuchEntityException(exception = new Exception("Country not found!!")))
-         } else throw EmptyListException(exception = new Exception("Country list is empty!!"),message = "Country list is empty!!")
+         _ = if (countryList.isEmpty) throw EmptyListException(exception = new Exception("Country list is empty!!"), message = "Country list is empty!!")
+         countryOption = countryList.find(_.countryId == id)
+         res = if (countryOption.isDefined) {
+            countryOption.get
+         } else throw NoSuchEntityException(exception = new Exception("Country not found!!"), message = "Country not found!!")
+         //countryOption.getOrElse(throw NoSuchEntityException(exception = new Exception("Country not found!!")))
       } yield res
-   }.recover { case ex => handleExceptions(ex) }
+      result.recover { case ex => handleExceptions(ex) }
+   }
 
    //delete country by id
    def deleteCountryById(id: Long): Future[String] = {
-      for {
+      val result = for {
          countryList <- countryRepository.countryFuture
          companyList <- companyRepository.companyFuture
-         res = if (countryList.nonEmpty) {
-            val countryOption = countryList.find(_.countryId == id)
-            if (countryOption.isDefined) {
-               val companiesForGivenCountry = companyList.filter(_.country == id)
-               if (companiesForGivenCountry.isEmpty) {
-                  countryRepository.delete(id)
-                  Future.successful("Deleted country successfully")
-               } else throw ForeignKeyRelationFoundException(exception = new Exception("Foreign key relation found in company table!!"), message = "Foreign key relation found in company table!!")
-            } else throw NoSuchEntityException(exception = new Exception("Country for given id doesn't exists!!"), message = "Country for given id doesn't exists!!")
-         } else throw EmptyListException(exception = new Exception("Country list is empty!!"), message = "Country list is empty!!")
+         _ = if (countryList.isEmpty) throw EmptyListException(exception = new Exception("Country list is empty!!"), message = "Country list is empty!!")
+         countryOption = countryList.find(_.countryId == id)
+         _ = if (countryOption.isEmpty) throw NoSuchEntityException(exception = new Exception("Country for given id doesn't exists!!"), message = "Country for given id doesn't exists!!")
+         companiesForGivenCountry = companyList.filter(_.country == id)
+         _ = if (companiesForGivenCountry.nonEmpty) throw ForeignKeyRelationFoundException(exception = new Exception("Foreign key relation found in company table!!"), message = "Foreign key relation found in company table!!")
+         res <- countryRepository.delete(id).map { x => "Deleted country successfully" }
       } yield res
-   }.flatten.recover { case ex => handleExceptions(ex) }
+      result.recover { case ex => handleExceptions(ex) }
+   }
 
    // update country by id
    def updateCountryById(id: Long, updatedCountry: Country): Future[String] = {
-      for {
+      val result = for {
          countryList <- countryRepository.countryFuture
-         res = if (updatedCountry.name.nonEmpty && updatedCountry.language.nonEmpty && updatedCountry.code.nonEmpty) {
-            if (countryList.nonEmpty) {
-               val countryOption = countryList.find(_.countryId == id)
-               if (countryOption.isDefined) {
-                  val uniqueCountryCode = countryList.find(_.code.equalsIgnoreCase(updatedCountry.code))
-                  if (uniqueCountryCode.isEmpty) {
-                     countryRepository.update(id, updatedCountry)
-                     Future.successful("Updated country successfully")
-                  } else throw UniqueKeyViolationException(exception = new Exception("Updated country has duplicate code!!"), message = "Updated country has duplicate code!!")
-               } else throw NoSuchEntityException(exception = new Exception("Country for given id doesn't exists!!"), message = "Country for given id doesn't exists!!")
-            } else throw EmptyListException(exception = new Exception("Country list is empty!!"), message = "Country list is empty!!")
-         } else throw FieldNotDefinedException(exception = new Exception("Fields are not defined!!"), message = "Fields are not defined!!")
+         _ = if (updatedCountry.name.isEmpty && updatedCountry.language.isEmpty && updatedCountry.code.isEmpty) throw FieldNotDefinedException(exception = new Exception("Fields are not defined!!"), message = "Fields are not defined!!")
+         _ = if (countryList.isEmpty) throw EmptyListException(exception = new Exception("Country list is empty!!"), message = "Country list is empty!!")
+         countryOption = countryList.find(_.countryId == id)
+         _ = if (countryOption.isEmpty) throw NoSuchEntityException(exception = new Exception("Country for given id doesn't exists!!"), message = "Country for given id doesn't exists!!")
+         uniqueCountryCode = countryList.find(_.code.equalsIgnoreCase(updatedCountry.code))
+         res <- if (uniqueCountryCode.isEmpty) {
+            countryRepository.update(id, updatedCountry).map { x => "Updated country successfully" }
+         } else Future.failed(UniqueKeyViolationException(exception = new Exception("Updated country has duplicate code!!"), message = "Updated country has duplicate code!!"))
       } yield res
-   }.flatten.recover { case ex => handleExceptions(ex) }
+      result.recover { case ex => handleExceptions(ex) }
+   }
 
    def getAll: Future[Seq[Country]] = {
-      for {
+      val result = for {
          countryList <- countryRepository.countryFuture
-         res = if (countryList.nonEmpty) {countryList} else throw EmptyListException(message = "Country list is empty!!", exception = new Exception("Country list is empty!!"))
+         _ = if (countryList.isEmpty) throw EmptyListException(message = "Country list is empty!!", exception = new Exception("Country list is empty!!"))
+         res = countryList
       } yield res
+      result.recover { case ex => handleExceptions(ex) }
    }
 
 }

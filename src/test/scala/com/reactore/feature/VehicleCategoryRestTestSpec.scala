@@ -46,6 +46,12 @@ class VehicleCategoryRestTestSpec extends WordSpec with Matchers with ScalatestR
             responseAs[String] shouldBe "Vehicle category not found for given id!!".asJson
          }
       }
+      "throw exception in get category for empty category list" in {
+         when(MockVehicleCategoryService.vehicleCategoryRepository.vehicleCategoryFuture).thenReturn(MockVehicleCategoryRepository.emptyList)
+         Get("/vehiclecategory/1") ~> testRoute ~> check {
+            status shouldEqual StatusCodes.BadRequest
+         }
+      }
 
       "delete vehicle category for id as 3" in {
          when(MockVehicleCategoryService.vehicleCategoryRepository.vehicleCategoryFuture).thenReturn(MockVehicleCategoryRepository.vehicleCategoryFuture)
@@ -73,6 +79,13 @@ class VehicleCategoryRestTestSpec extends WordSpec with Matchers with ScalatestR
             responseAs[String] shouldBe "Vehicle category list is empty!!".asJson
          }
       }
+      "throw exception in delete vehicle category for category id as 4" in {
+         when(MockVehicleCategoryService.vehicleCategoryRepository.vehicleCategoryFuture).thenReturn(MockVehicleCategoryRepository.vehicleCategoryFuture)
+         when(MockVehicleCategoryService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.vehicleTypeFuture)
+         Delete("/vehiclecategory/4") ~> testRoute ~> check {
+            status shouldEqual StatusCodes.BadRequest
+         }
+      }
 
       "insert new vehicle category" in {
          when(MockVehicleCategoryService.vehicleCategoryRepository.vehicleCategoryFuture).thenReturn(MockVehicleCategoryRepository.vehicleCategoryFuture)
@@ -87,6 +100,13 @@ class VehicleCategoryRestTestSpec extends WordSpec with Matchers with ScalatestR
          val newCategory = VehicleCategory(4, "4-Wheeler", maxCapacity = 15.0).asJson
          Post("/vehiclecategory").withEntity(newCategory) ~> testRoute ~> check {
             responseAs[String] shouldBe "Category Name already defined!!".asJson
+         }
+      }
+      "throw exception in insert category if category name is undefined" in {
+         when(MockVehicleCategoryService.vehicleCategoryRepository.vehicleCategoryFuture).thenReturn(MockVehicleCategoryRepository.vehicleCategoryFuture)
+         val newCategory = VehicleCategory(4, "", maxCapacity = 2.0).asJson
+         Post("/vehiclecategory").withEntity(newCategory) ~> testRoute ~> check {
+            status shouldEqual StatusCodes.BadRequest
          }
       }
       "update the vehicle category for category id as 1" in {
@@ -105,7 +125,19 @@ class VehicleCategoryRestTestSpec extends WordSpec with Matchers with ScalatestR
             responseAs[String] shouldBe "Vehicle category list is empty!!".asJson
          }
       }
-
-
+      "throw exception in update category if name is undefined" in {
+         when(MockVehicleCategoryService.vehicleCategoryRepository.vehicleCategoryFuture).thenReturn(MockVehicleCategoryRepository.vehicleCategoryFuture)
+         val updatedCategory = VehicleCategory(1, "", maxCapacity = 2.0).asJson
+         Put("/vehiclecategory/1").withEntity(updatedCategory) ~> testRoute ~> check {
+            status shouldEqual StatusCodes.BadRequest
+         }
+      }
+      "throw exception in update category for category id as 5" in {
+         when(MockVehicleCategoryService.vehicleCategoryRepository.vehicleCategoryFuture).thenReturn(MockVehicleCategoryRepository.vehicleCategoryFuture)
+         val updatedCategory = VehicleCategory(5, "15-Wheeler", maxCapacity = 2.0).asJson
+         Put("/vehiclecategory/5").withEntity(updatedCategory) ~> testRoute ~> check {
+            status shouldEqual StatusCodes.BadRequest
+         }
+      }
    }
 }

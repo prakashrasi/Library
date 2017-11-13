@@ -24,6 +24,14 @@ class CompanyRestTestSpec extends WordSpec with Matchers with ScalatestRouteTest
             responseAs[String] shouldBe MockCompanyRepository.companyList.asJson
          }
       }
+      "throw exception in get all for empty company list" in {
+         when(MockCompanyService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.emptyList)
+         Get("/company") ~> testRoute ~> check {
+            status shouldEqual StatusCodes.BadRequest
+            responseAs[String] shouldBe "Company list is empty!!".asJson
+         }
+      }
+
       "return company for company id as 2" in {
          when(MockCompanyService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
          Get("/company/2") ~> testRoute ~> check {
@@ -44,6 +52,7 @@ class CompanyRestTestSpec extends WordSpec with Matchers with ScalatestRouteTest
             responseAs[String] shouldBe "Company list is empty!!".asJson
          }
       }
+
       "insert a company to database" in {
          val newCompany = Company(4, "RENAULT", licenceNumber = "REN001", country = 2).asJson
          when(MockCompanyService.countryRepository.countryFuture).thenReturn(MockCountryRepository.countryFuture)
@@ -63,6 +72,31 @@ class CompanyRestTestSpec extends WordSpec with Matchers with ScalatestRouteTest
             responseAs[String] shouldBe "Country list is Empty!!".asJson
          }
       }
+      "throw exception in insert company if name and licence number not defined" in {
+         when(MockCompanyService.countryRepository.countryFuture).thenReturn(MockCountryRepository.countryFuture)
+         when(MockCompanyService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
+         val newCompany = Company(4, "", licenceNumber = "", country = 3).asJson
+         Post("/company").withEntity(newCompany) ~> testRoute ~> check {
+            status shouldEqual StatusCodes.BadRequest
+         }
+      }
+      "throw exception in insert company if country does not exists" in {
+         when(MockCompanyService.countryRepository.countryFuture).thenReturn(MockCountryRepository.countryFuture)
+         when(MockCompanyService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
+         val newCompany = Company(4, "RENAULT", licenceNumber = "REN001", country = 4).asJson
+         Post("/company").withEntity(newCompany) ~> testRoute ~> check {
+            status shouldEqual StatusCodes.BadRequest
+         }
+      }
+      "throw exception for insert company if duplicate country is inserted" in {
+         when(MockCompanyService.countryRepository.countryFuture).thenReturn(MockCountryRepository.countryFuture)
+         when(MockCompanyService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
+         val newCompany = Company(1, "TATA", licenceNumber = "TA001", country = 3).asJson
+         Post("/company").withEntity(newCompany) ~> testRoute ~> check {
+            status shouldEqual StatusCodes.BadRequest
+         }
+      }
+
       "delete company for company id as 3" in {
          when(MockCompanyService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
          when(MockCompanyService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
@@ -79,6 +113,21 @@ class CompanyRestTestSpec extends WordSpec with Matchers with ScalatestRouteTest
             responseAs[String] shouldBe "Company list is empty!!".asJson
          }
       }
+      "throw exception in delete company for company id as 5" in {
+         when(MockCompanyService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
+         when(MockCompanyService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
+         Delete("/company/5") ~> testRoute ~> check {
+            status shouldEqual StatusCodes.BadRequest
+         }
+      }
+      "throw exception in delete company if foreign key relation exists" in {
+         when(MockCompanyService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
+         when(MockCompanyService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
+         Delete("/company/1") ~> testRoute ~> check {
+            status shouldEqual StatusCodes.BadRequest
+         }
+      }
+
       "update company details" in {
          val updatedCompany = Company(2, "Scania", licenceNumber = "SCAN001", country = 2).asJson
          when(MockCompanyService.countryRepository.countryFuture).thenReturn(MockCountryRepository.countryFuture)
@@ -106,7 +155,21 @@ class CompanyRestTestSpec extends WordSpec with Matchers with ScalatestRouteTest
             responseAs[String] shouldBe "No country found!!".asJson
          }
       }
-
-
+      "throw exception in update company if name and licence number not defined" in {
+         when(MockCompanyService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
+         when(MockCompanyService.countryRepository.countryFuture).thenReturn(MockCountryRepository.countryFuture)
+         val updatedCompany = Company(1, "", licenceNumber = "", country = 1).asJson
+         Put("/company/1").withEntity(updatedCompany) ~> testRoute ~> check {
+            status shouldEqual StatusCodes.BadRequest
+         }
+      }
+      "throw exception in update company for duplicate company details" in {
+         when(MockCompanyService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
+         when(MockCompanyService.countryRepository.countryFuture).thenReturn(MockCountryRepository.countryFuture)
+         val updatedCompany = Company(1, "TATA", licenceNumber = "TA001", country = 1).asJson
+         Put("/company/1").withEntity(updatedCompany) ~> testRoute ~> check {
+            status shouldEqual StatusCodes.BadRequest
+         }
+      }
    }
 }

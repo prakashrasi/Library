@@ -13,6 +13,18 @@ import scala.concurrent.Future
   */
 class VehicleServiceTestSpec extends WordSpec with ScalaFutures with Matchers {
    "Vehicle Service" should {
+      // test cases for getAll method
+      "return all vehicle list " in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
+         val result = MockVehicleService.getAll
+         val expectedResult = MockVehicleRepository.vehicleList
+         result.futureValue shouldBe expectedResult
+      }
+      "throw exception in get all for empty vehicle list" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.emptyList)
+         val result = MockVehicleService.getAll
+         result.failed.futureValue shouldBe an[EmptyListException]
+      }
       "get vehicle in get by id for vehicle id as 1" in {
          when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
          val expectedResult = MockVehicleRepository.vehicle1

@@ -31,16 +31,23 @@ class CountryRestTestSpec extends WordSpec with Matchers with ScalatestRouteTest
             responseAs[String] shouldBe "Country list is empty!!".asJson
          }
       }
-      "return a country for id as 1"in{
+
+      "return a country for id as 1" in {
          when(MockCountryService.countryRepository.countryFuture).thenReturn(MockCountryRepository.countryFuture)
          Get("/country/1") ~> testRoute ~> check {
             responseAs[String] shouldBe MockCountryRepository.country1.asJson
          }
       }
-      "throw exception for get country by id for country id as 6"in{
+      "throw exception for get country by id for country id as 6" in {
          when(MockCountryService.countryRepository.countryFuture).thenReturn(MockCountryRepository.countryFuture)
          Get("/country/6") ~> testRoute ~> check {
             responseAs[String] shouldBe "Country not found!!".asJson
+         }
+      }
+      "throw exception for get country by id for empty country list" in {
+         when(MockCountryService.countryRepository.countryFuture).thenReturn(MockCountryRepository.emptyList)
+         Get("/country/6") ~> testRoute ~> check {
+            status shouldEqual StatusCodes.BadRequest
          }
       }
       "insert country to list" in {
@@ -59,6 +66,14 @@ class CountryRestTestSpec extends WordSpec with Matchers with ScalatestRouteTest
             responseAs[String] shouldBe "Unique country code violated!!".asJson
          }
       }
+      "throw exception in insert company for country name and language not defined" in {
+         when(MockCountryService.countryRepository.countryFuture).thenReturn(MockCountryRepository.countryFuture)
+         val newCountry = Country(4, "", "", "XYZ").asJson
+         Post("/country").withEntity(newCountry) ~> testRoute ~> check {
+            status shouldEqual StatusCodes.BadRequest
+         }
+      }
+
       "delete country by id for id as 3" in {
          when(MockCountryService.countryRepository.countryFuture).thenReturn(MockCountryRepository.countryFuture)
          when(MockCountryService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
@@ -81,6 +96,13 @@ class CountryRestTestSpec extends WordSpec with Matchers with ScalatestRouteTest
          Delete("/country/2") ~> testRoute ~> check {
             status shouldEqual StatusCodes.BadRequest
             responseAs[String] shouldBe "Foreign key relation found in company table!!".asJson
+         }
+      }
+      "throw exception for delete country for country id as 5" in {
+         when(MockCountryService.countryRepository.countryFuture).thenReturn(MockCountryRepository.countryFuture)
+         when(MockCountryService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
+         Delete("/country/5") ~> testRoute ~> check {
+            status shouldEqual StatusCodes.BadRequest
          }
       }
       "update country details" in {
@@ -107,13 +129,21 @@ class CountryRestTestSpec extends WordSpec with Matchers with ScalatestRouteTest
             responseAs[String] shouldBe "Updated country has duplicate code!!".asJson
          }
       }
-      "throw exception if country for country id as 4"in{
+      "throw exception if country for country id as 4" in {
          val updatedCountry = Country(4, "Indonesia", language = "English", code = "INA").asJson
          when(MockCountryService.countryRepository.countryFuture).thenReturn(MockCountryRepository.countryFuture)
          Put("/country/4").withEntity(updatedCountry) ~> testRoute ~> check {
             status shouldEqual StatusCodes.BadRequest
             responseAs[String] shouldBe "Country for given id doesn't exists!!".asJson
          }
+      }
+      "throw exception for update country for name and language not defined" in {
+         when(MockCountryService.countryRepository.countryFuture).thenReturn(MockCountryRepository.countryFuture)
+         val updatedCountry = Country(3, "", "", "").asJson
+         Put("/country/3").withEntity(updatedCountry) ~> testRoute ~> check {
+            status shouldEqual StatusCodes.BadRequest
+         }
+
       }
    }
 

@@ -14,6 +14,19 @@ import scala.concurrent.Future
 
 class CompanyServiceTestSpec extends WordSpec with Matchers with ScalaFutures {
    "Company Service " should {
+      // test cases for getAll method
+      "return all company list " in {
+         when(MockCompanyService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
+         val result = MockCompanyService.getAll
+         val expectedResult = MockCompanyRepository.companyList
+         result.futureValue shouldBe expectedResult
+      }
+      "throw exception in get all for empty company list" in {
+         when(MockCompanyService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.emptyList)
+         val result = MockCompanyService.getAll
+         result.failed.futureValue shouldBe an[EmptyListException]
+      }
+
       // test cases for getCompanyById method
       "return a company in get company for company id as 1" in {
          when(MockCompanyService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
@@ -33,7 +46,7 @@ class CompanyServiceTestSpec extends WordSpec with Matchers with ScalaFutures {
       }
 
       // test cases for insertCompany method
-      "insert company in insert company " in {
+      "insert company  to list in insert company " in {
          when(MockCompanyService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
          when(MockCompanyService.countryRepository.countryFuture).thenReturn(MockCountryRepository.countryFuture)
          when(MockCompanyService.companyRepository.insert(any[Company])).thenReturn(Future.successful(1))
