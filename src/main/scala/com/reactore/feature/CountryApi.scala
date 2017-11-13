@@ -15,7 +15,7 @@ class CountryService {
    self: CountryFacadeComponent =>
 
    // save country
-   def insertCountry(country: Country): Future[Int] = {
+   def insertCountry(country: Country): Future[String] = {
       for {
          countryList <- countryRepository.countryFuture
          res = if (country.name.nonEmpty && country.language.nonEmpty) {
@@ -23,9 +23,10 @@ class CountryService {
                val uniqueCodeOption = countryList.find(_.code == country.code)
                if (uniqueCodeOption.isEmpty) {
                   countryRepository.insert(country)
-               } else throw UniqueKeyViolationException(exception = new Exception("Unique country code violated!!"))
-            } else countryRepository.insert(country)
-         } else throw FieldNotDefinedException(exception = new Exception("Name/Language not defined!!"))
+                  Future.successful("Inserted country successfully")
+               } else throw UniqueKeyViolationException(exception = new Exception("Unique country code violated!!"), message = "Unique country code violated!!")
+            } else {countryRepository.insert(country); Future.successful("Inserted country successfully")}
+         } else throw FieldNotDefinedException(exception = new Exception("Fields not defined!!"), message = "Fields not defined!!")
       } yield res
    }.flatten.recover { case ex => handleExceptions(ex) }
 

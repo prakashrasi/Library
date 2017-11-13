@@ -37,7 +37,7 @@ class CountryServiceTestSpec extends WordSpec with ScalaFutures with Matchers {
          when(MockCountryService.countryRepository.insert(any[Country])).thenReturn(Future.successful(1))
          val newCountry = Country(4, "FRANCE", "FRENCH", "FRA")
          val result = MockCountryService.insertCountry(newCountry)
-         result.futureValue shouldBe 1
+         result.futureValue shouldBe "Inserted country successfully"
       }
       "throw exception in insert company for country name and language not defined" in {
          when(MockCountryService.countryRepository.countryFuture).thenReturn(MockCountryRepository.countryFuture)

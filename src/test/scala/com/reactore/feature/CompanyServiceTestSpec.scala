@@ -39,7 +39,7 @@ class CompanyServiceTestSpec extends WordSpec with Matchers with ScalaFutures {
          when(MockCompanyService.companyRepository.insert(any[Company])).thenReturn(Future.successful(1))
          val newCompany = Company(4, "IVECO", licenceNumber = "IVEC009", country = 3)
          val result = MockCompanyService.insertCompany(newCompany)
-         result.futureValue shouldBe 1
+         result.futureValue shouldBe "Inserted company successfully!!"
       }
       "throw exception in insert company if name and licence number not defined" in {
          when(MockCompanyService.countryRepository.countryFuture).thenReturn(MockCountryRepository.countryFuture)
@@ -76,7 +76,7 @@ class CompanyServiceTestSpec extends WordSpec with Matchers with ScalaFutures {
          when(MockCompanyService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
          when(MockCompanyService.companyRepository.delete(any[Long])).thenReturn(Future.successful(1))
          val result = MockCompanyService.deleteCompanyById(3)
-         result.futureValue shouldBe 1
+         result.futureValue shouldBe "Deleted company successfully"
       }
       "throw exception in delete company for empty company list" in {
          when(MockCompanyService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
@@ -104,7 +104,7 @@ class CompanyServiceTestSpec extends WordSpec with Matchers with ScalaFutures {
          when(MockCompanyService.companyRepository.update(any[Long], any[Company])).thenReturn(Future.successful(1))
          val updatedCompany = Company(1, "Benz", licenceNumber = "BEN001", country = 1)
          val result = MockCompanyService.updateCompanyById(1, updatedCompany)
-         result.futureValue shouldBe 1
+         result.futureValue shouldBe "Updated company successfully"
       }
       "throw exception in update company if name and licence number not defined" in {
          when(MockCompanyService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)

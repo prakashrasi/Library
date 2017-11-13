@@ -1,13 +1,12 @@
 package com.reactore.feature
 
+import akka.http.scaladsl.model.StatusCodes
 import akka.http.scaladsl.server.Route
 import akka.http.scaladsl.testkit.ScalatestRouteTest
+import com.reactore.core.CustomDirectives._
 import com.reactore.core._
-import CustomDirectives._
-import akka.http.scaladsl.model.StatusCodes
-import org.mockito.Mockito._
 import org.mockito.Matchers._
-import org.scalatest.mockito.MockitoSugar
+import org.mockito.Mockito._
 import org.scalatest.{Matchers, WordSpec}
 
 import scala.concurrent.Future
@@ -15,7 +14,7 @@ import scala.concurrent.Future
 /**
   * created by Kartik on 13-11-2017
   */
-class CompanyRestTestSpec extends WordSpec with Matchers with ScalatestRouteTest with MockitoSugar {
+class CompanyRestTestSpec extends WordSpec with Matchers with ScalatestRouteTest {
    val companyRest      = new CompanyRest(MockCompanyService)
    val testRoute: Route = companyRest.companyRoute
    "Company Rest" should {
@@ -86,7 +85,7 @@ class CompanyRestTestSpec extends WordSpec with Matchers with ScalatestRouteTest
          when(MockCompanyService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
          when(MockCompanyService.companyRepository.update(anyLong, any[Company])).thenReturn(Future.successful(1))
          Put("/company/2").withEntity(updatedCompany) ~> testRoute ~> check {
-            responseAs[String] shouldBe "Updated company is already present!!".asJson
+            responseAs[String] shouldBe "Updated company successfully".asJson
          }
       }
       "throw exception company id as 5" in {
@@ -99,10 +98,10 @@ class CompanyRestTestSpec extends WordSpec with Matchers with ScalatestRouteTest
          }
       }
       "throw exception if country is not found" in {
-         val updatedCompany = Company(5, "Scania", licenceNumber = "SCAN001", country = 5).asJson
+         val updatedCompany = Company(2, "Scania", licenceNumber = "SCAN001", country = 5).asJson
          when(MockCompanyService.countryRepository.countryFuture).thenReturn(MockCountryRepository.countryFuture)
          when(MockCompanyService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
-         Put("/company/5").withEntity(updatedCompany) ~> testRoute ~> check {
+         Put("/company/2").withEntity(updatedCompany) ~> testRoute ~> check {
             status shouldEqual StatusCodes.BadRequest
             responseAs[String] shouldBe "No country found!!".asJson
          }
