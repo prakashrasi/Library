@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="07e0413e-6afb-4dc9-9527-7ca5752d77ec" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/scala/com/reactore/feature/CompanyServiceTestSpec.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleCategoryServiceTestSpec.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleTypeServiceTestSpec.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/reactore/feature/BaseRepository.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/reactore/feature/BaseRepository.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/reactore/feature/CompanyApi.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/reactore/feature/CompanyApi.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/reactore/feature/CountryApi.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/reactore/feature/CountryApi.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleApi.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleApi.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleCategoryApi.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleCategoryApi.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleTypeApi.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleTypeApi.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/com/reactore/feature/CountryServiceTestSpec.scala" afterPath="$PROJECT_DIR$/src/test/scala/com/reactore/feature/CountryServiceTestSpec.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/com/reactore/feature/MockRepository.scala" afterPath="$PROJECT_DIR$/src/test/scala/com/reactore/feature/MockRepository.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleCategoryServiceTestSpec.scala" afterPath="$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleCategoryServiceTestSpec.scala" />
     </list>
     <ignored path="$PROJECT_DIR$/project/project/target/" />
     <ignored path="$PROJECT_DIR$/project/target/" />
@@ -28,75 +23,47 @@
       <file leaf-file-name="MockRepository.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/scala/com/reactore/feature/MockRepository.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="523">
-              <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+            <state relative-caret-position="343">
+              <caret line="43" column="143" lean-forward="false" selection-start-line="43" selection-start-column="143" selection-end-line="43" selection-end-column="143" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VehicleCategoryServiceTestSpec.scala" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleCategoryServiceTestSpec.scala">
+      <file leaf-file-name="VehicleTypeServiceTestSpec.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleTypeServiceTestSpec.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="12" column="33" lean-forward="true" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+            <state relative-caret-position="154">
+              <caret line="72" column="6" lean-forward="false" selection-start-line="72" selection-start-column="6" selection-end-line="72" selection-end-column="6" />
               <folding>
                 <element signature="e#30#56#0" expanded="true" />
+                <element signature="e#496#827#0" expanded="false" />
+                <element signature="e#898#1167#0" expanded="false" />
+                <element signature="e#1235#1515#0" expanded="false" />
+                <element signature="e#1603#2193#0" expanded="false" />
+                <element signature="e#2267#2770#0" expanded="false" />
+                <element signature="e#2844#3347#0" expanded="false" />
+                <element signature="e#3416#3904#0" expanded="false" />
+                <element signature="e#3979#4485#0" expanded="false" />
+                <element signature="e#5148#5539#0" expanded="false" />
+                <element signature="e#5617#6019#0" expanded="false" />
+                <element signature="e#6093#6506#0" expanded="false" />
+                <element signature="e#7302#7813#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CompanyServiceTestSpec.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/scala/com/reactore/feature/CompanyServiceTestSpec.scala">
+      <file leaf-file-name="VehicleTypeApi.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleTypeApi.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+            <state relative-caret-position="405">
+              <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
               <folding>
                 <element signature="e#30#56#0" expanded="true" />
-                <element signature="e#501#796#0" expanded="false" />
-                <element signature="e#862#1107#0" expanded="false" />
-                <element signature="e#1173#1425#0" expanded="false" />
-                <element signature="e#1517#2052#0" expanded="false" />
-                <element signature="e#2137#2588#0" expanded="false" />
-                <element signature="e#2661#3122#0" expanded="false" />
-                <element signature="e#3195#3646#0" expanded="false" />
-                <element signature="e#3726#4186#0" expanded="false" />
-                <element signature="e#4300#4742#0" expanded="false" />
-                <element signature="e#4811#5174#0" expanded="false" />
-                <element signature="e#5240#5610#0" expanded="false" />
-                <element signature="e#5687#6068#0" expanded="false" />
-                <element signature="e#6170#6729#0" expanded="false" />
-                <element signature="e#6814#7280#0" expanded="false" />
-                <element signature="e#7346#7819#0" expanded="false" />
-                <element signature="e#7892#8365#0" expanded="false" />
-                <element signature="e#8441#8916#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CountryServiceTestSpec.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/scala/com/reactore/feature/CountryServiceTestSpec.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="14" column="26" lean-forward="false" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
-              <folding>
-                <element signature="e#30#56#0" expanded="true" />
-                <element signature="e#483#778#0" expanded="false" />
-                <element signature="e#841#1093#0" expanded="false" />
-                <element signature="e#1166#1411#0" expanded="false" />
-                <element signature="e#1495#1894#0" expanded="false" />
-                <element signature="e#1982#2297#0" expanded="false" />
-                <element signature="e#2370#2704#0" expanded="false" />
-                <element signature="e#3428#3758#0" expanded="false" />
-                <element signature="e#3823#4164#0" expanded="false" />
-                <element signature="e#4240#4574#0" expanded="false" />
-                <element signature="e#4654#5003#0" expanded="false" />
-                <element signature="e#5116#5557#0" expanded="false" />
-                <element signature="e#5627#5989#0" expanded="false" />
-                <element signature="e#6056#6425#0" expanded="false" />
-                <element signature="e#6508#6888#0" expanded="false" />
+                <element signature="e#288#1636#0" expanded="false" />
+                <element signature="e#1641#2300#0" expanded="false" />
+                <element signature="e#2305#3315#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -105,10 +72,13 @@
       <file leaf-file-name="VehicleCategoryApi.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleCategoryApi.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="33" column="25" lean-forward="true" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
+            <state relative-caret-position="270">
+              <caret line="42" column="58" lean-forward="false" selection-start-line="42" selection-start-column="58" selection-end-line="42" selection-end-column="58" />
               <folding>
                 <element signature="e#30#56#0" expanded="true" />
+                <element signature="e#296#1175#0" expanded="false" />
+                <element signature="e#1180#1893#0" expanded="false" />
+                <element signature="e#1898#2988#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -119,6 +89,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="Kartik &lt;ksdeshamukh@gmail.com&gt;" />
         <option value="KartikSD &lt;ksdeshamukh@gmail.com&gt;" />
       </list>
     </option>
@@ -136,12 +107,14 @@
         <option value="$PROJECT_DIR$/src/main/scala/com/reactore/feature/CountryApi.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleApi.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleCategoryApi.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleTypeApi.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/com/reactore/feature/CountryServiceTestSpec.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/reactore/feature/BaseRepository.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/reactore/feature/CompanyApi.scala" />
-        <option value="$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleCategoryServiceTestSpec.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/com/reactore/feature/CompanyServiceTestSpec.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleCategoryServiceTestSpec.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleTypeApi.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleTypeServiceTestSpec.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/com/reactore/feature/MockRepository.scala" />
       </list>
     </option>
   </component>
@@ -253,43 +226,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="ScalaTest.VehicleCategoryServiceTestSpec.Vehicle Category Service should return vehicle category in get category by id for id as 1&#10;Vehicle Category Service should throw exception in get category by id for id as 5&#10;Vehicle Category Service should throw exception in get category for empty category list">
-    <configuration name="CompanyServiceTestSpec" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="slickassignments" />
-      <setting name="path" value="com.reactore.feature.CompanyServiceTestSpec" />
-      <setting name="package" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
-      <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="" />
-      <setting name="testKind" value="Class" />
-      <setting name="showProgressMessages" value="true" />
-      <setting name="useSbt" value="false" />
-      <setting name="useUiWithSbt" value="false" />
-      <classRegexps />
-      <testRegexps />
-      <envs />
-    </configuration>
-    <configuration name="CompanyServiceTestSpec.Company Service should return a company in get company for company id as 1&#10;Company Service should throw exception in get company for empty company list&#10;Company Service should throw exception in get company by id for company id 5&#10;Company Service should insert company in insert company&#10;Company Service should throw exception in insert company if name and licence number not defined&#10;Company Service should throw exception in insert company if country does not exists&#10;Company Service should throw exception for insert company if country list is empty&#10;Company Service should throw exception for insert company if duplicate country is inserted&#10;Company Service should delete company in delete company for company id as 3&#10;Company Service should throw exception in delete company for empty company list&#10;Company Service should throw exception in delete company for company id as 5&#10;Company Service should throw exception in delete company if foreign key relation exists&#10;Company Service should update company by id for company id as 1&#10;Company Service should throw exception in update company if name and licence number not defined&#10;Company Service should throw exception in update company for company id as 5&#10;Company Service should throw exception in update company if country does not exists&#10;Company Service should throw exception in update company for duplicate company details" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="slickassignments" />
-      <setting name="path" value="com.reactore.feature.CompanyServiceTestSpec" />
-      <setting name="package" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
-      <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="Company Service should return a company in get company for company id as 1&#10;Company Service should throw exception in get company for empty company list&#10;Company Service should throw exception in get company by id for company id 5&#10;Company Service should insert company in insert company&#10;Company Service should throw exception in insert company if name and licence number not defined&#10;Company Service should throw exception in insert company if country does not exists&#10;Company Service should throw exception for insert company if country list is empty&#10;Company Service should throw exception for insert company if duplicate country is inserted&#10;Company Service should delete company in delete company for company id as 3&#10;Company Service should throw exception in delete company for empty company list&#10;Company Service should throw exception in delete company for company id as 5&#10;Company Service should throw exception in delete company if foreign key relation exists&#10;Company Service should update company by id for company id as 1&#10;Company Service should throw exception in update company if name and licence number not defined&#10;Company Service should throw exception in update company for company id as 5&#10;Company Service should throw exception in update company if country does not exists&#10;Company Service should throw exception in update company for duplicate company details" />
-      <setting name="testKind" value="Test name" />
-      <setting name="showProgressMessages" value="true" />
-      <setting name="useSbt" value="false" />
-      <setting name="useUiWithSbt" value="false" />
-      <classRegexps />
-      <testRegexps />
-      <envs />
-    </configuration>
+  <component name="RunManager" selected="ScalaTest.VehicleTypeServiceTestSpec.Vehicle Type Service should get a vehicle type for type id as 1&#10;Vehicle Type Service should throw exception in get type id for empty vehicle type list&#10;Vehicle Type Service should throw exception in get type id for vehicle type id as 8&#10;Vehicle Type Service should insert a new vehicle type&#10;Vehicle Type Service should throw exception in insert vehicle type if name is not defined&#10;Vehicle Type Service should throw exception in insert type if category id does not exists&#10;Vehicle Type Service should throw exception in insert type if category list is empty&#10;Vehicle Type Service should throw exception in insert type if vehicle type already defined&#10;Vehicle Type Service should delete vehicle type for vehicle type id as 5&#10;Vehicle Type Service should throw exception in delete type if vehicle type list is empty&#10;Vehicle Type Service should throw exception in delete type if vehicle type id does not exists&#10;Vehicle Type Service should throw exception in delete type if foreign key relation exists&#10;Vehicle Type Service should update the vehicle type details&#10;Vehicle Type Service should throw exception in update vehicle type if vehicle type list is empty&#10;Vehicle Type Service should throw exception in update vehicle type for vehicle type id as 10&#10;Vehicle Type Service should throw exception in update vehicle type for vehicle category id as 4&#10;Vehicle Type Service should throw exception in update vehicle type if fields are not defined">
     <configuration name="CountryServiceTestSpec" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="slickassignments" />
@@ -336,6 +273,42 @@
       <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
       <setting name="searchForTest" value="Across module dependencies" />
       <setting name="testName" value="Vehicle Category Service should return vehicle category in get category by id for id as 1&#10;Vehicle Category Service should throw exception in get category by id for id as 5&#10;Vehicle Category Service should throw exception in get category for empty category list" />
+      <setting name="testKind" value="Test name" />
+      <setting name="showProgressMessages" value="true" />
+      <setting name="useSbt" value="false" />
+      <setting name="useUiWithSbt" value="false" />
+      <classRegexps />
+      <testRegexps />
+      <envs />
+    </configuration>
+    <configuration name="VehicleCategoryServiceTestSpec.Vehicle Category Service should return vehicle category in get category by id for id as 1&#10;Vehicle Category Service should throw exception in get category by id for id as 5&#10;Vehicle Category Service should throw exception in get category for empty category list&#10;Vehicle Category Service should insert vehicle into vehicle category table&#10;Vehicle Category Service should throw exception in insert category if category name is undefined&#10;Vehicle Category Service should throw exception in insert category if category name is undefined&#10;Vehicle Category Service should delete vehicle category for category id as 3&#10;Vehicle Category Service should throw exception in delete vehicle category for category id as 4&#10;Vehicle Category Service should throw exception in delete vehicle category for empty vehicle category list&#10;Vehicle Category Service should throw exception in delete vehicle category if foreign key relation exists&#10;Vehicle Category Service should update the vehicle category for category id as 1&#10;Vehicle Category Service should throw exception in update category if name is undefined&#10;Vehicle Category Service should throw exception in update category for category id as 5&#10;Vehicle Category Service should throw exception in update category for empty category list" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="slickassignments" />
+      <setting name="path" value="com.reactore.feature.VehicleCategoryServiceTestSpec" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="Vehicle Category Service should return vehicle category in get category by id for id as 1&#10;Vehicle Category Service should throw exception in get category by id for id as 5&#10;Vehicle Category Service should throw exception in get category for empty category list&#10;Vehicle Category Service should insert vehicle into vehicle category table&#10;Vehicle Category Service should throw exception in insert category if category name is undefined&#10;Vehicle Category Service should throw exception in insert category if category name is undefined&#10;Vehicle Category Service should delete vehicle category for category id as 3&#10;Vehicle Category Service should throw exception in delete vehicle category for category id as 4&#10;Vehicle Category Service should throw exception in delete vehicle category for empty vehicle category list&#10;Vehicle Category Service should throw exception in delete vehicle category if foreign key relation exists&#10;Vehicle Category Service should update the vehicle category for category id as 1&#10;Vehicle Category Service should throw exception in update category if name is undefined&#10;Vehicle Category Service should throw exception in update category for category id as 5&#10;Vehicle Category Service should throw exception in update category for empty category list" />
+      <setting name="testKind" value="Test name" />
+      <setting name="showProgressMessages" value="true" />
+      <setting name="useSbt" value="false" />
+      <setting name="useUiWithSbt" value="false" />
+      <classRegexps />
+      <testRegexps />
+      <envs />
+    </configuration>
+    <configuration name="VehicleTypeServiceTestSpec.Vehicle Type Service should get a vehicle type for type id as 1&#10;Vehicle Type Service should throw exception in get type id for empty vehicle type list&#10;Vehicle Type Service should throw exception in get type id for vehicle type id as 8&#10;Vehicle Type Service should insert a new vehicle type&#10;Vehicle Type Service should throw exception in insert vehicle type if name is not defined&#10;Vehicle Type Service should throw exception in insert type if category id does not exists&#10;Vehicle Type Service should throw exception in insert type if category list is empty&#10;Vehicle Type Service should throw exception in insert type if vehicle type already defined&#10;Vehicle Type Service should delete vehicle type for vehicle type id as 5&#10;Vehicle Type Service should throw exception in delete type if vehicle type list is empty&#10;Vehicle Type Service should throw exception in delete type if vehicle type id does not exists&#10;Vehicle Type Service should throw exception in delete type if foreign key relation exists&#10;Vehicle Type Service should update the vehicle type details&#10;Vehicle Type Service should throw exception in update vehicle type if vehicle type list is empty&#10;Vehicle Type Service should throw exception in update vehicle type for vehicle type id as 10&#10;Vehicle Type Service should throw exception in update vehicle type for vehicle category id as 4&#10;Vehicle Type Service should throw exception in update vehicle type if fields are not defined" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="slickassignments" />
+      <setting name="path" value="com.reactore.feature.VehicleTypeServiceTestSpec" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="Vehicle Type Service should get a vehicle type for type id as 1&#10;Vehicle Type Service should throw exception in get type id for empty vehicle type list&#10;Vehicle Type Service should throw exception in get type id for vehicle type id as 8&#10;Vehicle Type Service should insert a new vehicle type&#10;Vehicle Type Service should throw exception in insert vehicle type if name is not defined&#10;Vehicle Type Service should throw exception in insert type if category id does not exists&#10;Vehicle Type Service should throw exception in insert type if category list is empty&#10;Vehicle Type Service should throw exception in insert type if vehicle type already defined&#10;Vehicle Type Service should delete vehicle type for vehicle type id as 5&#10;Vehicle Type Service should throw exception in delete type if vehicle type list is empty&#10;Vehicle Type Service should throw exception in delete type if vehicle type id does not exists&#10;Vehicle Type Service should throw exception in delete type if foreign key relation exists&#10;Vehicle Type Service should update the vehicle type details&#10;Vehicle Type Service should throw exception in update vehicle type if vehicle type list is empty&#10;Vehicle Type Service should throw exception in update vehicle type for vehicle type id as 10&#10;Vehicle Type Service should throw exception in update vehicle type for vehicle category id as 4&#10;Vehicle Type Service should throw exception in update vehicle type if fields are not defined" />
       <setting name="testKind" value="Test name" />
       <setting name="showProgressMessages" value="true" />
       <setting name="useSbt" value="false" />
@@ -428,17 +401,17 @@
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="ScalaTest.CountryServiceTestSpec" />
       <item index="1" class="java.lang.String" itemvalue="ScalaTest.CountryServiceTestSpec.Country Service should return a country in get by id for id as 1&#10;Country Service should throw exception for get country by id for id as 4&#10;Country Service should throw exception for get country by id for empty country list&#10;Country Service should insert the country to list&#10;Country Service should throw exception in insert company for country name and language not defined&#10;Country Service should throw exception in insert country for duplicate country code&#10;Country Service should update country by id for country id as 3&#10;Country Service should throw exception for update country for name and language not defined&#10;Country Service should throw exception for update by id for country id as 5&#10;Country Service should throw exception for update country by id for empty country list&#10;Country Service should throw exception for update country by id for duplicate country code&#10;Country Service should delete country in delete country by id for id as 3&#10;Country Service should throw exception for delete country for empty country list&#10;Country Service should throw exception for delete country for country id as 5&#10;Country Service should throw exception for delete country by id if foreign key relation found" />
-      <item index="2" class="java.lang.String" itemvalue="ScalaTest.CompanyServiceTestSpec" />
-      <item index="3" class="java.lang.String" itemvalue="ScalaTest.CompanyServiceTestSpec.Company Service should return a company in get company for company id as 1&#10;Company Service should throw exception in get company for empty company list&#10;Company Service should throw exception in get company by id for company id 5&#10;Company Service should insert company in insert company&#10;Company Service should throw exception in insert company if name and licence number not defined&#10;Company Service should throw exception in insert company if country does not exists&#10;Company Service should throw exception for insert company if country list is empty&#10;Company Service should throw exception for insert company if duplicate country is inserted&#10;Company Service should delete company in delete company for company id as 3&#10;Company Service should throw exception in delete company for empty company list&#10;Company Service should throw exception in delete company for company id as 5&#10;Company Service should throw exception in delete company if foreign key relation exists&#10;Company Service should update company by id for company id as 1&#10;Company Service should throw exception in update company if name and licence number not defined&#10;Company Service should throw exception in update company for company id as 5&#10;Company Service should throw exception in update company if country does not exists&#10;Company Service should throw exception in update company for duplicate company details" />
-      <item index="4" class="java.lang.String" itemvalue="ScalaTest.VehicleCategoryServiceTestSpec.Vehicle Category Service should return vehicle category in get category by id for id as 1&#10;Vehicle Category Service should throw exception in get category by id for id as 5&#10;Vehicle Category Service should throw exception in get category for empty category list" />
+      <item index="2" class="java.lang.String" itemvalue="ScalaTest.VehicleCategoryServiceTestSpec.Vehicle Category Service should return vehicle category in get category by id for id as 1&#10;Vehicle Category Service should throw exception in get category by id for id as 5&#10;Vehicle Category Service should throw exception in get category for empty category list" />
+      <item index="3" class="java.lang.String" itemvalue="ScalaTest.VehicleCategoryServiceTestSpec.Vehicle Category Service should return vehicle category in get category by id for id as 1&#10;Vehicle Category Service should throw exception in get category by id for id as 5&#10;Vehicle Category Service should throw exception in get category for empty category list&#10;Vehicle Category Service should insert vehicle into vehicle category table&#10;Vehicle Category Service should throw exception in insert category if category name is undefined&#10;Vehicle Category Service should throw exception in insert category if category name is undefined&#10;Vehicle Category Service should delete vehicle category for category id as 3&#10;Vehicle Category Service should throw exception in delete vehicle category for category id as 4&#10;Vehicle Category Service should throw exception in delete vehicle category for empty vehicle category list&#10;Vehicle Category Service should throw exception in delete vehicle category if foreign key relation exists&#10;Vehicle Category Service should update the vehicle category for category id as 1&#10;Vehicle Category Service should throw exception in update category if name is undefined&#10;Vehicle Category Service should throw exception in update category for category id as 5&#10;Vehicle Category Service should throw exception in update category for empty category list" />
+      <item index="4" class="java.lang.String" itemvalue="ScalaTest.VehicleTypeServiceTestSpec.Vehicle Type Service should get a vehicle type for type id as 1&#10;Vehicle Type Service should throw exception in get type id for empty vehicle type list&#10;Vehicle Type Service should throw exception in get type id for vehicle type id as 8&#10;Vehicle Type Service should insert a new vehicle type&#10;Vehicle Type Service should throw exception in insert vehicle type if name is not defined&#10;Vehicle Type Service should throw exception in insert type if category id does not exists&#10;Vehicle Type Service should throw exception in insert type if category list is empty&#10;Vehicle Type Service should throw exception in insert type if vehicle type already defined&#10;Vehicle Type Service should delete vehicle type for vehicle type id as 5&#10;Vehicle Type Service should throw exception in delete type if vehicle type list is empty&#10;Vehicle Type Service should throw exception in delete type if vehicle type id does not exists&#10;Vehicle Type Service should throw exception in delete type if foreign key relation exists&#10;Vehicle Type Service should update the vehicle type details&#10;Vehicle Type Service should throw exception in update vehicle type if vehicle type list is empty&#10;Vehicle Type Service should throw exception in update vehicle type for vehicle type id as 10&#10;Vehicle Type Service should throw exception in update vehicle type for vehicle category id as 4&#10;Vehicle Type Service should throw exception in update vehicle type if fields are not defined" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="ScalaTest.VehicleCategoryServiceTestSpec.Vehicle Category Service should return vehicle category in get category by id for id as 1&#10;Vehicle Category Service should throw exception in get category by id for id as 5&#10;Vehicle Category Service should throw exception in get category for empty category list" />
-        <item index="1" class="java.lang.String" itemvalue="ScalaTest.CountryServiceTestSpec" />
-        <item index="2" class="java.lang.String" itemvalue="ScalaTest.CountryServiceTestSpec.Country Service should return a country in get by id for id as 1&#10;Country Service should throw exception for get country by id for id as 4&#10;Country Service should throw exception for get country by id for empty country list&#10;Country Service should insert the country to list&#10;Country Service should throw exception in insert company for country name and language not defined&#10;Country Service should throw exception in insert country for duplicate country code&#10;Country Service should update country by id for country id as 3&#10;Country Service should throw exception for update country for name and language not defined&#10;Country Service should throw exception for update by id for country id as 5&#10;Country Service should throw exception for update country by id for empty country list&#10;Country Service should throw exception for update country by id for duplicate country code&#10;Country Service should delete country in delete country by id for id as 3&#10;Country Service should throw exception for delete country for empty country list&#10;Country Service should throw exception for delete country for country id as 5&#10;Country Service should throw exception for delete country by id if foreign key relation found" />
-        <item index="3" class="java.lang.String" itemvalue="ScalaTest.CompanyServiceTestSpec" />
-        <item index="4" class="java.lang.String" itemvalue="ScalaTest.CompanyServiceTestSpec.Company Service should return a company in get company for company id as 1&#10;Company Service should throw exception in get company for empty company list&#10;Company Service should throw exception in get company by id for company id 5&#10;Company Service should insert company in insert company&#10;Company Service should throw exception in insert company if name and licence number not defined&#10;Company Service should throw exception in insert company if country does not exists&#10;Company Service should throw exception for insert company if country list is empty&#10;Company Service should throw exception for insert company if duplicate country is inserted&#10;Company Service should delete company in delete company for company id as 3&#10;Company Service should throw exception in delete company for empty company list&#10;Company Service should throw exception in delete company for company id as 5&#10;Company Service should throw exception in delete company if foreign key relation exists&#10;Company Service should update company by id for company id as 1&#10;Company Service should throw exception in update company if name and licence number not defined&#10;Company Service should throw exception in update company for company id as 5&#10;Company Service should throw exception in update company if country does not exists&#10;Company Service should throw exception in update company for duplicate company details" />
+        <item index="0" class="java.lang.String" itemvalue="ScalaTest.VehicleTypeServiceTestSpec.Vehicle Type Service should get a vehicle type for type id as 1&#10;Vehicle Type Service should throw exception in get type id for empty vehicle type list&#10;Vehicle Type Service should throw exception in get type id for vehicle type id as 8&#10;Vehicle Type Service should insert a new vehicle type&#10;Vehicle Type Service should throw exception in insert vehicle type if name is not defined&#10;Vehicle Type Service should throw exception in insert type if category id does not exists&#10;Vehicle Type Service should throw exception in insert type if category list is empty&#10;Vehicle Type Service should throw exception in insert type if vehicle type already defined&#10;Vehicle Type Service should delete vehicle type for vehicle type id as 5&#10;Vehicle Type Service should throw exception in delete type if vehicle type list is empty&#10;Vehicle Type Service should throw exception in delete type if vehicle type id does not exists&#10;Vehicle Type Service should throw exception in delete type if foreign key relation exists&#10;Vehicle Type Service should update the vehicle type details&#10;Vehicle Type Service should throw exception in update vehicle type if vehicle type list is empty&#10;Vehicle Type Service should throw exception in update vehicle type for vehicle type id as 10&#10;Vehicle Type Service should throw exception in update vehicle type for vehicle category id as 4&#10;Vehicle Type Service should throw exception in update vehicle type if fields are not defined" />
+        <item index="1" class="java.lang.String" itemvalue="ScalaTest.VehicleCategoryServiceTestSpec.Vehicle Category Service should return vehicle category in get category by id for id as 1&#10;Vehicle Category Service should throw exception in get category by id for id as 5&#10;Vehicle Category Service should throw exception in get category for empty category list&#10;Vehicle Category Service should insert vehicle into vehicle category table&#10;Vehicle Category Service should throw exception in insert category if category name is undefined&#10;Vehicle Category Service should throw exception in insert category if category name is undefined&#10;Vehicle Category Service should delete vehicle category for category id as 3&#10;Vehicle Category Service should throw exception in delete vehicle category for category id as 4&#10;Vehicle Category Service should throw exception in delete vehicle category for empty vehicle category list&#10;Vehicle Category Service should throw exception in delete vehicle category if foreign key relation exists&#10;Vehicle Category Service should update the vehicle category for category id as 1&#10;Vehicle Category Service should throw exception in update category if name is undefined&#10;Vehicle Category Service should throw exception in update category for category id as 5&#10;Vehicle Category Service should throw exception in update category for empty category list" />
+        <item index="2" class="java.lang.String" itemvalue="ScalaTest.VehicleCategoryServiceTestSpec.Vehicle Category Service should return vehicle category in get category by id for id as 1&#10;Vehicle Category Service should throw exception in get category by id for id as 5&#10;Vehicle Category Service should throw exception in get category for empty category list" />
+        <item index="3" class="java.lang.String" itemvalue="ScalaTest.CountryServiceTestSpec" />
+        <item index="4" class="java.lang.String" itemvalue="ScalaTest.CountryServiceTestSpec.Country Service should return a country in get by id for id as 1&#10;Country Service should throw exception for get country by id for id as 4&#10;Country Service should throw exception for get country by id for empty country list&#10;Country Service should insert the country to list&#10;Country Service should throw exception in insert company for country name and language not defined&#10;Country Service should throw exception in insert country for duplicate country code&#10;Country Service should update country by id for country id as 3&#10;Country Service should throw exception for update country for name and language not defined&#10;Country Service should throw exception for update by id for country id as 5&#10;Country Service should throw exception for update country by id for empty country list&#10;Country Service should throw exception for update country by id for duplicate country code&#10;Country Service should delete country in delete country by id for id as 3&#10;Country Service should throw exception for delete country for empty country list&#10;Country Service should throw exception for delete country for country id as 5&#10;Country Service should throw exception for delete country by id if foreign key relation found" />
       </list>
     </recent_temporary>
   </component>
@@ -486,7 +459,14 @@
       <option name="project" value="LOCAL" />
       <updated>1510472006203</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="test cases updated">
+      <created>1510491806339</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1510491806339</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -532,7 +512,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -648,16 +627,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleTypeApi.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="75" column="50" lean-forward="false" selection-start-line="75" selection-start-column="50" selection-end-line="75" selection-end-column="50" />
-          <folding>
-            <element signature="e#30#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/CompanyApi.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
@@ -671,20 +640,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/com/reactore/feature/MockRepository.scala">
+    <entry file="file://$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleCategoryServiceTestSpec.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleCategoryApi.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="33" column="25" lean-forward="true" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
+        <state relative-caret-position="-32">
+          <caret line="37" column="77" lean-forward="true" selection-start-line="37" selection-start-column="77" selection-end-line="37" selection-end-column="77" />
           <folding>
             <element signature="e#30#56#0" expanded="true" />
+            <element signature="e#531#898#0" expanded="false" />
+            <element signature="e#960#1268#0" expanded="false" />
+            <element signature="e#1336#1629#0" expanded="false" />
+            <element signature="e#2309#2698#0" expanded="false" />
+            <element signature="e#3289#3826#0" expanded="false" />
+            <element signature="e#3902#4351#0" expanded="false" />
+            <element signature="e#4438#4872#0" expanded="false" />
+            <element signature="e#4958#5418#0" expanded="false" />
+            <element signature="e#6125#6529#0" expanded="false" />
+            <element signature="e#6597#7008#0" expanded="false" />
+            <element signature="e#7079#7475#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -740,12 +712,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleCategoryServiceTestSpec.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleCategoryApi.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="12" column="33" lean-forward="true" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+        <state relative-caret-position="270">
+          <caret line="42" column="58" lean-forward="false" selection-start-line="42" selection-start-column="58" selection-end-line="42" selection-end-column="58" />
           <folding>
             <element signature="e#30#56#0" expanded="true" />
+            <element signature="e#296#1175#0" expanded="false" />
+            <element signature="e#1180#1893#0" expanded="false" />
+            <element signature="e#1898#2988#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleTypeApi.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+          <folding>
+            <element signature="e#30#56#0" expanded="true" />
+            <element signature="e#288#1636#0" expanded="false" />
+            <element signature="e#1641#2300#0" expanded="false" />
+            <element signature="e#2305#3315#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/com/reactore/feature/MockRepository.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="43" column="143" lean-forward="false" selection-start-line="43" selection-start-column="143" selection-end-line="43" selection-end-column="143" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleTypeServiceTestSpec.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="72" column="6" lean-forward="false" selection-start-line="72" selection-start-column="6" selection-end-line="72" selection-end-column="6" />
+          <folding>
+            <element signature="e#30#56#0" expanded="true" />
+            <element signature="e#496#827#0" expanded="false" />
+            <element signature="e#898#1167#0" expanded="false" />
+            <element signature="e#1235#1515#0" expanded="false" />
+            <element signature="e#1603#2193#0" expanded="false" />
+            <element signature="e#2267#2770#0" expanded="false" />
+            <element signature="e#2844#3347#0" expanded="false" />
+            <element signature="e#3416#3904#0" expanded="false" />
+            <element signature="e#3979#4485#0" expanded="false" />
+            <element signature="e#5148#5539#0" expanded="false" />
+            <element signature="e#5617#6019#0" expanded="false" />
+            <element signature="e#6093#6506#0" expanded="false" />
+            <element signature="e#7302#7813#0" expanded="false" />
           </folding>
         </state>
       </provider>

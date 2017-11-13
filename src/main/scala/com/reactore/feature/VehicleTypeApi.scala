@@ -69,13 +69,15 @@ class VehicleTypeService {
          vehicleTypeList <- vehicleTypeRepository.vehicleTypeFuture
          vehicleCategoryList <- vehicleCategoryRepository.vehicleCategoryFuture
          res = if (updatedVehicleType.name.nonEmpty) {
-            val vehicleTypeOption = vehicleTypeList.find(_.vehicleTypeId == id)
-            if (vehicleTypeOption.isDefined) {
-               val validVehicleCategory = vehicleCategoryList.find(_.vehicleCategoryId == updatedVehicleType.vehicleCategoryId)
-               if (validVehicleCategory.isDefined) {
-                  vehicleTypeRepository.update(id,updatedVehicleType)
-               } else throw NoSuchEntityException(exception = new Exception("Vehicle Category not found for updated vehicle type!!"))
-            } else throw NoSuchEntityException(exception = new Exception("Vehicle type not found given id!!"))
+            if (vehicleTypeList.nonEmpty) {
+               val vehicleTypeOption = vehicleTypeList.find(_.vehicleTypeId == id)
+               if (vehicleTypeOption.isDefined) {
+                  val validVehicleCategory = vehicleCategoryList.find(_.vehicleCategoryId == updatedVehicleType.vehicleCategoryId)
+                  if (validVehicleCategory.isDefined) {
+                     vehicleTypeRepository.update(id, updatedVehicleType)
+                  } else throw NoSuchEntityException(exception = new Exception("Vehicle Category not found for updated vehicle type!!"))
+               } else throw NoSuchEntityException(exception = new Exception("Vehicle type not found given id!!"))
+            } else throw EmptyListException(exception = new Exception("Vehicle type list is empty!!"))
          } else throw FieldNotDefinedException(exception = new Exception("Fields are not defined!!"))
       } yield res
    }.flatten.recover { case ex => handleExceptions(ex) }

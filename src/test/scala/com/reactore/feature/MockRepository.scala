@@ -37,11 +37,11 @@ object MockVehicleTypeRepository {
    val emptyList: Future[Nil.type] = Future.successful(Nil)
 
    val vehicleType1                                = VehicleType(1, "Car", vehicleCategoryId = 1)
-   val vehicleType3                                = VehicleType(2, "Truck", vehicleCategoryId = 2)
-   val vehicleType2                                = VehicleType(3, "Van", vehicleCategoryId = 1)
+   val vehicleType2                                = VehicleType(2, "Truck", vehicleCategoryId = 2)
+   val vehicleType3                                = VehicleType(3, "Van", vehicleCategoryId = 1)
    val vehicleType4                                = VehicleType(4, "Dumper", vehicleCategoryId = 2)
    val vehicleType5                                = VehicleType(5, "JEEP", vehicleCategoryId = 1)
-   val vehicleTypeFuture: Future[Seq[VehicleType]] = Future.successful(Seq(vehicleType1, vehicleType2, vehicleType3, vehicleType4, vehicleType4))
+   val vehicleTypeFuture: Future[Seq[VehicleType]] = Future.successful(Seq(vehicleType1, vehicleType2, vehicleType3, vehicleType4, vehicleType5))
 
 }
 
