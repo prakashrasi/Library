@@ -58,6 +58,9 @@ object MockVehicleRepository {
    val vehicle4                            = Vehicle(4, "MineDumper", modelNumber = "MINE DUMPER", vehicleType = 4, company = 2)
    val vehicleList                         = Seq(vehicle1, vehicle2, vehicle3, vehicle4)
    val vehicleFuture: Future[Seq[Vehicle]] = Future.successful(Seq(vehicle1, vehicle2, vehicle3, vehicle4))
+
+   val vehicleByCompany = Seq(VehiclesByCompanyContainer("TATA", Seq(vehicle1, vehicle3)),
+                                VehiclesByCompanyContainer("VOLVO", Seq(vehicle2, vehicle4)))
 }
 
 

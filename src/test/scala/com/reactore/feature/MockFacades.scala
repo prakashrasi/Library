@@ -17,9 +17,10 @@ trait MockCountryFacade extends CountryFacadeComponent with MockitoSugar {
 }
 
 trait MockVehicleFacade extends VehicleFacadeComponent with MockitoSugar {
-   override lazy val vehicleRepository    : VehiclesRepository    = mock[VehiclesRepository]
-   override lazy val vehicleTypeRepository: VehicleTypeRepository = mock[VehicleTypeRepository]
-   override lazy val companyRepository    : CompanyRepository     = mock[CompanyRepository]
+   override lazy val vehicleRepository        : VehiclesRepository        = mock[VehiclesRepository]
+   override lazy val vehicleTypeRepository    : VehicleTypeRepository     = mock[VehicleTypeRepository]
+   override lazy val companyRepository        : CompanyRepository         = mock[CompanyRepository]
+   override lazy val vehicleCategoryRepository: VehicleCategoryRepository = mock[VehicleCategoryRepository]
 }
 
 trait MockVehicleTypeFacade extends VehicleTypeFacadeComponent with MockitoSugar {

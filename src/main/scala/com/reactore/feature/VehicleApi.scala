@@ -61,12 +61,13 @@ class VehicleService {
       result.recover { case ex => handleExceptions(ex) }
    }
 
+   // update vehicle by id
    def updateVehicleById(id: Long, updatedVehicle: Vehicle): Future[String] = {
       val result = for {
          vehicleList <- vehicleRepository.vehiclesFuture
          vehicleTypeList <- vehicleTypeRepository.vehicleTypeFuture
          companyList <- companyRepository.companyFuture
-         _ = if (updatedVehicle.name.isEmpty && updatedVehicle.modelNumber.isEmpty) throw FieldNotDefinedException(exception = new Exception("All fields are not defined!!"),message = "All fields are not defined!!")
+         _ = if (updatedVehicle.name.isEmpty && updatedVehicle.modelNumber.isEmpty) throw FieldNotDefinedException(exception = new Exception("All fields are not defined!!"), message = "All fields are not defined!!")
          vehicleOption = vehicleList.find(vehicle => vehicle.vehicleId == id)
          _ = if (vehicleOption.isEmpty) throw NoSuchEntityException(exception = new Exception("Vehicle not found for given id!!"), message = "Vehicle not found for given id!!")
          validCompany = companyList.find(_.companyId == updatedVehicle.company)
@@ -85,6 +86,74 @@ class VehicleService {
          vehicleList <- vehicleRepository.vehiclesFuture
          _ = if (vehicleList.isEmpty) throw EmptyListException(message = "Vehicle list is empty!!", exception = new Exception("Vehicle list is empty!!"))
          res = vehicleList
+      } yield res
+      result.recover { case ex => handleExceptions(ex) }
+   }
+
+   // group vehicle by company
+   def groupVehicleByCompany: Future[Seq[VehiclesByCompanyContainer]] = {
+      val result = for {
+         vehicleList <- vehicleRepository.vehiclesFuture
+         companyList <- companyRepository.companyFuture
+         _ = if (vehicleList.isEmpty) throw EmptyListException(message = "Vehicle list is empty", exception = new Exception("Vehicle list is empty"))
+         _ = if (companyList.isEmpty) throw EmptyListException(message = "Company list is empty", exception = new Exception("Company list is empty"))
+         res = vehicleList.groupBy(_.company).map {
+            case (company, vehicles) =>
+               val companyOption = companyList.find(_.companyId == company)
+               val companyName = if (companyOption.isDefined) {companyOption.get.name} else throw NoSuchEntityException(message = "Company not found", exception = new Exception("Company not found"))
+               VehiclesByCompanyContainer(companyName, vehicles.sortBy(_.vehicleId))
+         }.toSeq.sortBy(_.companyName)
+      } yield res
+      result.recover { case ex => handleExceptions(ex) }
+   }
+
+   //get vehicles by category
+   def getVehiclesByCategory(categoryId: Long): Future[Seq[Vehicle]] = {
+      val result = for {
+         vehicleList <- vehicleRepository.vehiclesFuture
+         vehicleTypeList <- vehicleTypeRepository.vehicleTypeFuture
+         _ = if (vehicleList.isEmpty) throw EmptyListException(message = "Vehicle list is empty", exception = new Exception("Vehicle list is empty"))
+         _ = if (vehicleTypeList.isEmpty) throw EmptyListException(message = "Vehicle type list is empty", exception = new Exception("Vehicle type list is empty"))
+         vehicleTypes = vehicleTypeList.filter(_.vehicleCategoryId == categoryId).map(_.vehicleTypeId)
+         _ = if (vehicleTypes.isEmpty) throw NoSuchEntityException(message = "Vehicles not found for given category", exception = new Exception("Vehicles not found for given category"))
+         vehiclesForType = vehicleList.filter(vehicle => vehicleTypes.contains(vehicle.vehicleType))
+         res = if (vehiclesForType.nonEmpty) {vehiclesForType} else throw NoSuchEntityException(message = "Vehicles not found for given category", exception = new Exception("Vehicles not found for given category"))
+      } yield res
+      result.recover { case ex => handleExceptions(ex) }
+   }
+
+   //get vehicles with capacity greater than specified
+   def getVehiclesWithCapacityGreaterThan(capacity: Double): Future[Seq[Vehicle]] = {
+      val result = for {
+         vehicleList <- vehicleRepository.vehiclesFuture
+         vehicleTypeList <- vehicleTypeRepository.vehicleTypeFuture
+         vehicleCategoryList <- vehicleCategoryRepository.vehicleCategoryFuture
+         _ = if (vehicleList.isEmpty) throw EmptyListException(message = "Vehicle list is empty", exception = new Exception("Vehicle list is empty"))
+         _ = if (vehicleTypeList.isEmpty) throw EmptyListException(message = "Vehicle type list is empty", exception = new Exception("Vehicle type list is empty"))
+         _ = if (vehicleCategoryList.isEmpty) throw EmptyListException(message = "Vehicle category list is empty", exception = new Exception("Vehicle category list is empty"))
+         categoriesWithMaxCapacity = vehicleCategoryList.filter(_.maxCapacity > capacity).map(_.vehicleCategoryId)
+         _ = if (categoriesWithMaxCapacity.isEmpty) throw NoSuchEntityException(message = "No categories found", exception = new Exception("No categories found"))
+         vehicleTypesWithMaxCapacity = vehicleTypeList.filter(vehicleType => categoriesWithMaxCapacity.contains(vehicleType.vehicleCategoryId)).map(_.vehicleTypeId)
+         _ = if (vehicleTypesWithMaxCapacity.isEmpty) throw NoSuchEntityException(message = "No vehicle types found", exception = new Exception("No vehicle types found"))
+         vehiclesWithMaxCapacity = vehicleList.filter(vehicle => vehicleTypesWithMaxCapacity.contains(vehicle.vehicleType))
+         _ = if (vehiclesWithMaxCapacity.isEmpty) throw NoSuchEntityException(message = "No vehicles found", exception = new Exception("No vehicles found"))
+         res = vehiclesWithMaxCapacity.sortBy(_.vehicleId)
+      } yield res
+      result.recover { case ex => handleExceptions(ex) }
+   }
+
+   //get number of vehicle by country
+   def getVehicleCountByCountry(countryId: Long): Future[Int] = {
+      val result = for {
+         vehicleList <- vehicleRepository.vehiclesFuture
+         companyList <- companyRepository.companyFuture
+         _ = if (vehicleList.isEmpty) throw EmptyListException(message = "Vehicle list is empty", exception = new Exception("Vehicle list is empty"))
+         _ = if (companyList.isEmpty) throw EmptyListException(message = "Company list is empty", exception = new Exception("Company list is empty"))
+         companiesForGivenCountry = companyList.filter(_.country == countryId).map(_.companyId)
+         _ = if (companiesForGivenCountry.isEmpty) throw NoSuchEntityException(message = "No companies found", exception = new Exception("No companies found"))
+         vehiclesForGivenCountry = vehicleList.filter(vehicle => companiesForGivenCountry.contains(vehicle.company))
+         _ = if (vehiclesForGivenCountry.isEmpty) throw NoSuchEntityException(message = "No vehicles found", exception = new Exception("No vehicles found"))
+         res = vehiclesForGivenCountry.size
       } yield res
       result.recover { case ex => handleExceptions(ex) }
    }

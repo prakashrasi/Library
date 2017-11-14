@@ -14,3 +14,4 @@ case class VehicleType(vehicleTypeId: Long, name: String, description: Option[St
 
 case class Company(companyId: Long, name: String, description: Option[String] = None, licenceNumber: String, country: Long /*startYear: DateTime*/)
 
+case class VehiclesByCompanyContainer(companyName: String, vehicles: Seq[Vehicle])

@@ -10,13 +10,16 @@ trait VehicleFacadeComponent {
    def vehicleTypeRepository: VehicleTypeRepository
 
    def companyRepository: CompanyRepository
+
+   def vehicleCategoryRepository: VehicleCategoryRepository
 }
 
 trait VehicleFacade extends VehicleFacadeComponent {
 
-   override lazy val vehicleRepository    : VehiclesRepository    = ImplVehiclesRepository
-   override lazy val vehicleTypeRepository: VehicleTypeRepository = ImplVehicleTypeRepository
-   override lazy val companyRepository    : CompanyRepository     = ImplCompanyRepository
+   override lazy val vehicleRepository        : VehiclesRepository        = ImplVehiclesRepository
+   override lazy val vehicleTypeRepository    : VehicleTypeRepository     = ImplVehicleTypeRepository
+   override lazy val companyRepository        : CompanyRepository         = ImplCompanyRepository
+   override lazy val vehicleCategoryRepository: VehicleCategoryRepository = ImplVehicleCategoryRepository
 }
 
 trait CompanyFacadeComponent {

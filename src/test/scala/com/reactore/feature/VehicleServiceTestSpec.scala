@@ -162,12 +162,124 @@ class VehicleServiceTestSpec extends WordSpec with ScalaFutures with Matchers {
          result.failed.futureValue shouldBe an[NoSuchEntityException]
       }
       "throw exception in update vehicle if vehicle has duplicate model number " in {
-         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
          when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.vehicleTypeFuture)
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
          when(MockVehicleService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
          val updatedVehicle = Vehicle(1, "TIAGO-R", modelNumber = "TIAGO", vehicleType = 1, company = 1)
          val result = MockVehicleService.updateVehicleById(1, updatedVehicle)
          result.failed.futureValue shouldBe an[UniqueKeyViolationException]
+      }
+
+      //test cases for groupVehicleByCompany method
+      "group vehicles by company in group by company" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
+         when(MockVehicleService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
+         val expectedResult = MockVehicleRepository.vehicleByCompany
+         val result = MockVehicleService.groupVehicleByCompany
+         result.futureValue shouldBe expectedResult
+      }
+      "throw exception in group vehicle for empty vehicle list" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.emptyList)
+         when(MockVehicleService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
+         val result = MockVehicleService.groupVehicleByCompany
+         result.failed.futureValue shouldBe an[EmptyListException]
+      }
+      "throw exception in group vehicle for empty country list" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
+         when(MockVehicleService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.emptyList)
+         val result = MockVehicleService.groupVehicleByCompany
+         result.failed.futureValue shouldBe an[EmptyListException]
+      }
+
+      //test cases for getVehiclesByCategory method
+      "get vehicles for category id as 1" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
+         when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.vehicleTypeFuture)
+         val expectedResult = Seq(MockVehicleRepository.vehicle1, MockVehicleRepository.vehicle3)
+         val result = MockVehicleService.getVehiclesByCategory(1)
+         result.futureValue shouldBe expectedResult
+      }
+      "throw exception in get vehicle by category for empty vehicle list" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.emptyList)
+         when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.vehicleTypeFuture)
+         val result = MockVehicleService.getVehiclesByCategory(1)
+         result.failed.futureValue shouldBe an[EmptyListException]
+      }
+      "throw exception in get vehicle by category for empty vehicle type list" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
+         when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.emptyList)
+         val result = MockVehicleService.getVehiclesByCategory(1)
+         result.failed.futureValue shouldBe an[EmptyListException]
+      }
+      "throw exception in get vehicle by category for category id as 3" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
+         when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.vehicleTypeFuture)
+         val result = MockVehicleService.getVehiclesByCategory(3)
+         result.failed.futureValue shouldBe an[NoSuchEntityException]
+      }
+
+      //test cases for getVehiclesWithCapacityGreaterThan method
+      "return list of vehicles for capacity greater than 25.00" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
+         when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.vehicleTypeFuture)
+         when(MockVehicleService.vehicleCategoryRepository.vehicleCategoryFuture).thenReturn(MockVehicleCategoryRepository.vehicleCategoryFuture)
+         val expectedResult = Seq(MockVehicleRepository.vehicle2, MockVehicleRepository.vehicle4)
+         val result = MockVehicleService.getVehiclesWithCapacityGreaterThan(25.00)
+         result.futureValue shouldBe expectedResult
+      }
+      "throw exception in get vehicle with capacity greater than if vehicle list is empty" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.emptyList)
+         when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.vehicleTypeFuture)
+         when(MockVehicleService.vehicleCategoryRepository.vehicleCategoryFuture).thenReturn(MockVehicleCategoryRepository.vehicleCategoryFuture)
+         val result = MockVehicleService.getVehiclesWithCapacityGreaterThan(25.00)
+         result.failed.futureValue shouldBe an[EmptyListException]
+      }
+      "throw exception in get vehicle with capacity greater than if vehicle type list is empty" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
+         when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.emptyList)
+         when(MockVehicleService.vehicleCategoryRepository.vehicleCategoryFuture).thenReturn(MockVehicleCategoryRepository.vehicleCategoryFuture)
+         val result = MockVehicleService.getVehiclesWithCapacityGreaterThan(25.00)
+         result.failed.futureValue shouldBe an[EmptyListException]
+      }
+      "throw exception in get vehicle with capacity greater than if vehicle category list is empty" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
+         when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.vehicleTypeFuture)
+         when(MockVehicleService.vehicleCategoryRepository.vehicleCategoryFuture).thenReturn(MockVehicleCategoryRepository.emptyList)
+         val result = MockVehicleService.getVehiclesWithCapacityGreaterThan(25.00)
+         result.failed.futureValue shouldBe an[EmptyListException]
+      }
+      "throw exception in get vehicle with capacity greater than if vehicle is not found" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
+         when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.vehicleTypeFuture)
+         when(MockVehicleService.vehicleCategoryRepository.vehicleCategoryFuture).thenReturn(MockVehicleCategoryRepository.vehicleCategoryFuture)
+         val result = MockVehicleService.getVehiclesWithCapacityGreaterThan(45.00)
+         result.failed.futureValue shouldBe an[NoSuchEntityException]
+      }
+
+      //test cases for getVehicleCountByCountry method
+      "return count of vehicle in given country for country id as 1" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
+         when(MockVehicleService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
+         val result = MockVehicleService.getVehicleCountByCountry(1)
+         result.futureValue shouldBe 2
+      }
+      "throw exception in get vehicle count if vehicle list is empty" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.emptyList)
+         when(MockVehicleService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
+         val result = MockVehicleService.getVehicleCountByCountry(1)
+         result.failed.futureValue shouldBe an[EmptyListException]
+      }
+      "throw exception in get vehicle count if company list is empty" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
+         when(MockVehicleService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.emptyList)
+         val result = MockVehicleService.getVehicleCountByCountry(1)
+         result.failed.futureValue shouldBe an[EmptyListException]
+      }
+      "throw exception in get vehicle count if company not found for country id as 3" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
+         when(MockVehicleService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
+         val result = MockVehicleService.getVehicleCountByCountry(3)
+         result.failed.futureValue shouldBe an[NoSuchEntityException]
       }
    }
 }
