@@ -212,8 +212,6 @@ class VehicleService {
       } yield res
       result.recover { case ex => handleExceptions(ex) }
    }
-
-
 }
 
 
@@ -248,6 +246,17 @@ class VehicleRest(vehicleService: VehicleService) extends CustomDirectives {
          val result = vehicleService.deleteVehicleById(id)
          complete(respond(result))
       }
+   } ~ path("vehicle/category") {
+      get {
+         val result = vehicleService.groupVehiclesByCategory
+         complete(respond(result))
+      }
+   } ~ path("vehicle/category" / LongNumber) {
+      id =>
+         get {
+            val result = vehicleService.getVehiclesByCategory(id)
+            complete(respond(result))
+         }
    }
 }
 
