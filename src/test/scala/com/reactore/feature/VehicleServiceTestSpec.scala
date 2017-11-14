@@ -44,8 +44,8 @@ class VehicleServiceTestSpec extends WordSpec with ScalaFutures with Matchers {
 
       //test cases for insertVehicle method
       "insert a new vehicle " in {
-         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
          when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.vehicleTypeFuture)
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
          when(MockVehicleService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
          when(MockVehicleService.vehicleRepository.insert(any[Vehicle])).thenReturn(Future.successful(1))
          val newVehicle = Vehicle(5, "Bike", modelNumber = "BIKE", vehicleType = 3, company = 1)
@@ -311,6 +311,33 @@ class VehicleServiceTestSpec extends WordSpec with ScalaFutures with Matchers {
          when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.vehicleTypeFuture)
          when(MockVehicleService.vehicleCategoryRepository.vehicleCategoryFuture).thenReturn(MockVehicleCategoryRepository.emptyList)
          val result = MockVehicleService.groupVehiclesByCategory
+         result.failed.futureValue shouldBe an[EmptyListException]
+      }
+
+      //test cases for getVehiclesByCompanyOlderThan method
+      "return list of vehicle wih company older than 35 years " in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
+         when(MockVehicleService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
+         val result = MockVehicleService.getVehiclesByCompanyOlderThan(35)
+         val expectedResult = Seq(MockVehicleRepository.vehicle2, MockVehicleRepository.vehicle4)
+         result.futureValue shouldBe expectedResult
+      }
+      "throw exception if no vehicle found for company older than 40 years" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
+         when(MockVehicleService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
+         val result = MockVehicleService.getVehiclesByCompanyOlderThan(40)
+         result.failed.futureValue shouldBe an[NoSuchEntityException]
+      }
+      "throw exception if vehicle list is empty for company older than 35" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.emptyList)
+         when(MockVehicleService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
+         val result = MockVehicleService.getVehiclesByCompanyOlderThan(35)
+         result.failed.futureValue shouldBe an[EmptyListException]
+      }
+      "throw exception if company list is empty for company older than 35" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
+         when(MockVehicleService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.emptyList)
+         val result = MockVehicleService.getVehiclesByCompanyOlderThan(35)
          result.failed.futureValue shouldBe an[EmptyListException]
       }
    }

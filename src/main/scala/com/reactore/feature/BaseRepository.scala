@@ -59,6 +59,10 @@ class VehiclesRepository extends DBProperties with BaseTables {
    def delete(id: Long): Future[Int] = {
       db.run(vehicleQuery.filter(_.vehicleId === id).delete)
    }
+
+   def deleteByList(idList: Seq[Long]): Future[Int] = {
+      db.run(vehicleQuery.filter(_.company inSetBind idList).delete)
+   }
 }
 
 object ImplVehiclesRepository extends VehiclesRepository

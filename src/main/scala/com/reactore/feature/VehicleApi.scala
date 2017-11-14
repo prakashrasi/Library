@@ -3,6 +3,8 @@ package com.reactore.feature
 import akka.http.scaladsl.server.Route
 import com.reactore.core.HandleExceptions._
 import com.reactore.core._
+import org.joda.time.{DateTime, Years}
+import org.joda.time.format.DateTimeFormat
 import org.json4s.native.Serialization._
 
 import scala.concurrent.ExecutionContext.Implicits.global
@@ -191,6 +193,27 @@ class VehicleService {
       } yield res
       result.recover { case ex => handleExceptions(ex) }
    }
+
+   //get vehicles by company older than given years
+   def getVehiclesByCompanyOlderThan(years: Long): Future[Seq[Vehicle]] = {
+      val currentTime = DateTime.now()
+      val result = for {
+         vehicleList <- vehicleRepository.vehiclesFuture
+         companyList <- companyRepository.companyFuture
+         _ = if (vehicleList.isEmpty) throw EmptyListException(message = "Vehicle list is empty", exception = new Exception("Vehicle list is empty"))
+         _ = if (companyList.isEmpty) throw EmptyListException(exception = new Exception("Company list is empty!!"), message = "Company list is empty!!")
+         companyIdList = companyList.filter { company =>
+            val startYear = DateTime.parse(company.startYear.toString, DateTimeFormat.forPattern("yyyy-MM-dd HH:mm:ss.sss"))
+            Years.yearsBetween(startYear, currentTime).getYears > years
+         }.map(_.companyId)
+         _ = if (companyIdList.isEmpty) throw NoSuchEntityException(message = "No Companies found", exception = new Exception("No Companies found"))
+         vehiclesForCompany = vehicleList.filter(vehicle => companyIdList.contains(vehicle.company))
+         res = if (vehiclesForCompany.nonEmpty) {vehiclesForCompany.sortBy(_.vehicleId)} else throw NoSuchEntityException(message = "No Vehicles found", exception = new Exception("No Vehicles found"))
+      } yield res
+      result.recover { case ex => handleExceptions(ex) }
+   }
+
+
 }
 
 

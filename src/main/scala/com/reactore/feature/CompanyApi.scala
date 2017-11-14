@@ -93,6 +93,29 @@ class CompanyService {
       } yield res
       result.recover { case ex => handleExceptions(ex) }
    }
+
+   //delete company and its related data in other tables
+   def deleteCompanyWithRelatedDataById(companyId: Long): Future[String] = {
+      val result = for {
+         companyList <- companyRepository.companyFuture
+         vehicleList <- vehicleRepository.vehiclesFuture
+         _ = if (companyList.isEmpty) throw EmptyListException(message = "Company list is empty!!", exception = new Exception("Company list is empty!!"))
+         companyOption = companyList.find(_.companyId == companyId)
+         _ = if (companyOption.isEmpty) throw NoSuchEntityException(exception = new Exception("No country found!!"), message = "No country found!!")
+         res <- if (vehicleList.isEmpty) {
+            companyRepository.delete(companyId).map { x => "Deleted company successfully" }
+         } else {
+            val vehicleIdList = vehicleList.filter(_.company == companyId).map(_.vehicleId)
+            if (vehicleIdList.isEmpty) {
+               companyRepository.delete(companyId).map { x => "Deleted company successfully" }
+            } else {
+               vehicleRepository.deleteByList(vehicleIdList).map { x => "Deleted vehicles successfully" }
+               companyRepository.delete(companyId).map { x => "Deleted company successfully" }
+            }
+         }
+      } yield res
+      result.recover { case ex => handleExceptions(ex) }
+   }
 }
 
 object ImplCompanyService extends CompanyService with CompanyFacade

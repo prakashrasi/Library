@@ -52,35 +52,35 @@ class CompanyServiceTestSpec extends WordSpec with Matchers with ScalaFutures {
          when(MockCompanyService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
          when(MockCompanyService.countryRepository.countryFuture).thenReturn(MockCountryRepository.countryFuture)
          when(MockCompanyService.companyRepository.insert(any[Company])).thenReturn(Future.successful(1))
-         val newCompany = Company(4, "IVECO", licenceNumber = "IVEC009", country = 3,startYear = Timestamp.valueOf("1970-01-01 00:00:00"))
+         val newCompany = Company(4, "IVECO", licenceNumber = "IVEC009", country = 3, startYear = Timestamp.valueOf("1970-01-01 00:00:00"))
          val result = MockCompanyService.insertCompany(newCompany)
          result.futureValue shouldBe "Inserted company successfully!!"
       }
       "throw exception in insert company if name and licence number not defined" in {
          when(MockCompanyService.countryRepository.countryFuture).thenReturn(MockCountryRepository.countryFuture)
          when(MockCompanyService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
-         val newCompany = Company(4, "", licenceNumber = "", country = 3,startYear = Timestamp.valueOf("1970-01-01 00:00:00"))
+         val newCompany = Company(4, "", licenceNumber = "", country = 3, startYear = Timestamp.valueOf("1970-01-01 00:00:00"))
          val result = MockCompanyService.insertCompany(newCompany)
          result.failed.futureValue shouldBe an[FieldNotDefinedException]
       }
       "throw exception in insert company if country does not exists" in {
          when(MockCompanyService.countryRepository.countryFuture).thenReturn(MockCountryRepository.countryFuture)
          when(MockCompanyService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
-         val newCompany = Company(4, "RENAULT", licenceNumber = "REN001", country = 4,startYear = Timestamp.valueOf("1970-01-01 00:00:00"))
+         val newCompany = Company(4, "RENAULT", licenceNumber = "REN001", country = 4, startYear = Timestamp.valueOf("1970-01-01 00:00:00"))
          val result = MockCompanyService.insertCompany(newCompany)
          result.failed.futureValue shouldBe an[NoSuchEntityException]
       }
       "throw exception for insert company if country list is empty " in {
          when(MockCompanyService.countryRepository.countryFuture).thenReturn(MockCountryRepository.emptyList)
          when(MockCompanyService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
-         val newCompany = Company(4, "BENZ", licenceNumber = "BEN009", country = 3,startYear = Timestamp.valueOf("1970-01-01 00:00:00"))
+         val newCompany = Company(4, "BENZ", licenceNumber = "BEN009", country = 3, startYear = Timestamp.valueOf("1970-01-01 00:00:00"))
          val result = MockCompanyService.insertCompany(newCompany)
          result.failed.futureValue shouldBe an[EmptyListException]
       }
       "throw exception for insert company if duplicate country is inserted" in {
          when(MockCompanyService.countryRepository.countryFuture).thenReturn(MockCountryRepository.countryFuture)
          when(MockCompanyService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
-         val newCompany = Company(1, "TATA", licenceNumber = "TA001", country = 3,startYear = Timestamp.valueOf("1970-01-01 00:00:00"))
+         val newCompany = Company(1, "TATA", licenceNumber = "TA001", country = 3, startYear = Timestamp.valueOf("1970-01-01 00:00:00"))
          val result = MockCompanyService.insertCompany(newCompany)
          result.failed.futureValue shouldBe an[DuplicateEntityException]
       }
@@ -117,37 +117,67 @@ class CompanyServiceTestSpec extends WordSpec with Matchers with ScalaFutures {
          when(MockCompanyService.countryRepository.countryFuture).thenReturn(MockCountryRepository.countryFuture)
          when(MockCompanyService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
          when(MockCompanyService.companyRepository.update(any[Long], any[Company])).thenReturn(Future.successful(1))
-         val updatedCompany = Company(1, "Benz", licenceNumber = "BEN001", country = 1,startYear = Timestamp.valueOf("1970-01-01 00:00:00"))
+         val updatedCompany = Company(1, "Benz", licenceNumber = "BEN001", country = 1, startYear = Timestamp.valueOf("1970-01-01 00:00:00"))
          val result = MockCompanyService.updateCompanyById(1, updatedCompany)
          result.futureValue shouldBe "Updated company successfully"
       }
       "throw exception in update company if name and licence number not defined" in {
          when(MockCompanyService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
          when(MockCompanyService.countryRepository.countryFuture).thenReturn(MockCountryRepository.countryFuture)
-         val updatedCompany = Company(1, "", licenceNumber = "", country = 1,startYear = Timestamp.valueOf("1970-01-01 00:00:00"))
+         val updatedCompany = Company(1, "", licenceNumber = "", country = 1, startYear = Timestamp.valueOf("1970-01-01 00:00:00"))
          val result = MockCompanyService.updateCompanyById(1, updatedCompany)
          result.failed.futureValue shouldBe an[FieldNotDefinedException]
       }
       "throw exception in update company for company id as 5" in {
          when(MockCompanyService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
          when(MockCompanyService.countryRepository.countryFuture).thenReturn(MockCountryRepository.countryFuture)
-         val updatedCompany = Company(5, "Benz", licenceNumber = "Ben001", country = 1,startYear = Timestamp.valueOf("1970-01-01 00:00:00"))
+         val updatedCompany = Company(5, "Benz", licenceNumber = "Ben001", country = 1, startYear = Timestamp.valueOf("1970-01-01 00:00:00"))
          val result = MockCompanyService.updateCompanyById(5, updatedCompany)
          result.failed.futureValue shouldBe an[NoSuchEntityException]
       }
       "throw exception in update company if country does not exists" in {
          when(MockCompanyService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
          when(MockCompanyService.countryRepository.countryFuture).thenReturn(MockCountryRepository.countryFuture)
-         val updatedCompany = Company(1, "Benz", licenceNumber = "Ben001", country = 5,startYear = Timestamp.valueOf("1970-01-01 00:00:00"))
+         val updatedCompany = Company(1, "Benz", licenceNumber = "Ben001", country = 5, startYear = Timestamp.valueOf("1970-01-01 00:00:00"))
          val result = MockCompanyService.updateCompanyById(1, updatedCompany)
          result.failed.futureValue shouldBe an[NoSuchEntityException]
       }
       "throw exception in update company for duplicate company details" in {
          when(MockCompanyService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
          when(MockCompanyService.countryRepository.countryFuture).thenReturn(MockCountryRepository.countryFuture)
-         val updatedCompany = Company(1, "TATA", licenceNumber = "TA001", country = 1,startYear = Timestamp.valueOf("1970-01-01 00:00:00"))
+         val updatedCompany = Company(1, "TATA", licenceNumber = "TA001", country = 1, startYear = Timestamp.valueOf("1970-01-01 00:00:00"))
          val result = MockCompanyService.updateCompanyById(1, updatedCompany)
          result.failed.futureValue shouldBe an[DuplicateEntityException]
+      }
+
+      // test cases for deleteCompanyWithRelatedDataById method
+      "delete company and vehicles data" in {
+         when(MockCompanyService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
+         when(MockCompanyService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
+         when(MockCompanyService.companyRepository.delete(any[Long])).thenReturn(Future.successful(1))
+         when(MockCompanyService.vehicleRepository.deleteByList(any[Seq[Long]])).thenReturn(Future.successful(1))
+         val result = MockCompanyService.deleteCompanyWithRelatedDataById(1)
+         result.futureValue shouldBe "Deleted company successfully"
+      }
+      "throw exception in delete related data if company id not found" in {
+         when(MockCompanyService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
+         when(MockCompanyService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
+         val result = MockCompanyService.deleteCompanyWithRelatedDataById(5)
+         result.failed.futureValue shouldBe an[NoSuchEntityException]
+      }
+      "delete company in delete related data if vehicle list is empty" in {
+         when(MockCompanyService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.emptyList)
+         when(MockCompanyService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
+         when(MockCompanyService.companyRepository.delete(any[Long])).thenReturn(Future.successful(1))
+         when(MockCompanyService.vehicleRepository.deleteByList(any[Seq[Long]])).thenReturn(Future.successful(1))
+         val result = MockCompanyService.deleteCompanyWithRelatedDataById(1)
+         result.futureValue shouldBe "Deleted company successfully"
+      }
+      "throw exception in delete related data if company list is empty" in {
+         when(MockCompanyService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
+         when(MockCompanyService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.emptyList)
+         val result = MockCompanyService.deleteCompanyWithRelatedDataById(1)
+         result.failed.futureValue shouldBe an[EmptyListException]
       }
    }
 }
