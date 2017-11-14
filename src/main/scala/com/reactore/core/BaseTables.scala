@@ -9,14 +9,14 @@ import slick.jdbc.PostgresProfile.api._
 trait BaseTables {
 
    class CompanyTable(_tableTag: Tag) extends Table[Company](_tableTag, Some("vehicle"), "Company") {
-      def * = (companyId, name, description, licenceNumber, country) <> (Company.tupled, Company.unapply)
+      def * = (companyId, name, description, licenceNumber, country,startYear) <> (Company.tupled, Company.unapply)
 
       val companyId    : Rep[Long]           = column[Long]("companyId", O.AutoInc, O.PrimaryKey)
       val name         : Rep[String]         = column[String]("name", O.Length(200, varying = true))
       val description  : Rep[Option[String]] = column[Option[String]]("description", O.Length(200, varying = true), O.Default(None))
       val licenceNumber: Rep[String]         = column[String]("licenceNumber", O.Length(200, varying = true))
       val country      : Rep[Long]           = column[Long]("country")
-      //val startYear    : Rep[DateTime]       = column[DateTime]("startYear", ColumnOption.SqlType("timestamp without time zone"))
+      val startYear    : Rep[java.sql.Timestamp]       = column[java.sql.Timestamp]("startYear")
 
       lazy val countryFk = foreignKey("Company_country_fkey", country, countryQuery)(r => r.countryId, onUpdate = ForeignKeyAction.NoAction, onDelete = ForeignKeyAction.NoAction)
    }

@@ -1,5 +1,7 @@
 package com.reactore.feature
 
+import java.sql.Timestamp
+
 import com.reactore.core._
 
 import scala.concurrent.Future
@@ -19,9 +21,9 @@ object MockCountryRepository {
 object MockCompanyRepository {
    val emptyList: Future[Nil.type] = Future.successful(Nil)
 
-   val company1                            = Company(1, "TATA", licenceNumber = "TA001", country = 1)
-   val company2                            = Company(2, "VOLVO", licenceNumber = "VO001", country = 2)
-   val company3                            = Company(3, "PETERBILT", licenceNumber = "PB001", country = 2)
+   val company1                            = Company(1, "TATA", licenceNumber = "TA001", country = 1, startYear = Timestamp.valueOf("1985-01-01 00:00:00"))
+   val company2                            = Company(2, "VOLVO", licenceNumber = "VO001", country = 2, startYear = Timestamp.valueOf("1980-01-01 00:00:00"))
+   val company3                            = Company(3, "PETERBILT", licenceNumber = "PB001", country = 2, startYear = Timestamp.valueOf("1990-01-01 00:00:00"))
    val companyList                         = Seq(company1, company2, company3)
    val companyFuture: Future[Seq[Company]] = Future.successful(Seq(company1, company2, company3))
 }
@@ -62,18 +64,3 @@ object MockVehicleRepository {
    val vehicleByCompany = Seq(VehiclesByCompanyContainer("TATA", Seq(vehicle1, vehicle3)),
                                 VehiclesByCompanyContainer("VOLVO", Seq(vehicle2, vehicle4)))
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

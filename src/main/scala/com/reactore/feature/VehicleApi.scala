@@ -157,6 +157,40 @@ class VehicleService {
       } yield res
       result.recover { case ex => handleExceptions(ex) }
    }
+
+   // update quantity, weight and description
+   def updateVehicleDetails(id: Long, quantity: Long, weight: Long, description: Option[String]): Future[String] = {
+      val result = for {
+         vehicleList <- vehicleRepository.vehiclesFuture
+         _ = if (vehicleList.isEmpty) throw EmptyListException(message = "Vehicle list is empty", exception = new Exception("Vehicle list is empty"))
+         vehicleOption = vehicleList.find(_.vehicleId == id)
+         _ = if (vehicleOption.isEmpty) throw NoSuchEntityException(message = "No vehicle found for given id", exception = new Exception("No vehicle found for given id"))
+         updatedVehicle = vehicleOption.get.copy(description = description, weight = weight, quantity = quantity)
+         res <- vehicleRepository.update(id, updatedVehicle).map(x => "Updated vehicle details successfully")
+      } yield res
+      result.recover { case ex => handleExceptions(ex) }
+   }
+
+   //group vehicles by category
+   def groupVehiclesByCategory: Future[Seq[VehiclesByCategoryContainer]] = {
+      val result = for {
+         vehicleList <- vehicleRepository.vehiclesFuture
+         vehicleTypeList <- vehicleTypeRepository.vehicleTypeFuture
+         vehicleCategoryList <- vehicleCategoryRepository.vehicleCategoryFuture
+         _ = if (vehicleList.isEmpty) throw EmptyListException(message = "Vehicle list is empty", exception = new Exception("Vehicle list is empty"))
+         _ = if (vehicleTypeList.isEmpty) throw EmptyListException(message = "Vehicle type list is empty", exception = new Exception("Vehicle type list is empty"))
+         _ = if (vehicleCategoryList.isEmpty) throw EmptyListException(message = "Vehicle category list is empty", exception = new Exception("Vehicle category list is empty"))
+         res = vehicleTypeList.groupBy(_.vehicleCategoryId).map {
+            case (vehicleCategoryId, vehicleTypes) =>
+               val categoryOption = vehicleCategoryList.find(_.vehicleCategoryId == vehicleCategoryId)
+               val categoryName = if (categoryOption.isDefined) categoryOption.get.name else throw NoSuchEntityException(message = "No category found for given id", exception = new Exception("No category found for given id"))
+               val vehicleTypeIdList = vehicleTypes.map(_.vehicleTypeId)
+               val vehiclesForCategory = vehicleList.filter(vehicle => vehicleTypeIdList.contains(vehicle.vehicleType))
+               VehiclesByCategoryContainer(categoryName, vehiclesForCategory.sortBy(_.vehicleId))
+         }.toSeq.sortBy(_.categoryName)
+      } yield res
+      result.recover { case ex => handleExceptions(ex) }
+   }
 }
 
 
@@ -193,4 +227,5 @@ class VehicleRest(vehicleService: VehicleService) extends CustomDirectives {
       }
    }
 }
+
 

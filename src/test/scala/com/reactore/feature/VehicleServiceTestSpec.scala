@@ -281,6 +281,38 @@ class VehicleServiceTestSpec extends WordSpec with ScalaFutures with Matchers {
          val result = MockVehicleService.getVehicleCountByCountry(3)
          result.failed.futureValue shouldBe an[NoSuchEntityException]
       }
+
+      //test cases for groupVehiclesByCategory method
+      "group vehicle by vehicle category" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
+         when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.vehicleTypeFuture)
+         when(MockVehicleService.vehicleCategoryRepository.vehicleCategoryFuture).thenReturn(MockVehicleCategoryRepository.vehicleCategoryFuture)
+         val expectedResult = Seq(VehiclesByCategoryContainer("4-Wheeler", Seq(MockVehicleRepository.vehicle1, MockVehicleRepository.vehicle3)),
+                                    VehiclesByCategoryContainer("8-Wheeler", Seq(MockVehicleRepository.vehicle2, MockVehicleRepository.vehicle4)))
+         val result = MockVehicleService.groupVehiclesByCategory
+         result.futureValue shouldBe expectedResult
+      }
+      "throw exception in group by category if vehicle list is empty" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.emptyList)
+         when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.vehicleTypeFuture)
+         when(MockVehicleService.vehicleCategoryRepository.vehicleCategoryFuture).thenReturn(MockVehicleCategoryRepository.vehicleCategoryFuture)
+         val result = MockVehicleService.groupVehiclesByCategory
+         result.failed.futureValue shouldBe an[EmptyListException]
+      }
+      "throw exception in group by category if vehicle type list is empty" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
+         when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.emptyList)
+         when(MockVehicleService.vehicleCategoryRepository.vehicleCategoryFuture).thenReturn(MockVehicleCategoryRepository.vehicleCategoryFuture)
+         val result = MockVehicleService.groupVehiclesByCategory
+         result.failed.futureValue shouldBe an[EmptyListException]
+      }
+      "throw exception in group by category if vehicle category list is empty" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
+         when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.vehicleTypeFuture)
+         when(MockVehicleService.vehicleCategoryRepository.vehicleCategoryFuture).thenReturn(MockVehicleCategoryRepository.emptyList)
+         val result = MockVehicleService.groupVehiclesByCategory
+         result.failed.futureValue shouldBe an[EmptyListException]
+      }
    }
 }
 

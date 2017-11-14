@@ -12,6 +12,8 @@ case class VehicleCategory(vehicleCategoryId: Long, name: String, description: O
 
 case class VehicleType(vehicleTypeId: Long, name: String, description: Option[String] = None, vehicleCategoryId: Long)
 
-case class Company(companyId: Long, name: String, description: Option[String] = None, licenceNumber: String, country: Long /*startYear: DateTime*/)
+case class Company(companyId: Long, name: String, description: Option[String] = None, licenceNumber: String, country: Long, startYear: java.sql.Timestamp)
 
 case class VehiclesByCompanyContainer(companyName: String, vehicles: Seq[Vehicle])
+
+case class VehiclesByCategoryContainer(categoryName: String, vehicleList: Seq[Vehicle])

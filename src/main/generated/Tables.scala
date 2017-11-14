@@ -72,18 +72,19 @@ trait Tables {
    *  @param name Database column name SqlType(varchar), Length(200,true)
    *  @param description Database column description SqlType(varchar), Length(200,true), Default(None)
    *  @param licencenumber Database column licenceNumber SqlType(varchar), Length(200,true)
-   *  @param country Database column country SqlType(int8) */
-  case class CompanyRow(companyid: Long, name: String, description: Option[String] = None, licencenumber: String, country: Long)
+   *  @param country Database column country SqlType(int8)
+   *  @param startyear Database column startYear SqlType(timestamp) */
+  case class CompanyRow(companyid: Long, name: String, description: Option[String] = None, licencenumber: String, country: Long, startyear: java.sql.Timestamp)
   /** GetResult implicit for fetching CompanyRow objects using plain SQL queries */
-  implicit def GetResultCompanyRow(implicit e0: GR[Long], e1: GR[String], e2: GR[Option[String]]): GR[CompanyRow] = GR{
+  implicit def GetResultCompanyRow(implicit e0: GR[Long], e1: GR[String], e2: GR[Option[String]], e3: GR[java.sql.Timestamp]): GR[CompanyRow] = GR{
     prs => import prs._
-    CompanyRow.tupled((<<[Long], <<[String], <<?[String], <<[String], <<[Long]))
+    CompanyRow.tupled((<<[Long], <<[String], <<?[String], <<[String], <<[Long], <<[java.sql.Timestamp]))
   }
   /** Table description of table Company. Objects of this class serve as prototypes for rows in queries. */
   class Company(_tableTag: Tag) extends profile.api.Table[CompanyRow](_tableTag, Some("vehicle"), "Company") {
-    def * = (companyid, name, description, licencenumber, country) <> (CompanyRow.tupled, CompanyRow.unapply)
+    def * = (companyid, name, description, licencenumber, country, startyear) <> (CompanyRow.tupled, CompanyRow.unapply)
     /** Maps whole row to an option. Useful for outer joins. */
-    def ? = (Rep.Some(companyid), Rep.Some(name), description, Rep.Some(licencenumber), Rep.Some(country)).shaped.<>({r=>import r._; _1.map(_=> CompanyRow.tupled((_1.get, _2.get, _3, _4.get, _5.get)))}, (_:Any) =>  throw new Exception("Inserting into ? projection not supported."))
+    def ? = (Rep.Some(companyid), Rep.Some(name), description, Rep.Some(licencenumber), Rep.Some(country), Rep.Some(startyear)).shaped.<>({r=>import r._; _1.map(_=> CompanyRow.tupled((_1.get, _2.get, _3, _4.get, _5.get, _6.get)))}, (_:Any) =>  throw new Exception("Inserting into ? projection not supported."))
 
     /** Database column companyId SqlType(bigserial), AutoInc, PrimaryKey */
     val companyid: Rep[Long] = column[Long]("companyId", O.AutoInc, O.PrimaryKey)
@@ -95,6 +96,8 @@ trait Tables {
     val licencenumber: Rep[String] = column[String]("licenceNumber", O.Length(200,varying=true))
     /** Database column country SqlType(int8) */
     val country: Rep[Long] = column[Long]("country")
+    /** Database column startYear SqlType(timestamp) */
+    val startyear: Rep[java.sql.Timestamp] = column[java.sql.Timestamp]("startYear")
 
     /** Foreign key referencing Country (database name Company_country_fkey) */
     lazy val countryFk = foreignKey("Company_country_fkey", country, Country)(r => r.countryid, onUpdate=ForeignKeyAction.NoAction, onDelete=ForeignKeyAction.NoAction)
