@@ -2,7 +2,91 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="07e0413e-6afb-4dc9-9527-7ca5752d77ec" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$0beda2ed60151c87de76$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$0beda2ed60151c87de76.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$0beda2ed60151c87de76.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$b7088ed3829844498b7f$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$b7088ed3829844498b7f.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$b7088ed3829844498b7f.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$c1eb274d8823d5ab3ff1$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$c1eb274d8823d5ab3ff1.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$c1eb274d8823d5ab3ff1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$f6fce7b70bab0464737a$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$f6fce7b70bab0464737a.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$f6fce7b70bab0464737a.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$f7117438964874aeb66c$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$f7117438964874aeb66c.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$f7117438964874aeb66c.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$f9ae437c62edc13b6093$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$f9ae437c62edc13b6093.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$f9ae437c62edc13b6093.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/slickassignments-build.iml" afterPath="$PROJECT_DIR$/.idea/modules/slickassignments-build.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/slickassignments.iml" afterPath="$PROJECT_DIR$/.idea/modules/slickassignments.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/slickassignments-build/scala_2.12/sbt_1.0/0.1-SNAPSHOT/resolved.xml.properties" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/slickassignments-build/scala_2.12/sbt_1.0/0.1-SNAPSHOT/resolved.xml.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/slickassignments-build/scala_2.12/sbt_1.0/0.1-SNAPSHOT/resolved.xml.xml" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/slickassignments-build/scala_2.12/sbt_1.0/0.1-SNAPSHOT/resolved.xml.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-slickassignments-build-compile-internal.xml" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-slickassignments-build-compile-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-slickassignments-build-compile.xml" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-slickassignments-build-compile.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-slickassignments-build-optional.xml" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-slickassignments-build-optional.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-slickassignments-build-plugin.xml" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-slickassignments-build-plugin.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-slickassignments-build-pom.xml" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-slickassignments-build-pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-slickassignments-build-provided.xml" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-slickassignments-build-provided.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-slickassignments-build-runtime-internal.xml" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-slickassignments-build-runtime-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-slickassignments-build-runtime.xml" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-slickassignments-build-runtime.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-slickassignments-build-scala-tool.xml" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-slickassignments-build-scala-tool.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-slickassignments-build-test-internal.xml" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-slickassignments-build-test-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-slickassignments-build-test.xml" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-slickassignments-build-test.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/inputs" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/inputs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/output" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/compile/dependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/compile/dependencyClasspath/$global/streams/export" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/compile/exportedProducts/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/compile/exportedProducts/$global/streams/export" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/compile/externalDependencyClasspath/$global/streams/export" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/compile/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/compile/managedClasspath/$global/streams/export" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/$global/streams/export" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/runtime/exportedProducts/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/runtime/exportedProducts/$global/streams/export" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/$global/streams/export" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/runtime/internalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/runtime/internalDependencyClasspath/$global/streams/export" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleApi.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleApi.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleRestTestSpec.scala" afterPath="$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleRestTestSpec.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleServiceTestSpec.scala" afterPath="$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleServiceTestSpec.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/default/slickassignments$sources/0.1/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/default/slickassignments$sources/0.1/resolved.xml.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/default/slickassignments$sources/0.1/resolved.xml.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/default/slickassignments$sources/0.1/resolved.xml.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/default/slickassignments_2.12/0.1/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/default/slickassignments_2.12/0.1/resolved.xml.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/default/slickassignments_2.12/0.1/resolved.xml.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/default/slickassignments_2.12/0.1/resolved.xml.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-slickassignments$sources-compile-internal.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-slickassignments$sources-compile-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-slickassignments$sources-compile.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-slickassignments$sources-compile.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-slickassignments$sources-optional.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-slickassignments$sources-optional.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-slickassignments$sources-plugin.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-slickassignments$sources-plugin.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-slickassignments$sources-pom.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-slickassignments$sources-pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-slickassignments$sources-provided.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-slickassignments$sources-provided.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-slickassignments$sources-runtime-internal.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-slickassignments$sources-runtime-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-slickassignments$sources-runtime.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-slickassignments$sources-runtime.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-slickassignments$sources-scala-tool.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-slickassignments$sources-scala-tool.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-slickassignments$sources-test-internal.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-slickassignments$sources-test-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-slickassignments$sources-test.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-slickassignments$sources-test.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-slickassignments_2.12-compile-internal.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-slickassignments_2.12-compile-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-slickassignments_2.12-compile.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-slickassignments_2.12-compile.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-slickassignments_2.12-optional.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-slickassignments_2.12-optional.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-slickassignments_2.12-plugin.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-slickassignments_2.12-plugin.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-slickassignments_2.12-pom.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-slickassignments_2.12-pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-slickassignments_2.12-provided.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-slickassignments_2.12-provided.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-slickassignments_2.12-runtime-internal.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-slickassignments_2.12-runtime-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-slickassignments_2.12-runtime.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-slickassignments_2.12-runtime.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-slickassignments_2.12-scala-tool.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-slickassignments_2.12-scala-tool.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-slickassignments_2.12-test-internal.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-slickassignments_2.12-test-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-slickassignments_2.12-test.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-slickassignments_2.12-test.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/$global/dumpStructure/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/$global/dumpStructure/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" afterPath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/output" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/$global/streams/export" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/compile/managedClasspath/$global/streams/export" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/runtime/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/runtime/externalDependencyClasspath/$global/streams/export" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/runtime/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/runtime/managedClasspath/$global/streams/export" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/test/externalDependencyClasspath/$global/streams/export" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/test/managedClasspath/$global/streams/export" />
     </list>
     <ignored path="$PROJECT_DIR$/project/project/target/" />
     <ignored path="$PROJECT_DIR$/project/target/" />
@@ -13,6 +97,11 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
   </component>
   <component name="ExternalProjectsManager">
     <system id="SBT">
@@ -36,8 +125,8 @@
       <file leaf-file-name="VehicleApi.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleApi.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="286" column="1" lean-forward="true" selection-start-line="286" selection-start-column="1" selection-end-line="286" selection-end-column="1" />
+            <state relative-caret-position="-47">
+              <caret line="191" column="157" lean-forward="false" selection-start-line="191" selection-start-column="157" selection-end-line="191" selection-end-column="157" />
               <folding>
                 <element signature="e#30#68#0" expanded="true" />
                 <element signature="e#2372#3033#0" expanded="false" />
@@ -49,8 +138,7 @@
                 <element signature="e#8379#10064#0" expanded="false" />
                 <element signature="e#10069#11960#0" expanded="false" />
                 <element signature="e#11965#13157#0" expanded="false" />
-                <element signature="e#13162#14089#0" expanded="false" />
-                <element signature="e#14094#15512#0" expanded="false" />
+                <element signature="e#14112#15530#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -59,8 +147,8 @@
       <file leaf-file-name="VehicleServiceTestSpec.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleServiceTestSpec.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="236" column="47" lean-forward="true" selection-start-line="236" selection-start-column="47" selection-end-line="236" selection-end-column="47" />
+            <state relative-caret-position="1530">
+              <caret line="365" column="0" lean-forward="false" selection-start-line="365" selection-start-column="0" selection-end-line="365" selection-end-column="0" />
               <folding>
                 <element signature="e#465#753#0" expanded="false" />
                 <element signature="e#815#1050#0" expanded="false" />
@@ -114,8 +202,8 @@
       <file leaf-file-name="VehicleRestTestSpec.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleRestTestSpec.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="322" column="7" lean-forward="true" selection-start-line="322" selection-start-column="7" selection-end-line="322" selection-end-column="7" />
+            <state relative-caret-position="1890">
+              <caret line="387" column="6" lean-forward="false" selection-start-line="387" selection-start-column="6" selection-end-line="387" selection-end-column="6" />
               <folding>
                 <element signature="e#1041#1348#0" expanded="false" />
                 <element signature="e#1405#1714#0" expanded="false" />
@@ -210,8 +298,8 @@
         <option value="$PROJECT_DIR$/src/main/scala/com/reactore/feature/CompanyApi.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/com/reactore/feature/CompanyServiceTestSpec.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleServiceTestSpec.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleApi.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleRestTestSpec.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleApi.scala" />
       </list>
     </option>
   </component>
@@ -238,8 +326,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -332,8 +419,9 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -544,6 +632,31 @@
     </recent_temporary>
   </component>
   <component name="SbtLocalSettings">
+    <option name="lastUpdateTimestamp" value="1510722672977" />
+    <option name="availableProjects">
+      <map>
+        <entry>
+          <key>
+            <ExternalProjectPojo>
+              <option name="name" value="SlickAssignments" />
+              <option name="path" value="$PROJECT_DIR$" />
+            </ExternalProjectPojo>
+          </key>
+          <value>
+            <list>
+              <ExternalProjectPojo>
+                <option name="name" value="slickassignments" />
+                <option name="path" value="$PROJECT_DIR$" />
+              </ExternalProjectPojo>
+              <ExternalProjectPojo>
+                <option name="name" value="slickassignments-build" />
+                <option name="path" value="$PROJECT_DIR$/project" />
+              </ExternalProjectPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="externalProjectsViewState">
       <projects_view />
     </option>
@@ -756,7 +869,6 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="SBT" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19062027" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -780,6 +892,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -843,8 +956,125 @@
             <element signature="e#8379#10064#0" expanded="false" />
             <element signature="e#10069#11960#0" expanded="false" />
             <element signature="e#11965#13157#0" expanded="false" />
-            <element signature="e#13162#14089#0" expanded="false" />
-            <element signature="e#14094#15512#0" expanded="false" />
+            <element signature="e#14112#15530#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleServiceTestSpec.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="870">
+          <caret line="236" column="47" lean-forward="true" selection-start-line="236" selection-start-column="47" selection-end-line="236" selection-end-column="47" />
+          <folding>
+            <element signature="e#465#753#0" expanded="false" />
+            <element signature="e#815#1050#0" expanded="false" />
+            <element signature="e#1107#1403#0" expanded="false" />
+            <element signature="e#1466#1719#0" expanded="false" />
+            <element signature="e#1786#2032#0" expanded="false" />
+            <element signature="e#2890#3487#0" expanded="false" />
+            <element signature="e#3558#4153#0" expanded="false" />
+            <element signature="e#4229#4820#0" expanded="false" />
+            <element signature="e#4893#5495#0" expanded="false" />
+            <element signature="e#5573#6175#0" expanded="false" />
+            <element signature="e#6256#6868#0" expanded="false" />
+            <element signature="e#6971#7326#0" expanded="false" />
+            <element signature="e#7397#7646#0" expanded="false" />
+            <element signature="e#7728#7984#0" expanded="false" />
+            <element signature="e#8068#8798#0" expanded="false" />
+            <element signature="e#8870#9482#0" expanded="false" />
+            <element signature="e#9571#10188#0" expanded="false" />
+            <element signature="e#10255#10872#0" expanded="false" />
+            <element signature="e#10944#11561#0" expanded="false" />
+            <element signature="e#11646#12273#0" expanded="false" />
+            <element signature="e#12384#12806#0" expanded="false" />
+            <element signature="e#12874#13238#0" expanded="false" />
+            <element signature="e#13306#13670#0" expanded="false" />
+            <element signature="e#13769#14239#0" expanded="false" />
+            <element signature="e#14317#14700#0" expanded="false" />
+            <element signature="e#14783#15162#0" expanded="false" />
+            <element signature="e#15238#15628#0" expanded="false" />
+            <element signature="e#15762#16395#0" expanded="false" />
+            <element signature="e#16490#17036#0" expanded="false" />
+            <element signature="e#17136#17678#0" expanded="false" />
+            <element signature="e#17782#18320#0" expanded="false" />
+            <element signature="e#18414#18967#0" expanded="false" />
+            <element signature="e#19096#19442#0" expanded="false" />
+            <element signature="e#19516#19886#0" expanded="false" />
+            <element signature="e#19960#20330#0" expanded="false" />
+            <element signature="e#20420#20797#0" expanded="false" />
+            <element signature="e#20898#21707#0" expanded="false" />
+            <element signature="e#21781#22309#0" expanded="false" />
+            <element signature="e#22388#22912#0" expanded="false" />
+            <element signature="e#22995#23515#0" expanded="false" />
+            <element signature="e#23644#24107#0" expanded="false" />
+            <element signature="e#24187#24570#0" expanded="false" />
+            <element signature="e#24649#25025#0" expanded="false" />
+            <element signature="e#25104#25480#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleRestTestSpec.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1095">
+          <caret line="322" column="7" lean-forward="true" selection-start-line="322" selection-start-column="7" selection-end-line="322" selection-end-column="7" />
+          <folding>
+            <element signature="e#1041#1348#0" expanded="false" />
+            <element signature="e#1405#1714#0" expanded="false" />
+            <element signature="e#1777#2100#0" expanded="false" />
+            <element signature="e#2166#2475#0" expanded="false" />
+            <element signature="e#2510#3251#0" expanded="false" />
+            <element signature="e#3323#3945#0" expanded="false" />
+            <element signature="e#4016#4641#0" expanded="false" />
+            <element signature="e#4717#5343#0" expanded="false" />
+            <element signature="e#5416#6041#0" expanded="false" />
+            <element signature="e#6119#6749#0" expanded="false" />
+            <element signature="e#6830#7470#0" expanded="false" />
+            <element signature="e#7525#7893#0" expanded="false" />
+            <element signature="e#7964#8222#0" expanded="false" />
+            <element signature="e#8304#8576#0" expanded="false" />
+            <element signature="e#8612#9370#0" expanded="false" />
+            <element signature="e#9442#10077#0" expanded="false" />
+            <element signature="e#10166#10813#0" expanded="false" />
+            <element signature="e#10880#11531#0" expanded="false" />
+            <element signature="e#11603#12259#0" expanded="false" />
+            <element signature="e#12344#13007#0" expanded="false" />
+            <element signature="e#13066#13503#0" expanded="false" />
+            <element signature="e#13571#13927#0" expanded="false" />
+            <element signature="e#13995#14351#0" expanded="false" />
+            <element signature="e#14398#15221#0" expanded="false" />
+            <element signature="e#15295#15814#0" expanded="false" />
+            <element signature="e#15893#16408#0" expanded="false" />
+            <element signature="e#16491#17002#0" expanded="false" />
+            <element signature="e#17049#17534#0" expanded="false" />
+            <element signature="e#17612#17987#0" expanded="false" />
+            <element signature="e#18070#18441#0" expanded="false" />
+            <element signature="e#18517#18896#0" expanded="false" />
+            <element signature="e#19412#19777#0" expanded="false" />
+            <element signature="e#19851#20216#0" expanded="false" />
+            <element signature="e#20306#20675#0" expanded="false" />
+            <element signature="e#21293#21656#0" expanded="false" />
+            <element signature="e#21735#22094#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleApi.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#30#68#0" expanded="true" />
+            <element signature="e#2372#3033#0" expanded="false" />
+            <element signature="e#3038#3760#0" expanded="false" />
+            <element signature="e#3765#5599#0" expanded="false" />
+            <element signature="e#5604#6006#0" expanded="false" />
+            <element signature="e#6011#7121#0" expanded="false" />
+            <element signature="e#7126#8374#0" expanded="false" />
+            <element signature="e#8379#10064#0" expanded="false" />
+            <element signature="e#10069#11960#0" expanded="false" />
+            <element signature="e#11965#13157#0" expanded="false" />
+            <element signature="e#14112#15530#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -853,9 +1083,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="22" column="25" lean-forward="true" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
-          <folding>
-            <element signature="e#30#59#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -863,9 +1091,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding>
-            <element signature="e#30#55#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -884,8 +1110,7 @@
             <element signature="e#8379#10064#0" expanded="false" />
             <element signature="e#10069#11960#0" expanded="false" />
             <element signature="e#11965#13157#0" expanded="false" />
-            <element signature="e#13162#14089#0" expanded="false" />
-            <element signature="e#14094#15512#0" expanded="false" />
+            <element signature="e#14112#15530#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -894,7 +1119,44 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2310">
           <caret line="165" column="0" lean-forward="false" selection-start-line="165" selection-start-column="0" selection-end-line="165" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#1041#1348#0" expanded="false" />
+            <element signature="e#1405#1714#0" expanded="false" />
+            <element signature="e#1777#2100#0" expanded="false" />
+            <element signature="e#2166#2475#0" expanded="false" />
+            <element signature="e#2510#3251#0" expanded="false" />
+            <element signature="e#3323#3945#0" expanded="false" />
+            <element signature="e#4016#4641#0" expanded="false" />
+            <element signature="e#4717#5343#0" expanded="false" />
+            <element signature="e#5416#6041#0" expanded="false" />
+            <element signature="e#6119#6749#0" expanded="false" />
+            <element signature="e#6830#7470#0" expanded="false" />
+            <element signature="e#7525#7893#0" expanded="false" />
+            <element signature="e#7964#8222#0" expanded="false" />
+            <element signature="e#8304#8576#0" expanded="false" />
+            <element signature="e#8612#9370#0" expanded="false" />
+            <element signature="e#9442#10077#0" expanded="false" />
+            <element signature="e#10166#10813#0" expanded="false" />
+            <element signature="e#10880#11531#0" expanded="false" />
+            <element signature="e#11603#12259#0" expanded="false" />
+            <element signature="e#12344#13007#0" expanded="false" />
+            <element signature="e#13066#13503#0" expanded="false" />
+            <element signature="e#13571#13927#0" expanded="false" />
+            <element signature="e#13995#14351#0" expanded="false" />
+            <element signature="e#14398#15221#0" expanded="false" />
+            <element signature="e#15295#15814#0" expanded="false" />
+            <element signature="e#15893#16408#0" expanded="false" />
+            <element signature="e#16491#17002#0" expanded="false" />
+            <element signature="e#17049#17534#0" expanded="false" />
+            <element signature="e#17612#17987#0" expanded="false" />
+            <element signature="e#18070#18441#0" expanded="false" />
+            <element signature="e#18517#18896#0" expanded="false" />
+            <element signature="e#19412#19777#0" expanded="false" />
+            <element signature="e#19851#20216#0" expanded="false" />
+            <element signature="e#20306#20675#0" expanded="false" />
+            <element signature="e#21293#21656#0" expanded="false" />
+            <element signature="e#21735#22094#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -939,11 +1201,14 @@
             <element signature="e#19516#19886#0" expanded="false" />
             <element signature="e#19960#20330#0" expanded="false" />
             <element signature="e#20420#20797#0" expanded="false" />
+            <element signature="e#20898#21707#0" expanded="false" />
             <element signature="e#21781#22309#0" expanded="false" />
             <element signature="e#22388#22912#0" expanded="false" />
             <element signature="e#22995#23515#0" expanded="false" />
+            <element signature="e#23644#24107#0" expanded="false" />
             <element signature="e#24187#24570#0" expanded="false" />
             <element signature="e#24649#25025#0" expanded="false" />
+            <element signature="e#25104#25480#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -962,7 +1227,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1279,10 +1543,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleRestTestSpec.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1890">
+          <caret line="387" column="6" lean-forward="false" selection-start-line="387" selection-start-column="6" selection-end-line="387" selection-end-column="6" />
+          <folding>
+            <element signature="e#1041#1348#0" expanded="false" />
+            <element signature="e#1405#1714#0" expanded="false" />
+            <element signature="e#1777#2100#0" expanded="false" />
+            <element signature="e#2166#2475#0" expanded="false" />
+            <element signature="e#2510#3251#0" expanded="false" />
+            <element signature="e#3323#3945#0" expanded="false" />
+            <element signature="e#4016#4641#0" expanded="false" />
+            <element signature="e#4717#5343#0" expanded="false" />
+            <element signature="e#5416#6041#0" expanded="false" />
+            <element signature="e#6119#6749#0" expanded="false" />
+            <element signature="e#6830#7470#0" expanded="false" />
+            <element signature="e#7525#7893#0" expanded="false" />
+            <element signature="e#7964#8222#0" expanded="false" />
+            <element signature="e#8304#8576#0" expanded="false" />
+            <element signature="e#8612#9370#0" expanded="false" />
+            <element signature="e#9442#10077#0" expanded="false" />
+            <element signature="e#10166#10813#0" expanded="false" />
+            <element signature="e#10880#11531#0" expanded="false" />
+            <element signature="e#11603#12259#0" expanded="false" />
+            <element signature="e#12344#13007#0" expanded="false" />
+            <element signature="e#13066#13503#0" expanded="false" />
+            <element signature="e#13571#13927#0" expanded="false" />
+            <element signature="e#13995#14351#0" expanded="false" />
+            <element signature="e#14398#15221#0" expanded="false" />
+            <element signature="e#15295#15814#0" expanded="false" />
+            <element signature="e#15893#16408#0" expanded="false" />
+            <element signature="e#16491#17002#0" expanded="false" />
+            <element signature="e#17049#17534#0" expanded="false" />
+            <element signature="e#17612#17987#0" expanded="false" />
+            <element signature="e#18070#18441#0" expanded="false" />
+            <element signature="e#18517#18896#0" expanded="false" />
+            <element signature="e#19412#19777#0" expanded="false" />
+            <element signature="e#19851#20216#0" expanded="false" />
+            <element signature="e#20306#20675#0" expanded="false" />
+            <element signature="e#21293#21656#0" expanded="false" />
+            <element signature="e#21735#22094#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleServiceTestSpec.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="236" column="47" lean-forward="true" selection-start-line="236" selection-start-column="47" selection-end-line="236" selection-end-column="47" />
+        <state relative-caret-position="1530">
+          <caret line="365" column="0" lean-forward="false" selection-start-line="365" selection-start-column="0" selection-end-line="365" selection-end-column="0" />
           <folding>
             <element signature="e#465#753#0" expanded="false" />
             <element signature="e#815#1050#0" expanded="false" />
@@ -1332,55 +1641,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleRestTestSpec.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="322" column="7" lean-forward="true" selection-start-line="322" selection-start-column="7" selection-end-line="322" selection-end-column="7" />
-          <folding>
-            <element signature="e#1041#1348#0" expanded="false" />
-            <element signature="e#1405#1714#0" expanded="false" />
-            <element signature="e#1777#2100#0" expanded="false" />
-            <element signature="e#2166#2475#0" expanded="false" />
-            <element signature="e#2510#3251#0" expanded="false" />
-            <element signature="e#3323#3945#0" expanded="false" />
-            <element signature="e#4016#4641#0" expanded="false" />
-            <element signature="e#4717#5343#0" expanded="false" />
-            <element signature="e#5416#6041#0" expanded="false" />
-            <element signature="e#6119#6749#0" expanded="false" />
-            <element signature="e#6830#7470#0" expanded="false" />
-            <element signature="e#7525#7893#0" expanded="false" />
-            <element signature="e#7964#8222#0" expanded="false" />
-            <element signature="e#8304#8576#0" expanded="false" />
-            <element signature="e#8612#9370#0" expanded="false" />
-            <element signature="e#9442#10077#0" expanded="false" />
-            <element signature="e#10166#10813#0" expanded="false" />
-            <element signature="e#10880#11531#0" expanded="false" />
-            <element signature="e#11603#12259#0" expanded="false" />
-            <element signature="e#12344#13007#0" expanded="false" />
-            <element signature="e#13066#13503#0" expanded="false" />
-            <element signature="e#13571#13927#0" expanded="false" />
-            <element signature="e#13995#14351#0" expanded="false" />
-            <element signature="e#14398#15221#0" expanded="false" />
-            <element signature="e#15295#15814#0" expanded="false" />
-            <element signature="e#15893#16408#0" expanded="false" />
-            <element signature="e#16491#17002#0" expanded="false" />
-            <element signature="e#17049#17534#0" expanded="false" />
-            <element signature="e#17612#17987#0" expanded="false" />
-            <element signature="e#18070#18441#0" expanded="false" />
-            <element signature="e#18517#18896#0" expanded="false" />
-            <element signature="e#19412#19777#0" expanded="false" />
-            <element signature="e#19851#20216#0" expanded="false" />
-            <element signature="e#20306#20675#0" expanded="false" />
-            <element signature="e#21293#21656#0" expanded="false" />
-            <element signature="e#21735#22094#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleApi.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="286" column="1" lean-forward="true" selection-start-line="286" selection-start-column="1" selection-end-line="286" selection-end-column="1" />
+        <state relative-caret-position="-47">
+          <caret line="191" column="157" lean-forward="false" selection-start-line="191" selection-start-column="157" selection-end-line="191" selection-end-column="157" />
           <folding>
             <element signature="e#30#68#0" expanded="true" />
             <element signature="e#2372#3033#0" expanded="false" />
@@ -1392,8 +1656,7 @@
             <element signature="e#8379#10064#0" expanded="false" />
             <element signature="e#10069#11960#0" expanded="false" />
             <element signature="e#11965#13157#0" expanded="false" />
-            <element signature="e#13162#14089#0" expanded="false" />
-            <element signature="e#14094#15512#0" expanded="false" />
+            <element signature="e#14112#15530#0" expanded="false" />
           </folding>
         </state>
       </provider>

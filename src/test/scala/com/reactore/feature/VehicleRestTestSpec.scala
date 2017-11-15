@@ -385,6 +385,32 @@ class VehicleRestTestSpec extends WordSpec with ScalatestRouteTest with Matchers
          }
       }
 
+      "update the details of vehicle from vehicle details for id as 1" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
+         when(MockVehicleService.vehicleRepository.update(anyLong, any[Vehicle])).thenReturn(Future.successful(1))
+         val vehicleDetails = VehicleDetails(30, 30, Some("New description")).asJson
+         Put("/vehicle/details/1").withEntity(vehicleDetails) ~> testRoute ~> check {
+            responseAs[String] shouldBe "Updated vehicle details successfully".asJson
+         }
+      }
+      "throw exception in update the details of vehicle from vehicle details for vehicle id as 10" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
+         when(MockVehicleService.vehicleRepository.update(anyLong, any[Vehicle])).thenReturn(Future.successful(1))
+         val vehicleDetails = VehicleDetails(30, 30, Some("New description")).asJson
+         Put("/vehicle/details/10").withEntity(vehicleDetails) ~> testRoute ~> check {
+            status shouldEqual StatusCodes.BadRequest
+         }
+      }
+      "throw exception in update the details of vehicle from vehicle details for empty vehicle list" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.emptyList)
+         when(MockVehicleService.vehicleRepository.update(anyLong, any[Vehicle])).thenReturn(Future.successful(1))
+         val vehicleDetails = VehicleDetails(30, 30, Some("New description")).asJson
+         Put("/vehicle/details/1").withEntity(vehicleDetails) ~> testRoute ~> check {
+            status shouldEqual StatusCodes.BadRequest
+         }
+      }
+
+
    }
 
 }

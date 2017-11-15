@@ -340,6 +340,30 @@ class VehicleServiceTestSpec extends WordSpec with ScalaFutures with Matchers {
          val result = MockVehicleService.getVehiclesByCompanyOlderThan(35)
          result.failed.futureValue shouldBe an[EmptyListException]
       }
+
+      // test cases for updateVehicleDetails method
+      "update the details of vehicle from vehicle details for id as 1" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
+         when(MockVehicleService.vehicleRepository.update(anyLong, any[Vehicle])).thenReturn(Future.successful(1))
+         val vehicleDetails = VehicleDetails(30, 30, Some("New description"))
+         val result = MockVehicleService.updateVehicleDetails(1, vehicleDetails)
+         result.futureValue shouldBe "Updated vehicle details successfully"
+      }
+      "throw exception in update the details of vehicle from vehicle details for empty vehicle list" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.emptyList)
+         when(MockVehicleService.vehicleRepository.update(anyLong, any[Vehicle])).thenReturn(Future.successful(1))
+         val vehicleDetails = VehicleDetails(30, 30, Some("New description"))
+         val result = MockVehicleService.updateVehicleDetails(1, vehicleDetails)
+         result.failed.futureValue shouldBe an[EmptyListException]
+      }
+      "throw exception in update the details of vehicle from vehicle details for vehicle id as 10" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
+         when(MockVehicleService.vehicleRepository.update(anyLong, any[Vehicle])).thenReturn(Future.successful(1))
+         val vehicleDetails = VehicleDetails(30, 30, Some("New description"))
+         val result = MockVehicleService.updateVehicleDetails(10, vehicleDetails)
+         result.failed.futureValue shouldBe an[NoSuchEntityException]
+      }
+
    }
 }
 
