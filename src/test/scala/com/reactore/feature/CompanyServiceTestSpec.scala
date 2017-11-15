@@ -182,4 +182,3 @@ class CompanyServiceTestSpec extends WordSpec with Matchers with ScalaFutures {
    }
 }
 
-object MockCompanyService extends CompanyService with MockCompanyFacade

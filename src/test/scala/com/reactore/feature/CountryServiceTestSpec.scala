@@ -127,4 +127,3 @@ class CountryServiceTestSpec extends WordSpec with ScalaFutures with Matchers {
    }
 }
 
-object MockCountryService extends CountryService with MockCountryFacade

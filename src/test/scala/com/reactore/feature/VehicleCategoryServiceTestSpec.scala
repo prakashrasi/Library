@@ -120,4 +120,3 @@ class VehicleCategoryServiceTestSpec extends WordSpec with Matchers with ScalaFu
    }
 }
 
-object MockVehicleCategoryService extends VehicleCategoryService with MockVehicleCategoryFacade

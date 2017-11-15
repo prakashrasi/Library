@@ -148,4 +148,3 @@ class VehicleTypeServiceTestSpec extends WordSpec with Matchers with ScalaFuture
    }
 }
 
-object MockVehicleTypeService extends VehicleTypeService with MockVehicleTypeFacade

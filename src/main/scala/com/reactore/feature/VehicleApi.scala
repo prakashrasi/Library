@@ -1,5 +1,7 @@
 package com.reactore.feature
 
+import java.sql.Timestamp
+
 import akka.http.scaladsl.server.Route
 import com.reactore.core.HandleExceptions._
 import com.reactore.core._
@@ -199,6 +201,7 @@ class VehicleService {
 
    //get vehicles by company older than given years
    def getVehiclesByCompanyOlderThan(years: Long): Future[Seq[Vehicle]] = {
+      val currentTimeStamp= new Timestamp(System.currentTimeMillis())
       val currentTime = DateTime.now()
       val result = for {
          vehicleList <- vehicleRepository.vehiclesFuture
@@ -206,8 +209,9 @@ class VehicleService {
          _ = if (vehicleList.isEmpty) throw EmptyListException(message = "Vehicle list is empty", exception = new Exception("Vehicle list is empty"))
          _ = if (companyList.isEmpty) throw EmptyListException(exception = new Exception("Company list is empty!!"), message = "Company list is empty!!")
          companyIdList = companyList.filter { company =>
-            val startYear = DateTime.parse(company.startYear.toString, DateTimeFormat.forPattern("yyyy-MM-dd HH:mm:ss.sss"))
-            Years.yearsBetween(startYear, currentTime).getYears > years
+            (currentTimeStamp.getYear - company.startYear.getYear)>years
+            //val startYear = DateTime.parse(company.startYear.toString, DateTimeFormat.forPattern("yyyy-MM-dd HH:mm:ss.sss"))
+            //Years.yearsBetween(startYear, currentTime).getYears > years
          }.map(_.companyId)
          _ = if (companyIdList.isEmpty) throw NoSuchEntityException(message = "No Companies found", exception = new Exception("No Companies found"))
          vehiclesForCompany = vehicleList.filter(vehicle => companyIdList.contains(vehicle.company))
