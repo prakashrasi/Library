@@ -18,7 +18,7 @@ class CountryService {
    // save country
    def insertCountry(country: Country): Future[String] = {
       val result = for {
-         countryList <- countryRepository.countryFuture
+         countryList <- countryRepository.getAllCountry
          _ = if (country.name.isEmpty && country.language.isEmpty) throw FieldNotDefinedException(exception = new Exception("Fields not defined!!"), message = "Fields not defined!!")
          _ = if (countryList.isEmpty) countryRepository.insert(country).map { x => "Inserted country successfully" }
          uniqueCodeOption = countryList.find(_.code == country.code)
@@ -32,7 +32,7 @@ class CountryService {
    //get country by id
    def getCountryById(id: Long): Future[Country] = {
       val result = for {
-         countryList <- countryRepository.countryFuture
+         countryList <- countryRepository.getAllCountry
          _ = if (countryList.isEmpty) throw EmptyListException(exception = new Exception("Country list is empty!!"), message = "Country list is empty!!")
          countryOption = countryList.find(_.countryId == id)
          res = if (countryOption.isDefined) {
@@ -46,8 +46,8 @@ class CountryService {
    //delete country by id
    def deleteCountryById(id: Long): Future[String] = {
       val result = for {
-         countryList <- countryRepository.countryFuture
-         companyList <- companyRepository.companyFuture
+         countryList <- countryRepository.getAllCountry
+         companyList <- companyRepository.getAllCompany
          _ = if (countryList.isEmpty) throw EmptyListException(exception = new Exception("Country list is empty!!"), message = "Country list is empty!!")
          countryOption = countryList.find(_.countryId == id)
          _ = if (countryOption.isEmpty) throw NoSuchEntityException(exception = new Exception("Country for given id doesn't exists!!"), message = "Country for given id doesn't exists!!")
@@ -61,7 +61,7 @@ class CountryService {
    // update country by id
    def updateCountryById(id: Long, updatedCountry: Country): Future[String] = {
       val result = for {
-         countryList <- countryRepository.countryFuture
+         countryList <- countryRepository.getAllCountry
          _ = if (updatedCountry.name.isEmpty && updatedCountry.language.isEmpty && updatedCountry.code.isEmpty) throw FieldNotDefinedException(exception = new Exception("Fields are not defined!!"), message = "Fields are not defined!!")
          _ = if (countryList.isEmpty) throw EmptyListException(exception = new Exception("Country list is empty!!"), message = "Country list is empty!!")
          countryOption = countryList.find(_.countryId == id)
@@ -76,7 +76,7 @@ class CountryService {
 
    def getAll: Future[Seq[Country]] = {
       val result = for {
-         countryList <- countryRepository.countryFuture
+         countryList <- countryRepository.getAllCountry
          _ = if (countryList.isEmpty) throw EmptyListException(message = "Country list is empty!!", exception = new Exception("Country list is empty!!"))
          res = countryList
       } yield res

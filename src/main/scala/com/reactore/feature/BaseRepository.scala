@@ -10,7 +10,7 @@ import slick.jdbc.PostgresProfile.api._
 import scala.concurrent.Future
 
 class CompanyRepository extends DBProperties with BaseTables {
-   lazy val companyFuture: Future[Seq[Company]] = db.run(companyQuery.result)
+   def getAllCompany: Future[Seq[Company]] = db.run(companyQuery.result)
 
    def insert(company: Company): Future[Int] = {
       db.run(companyQuery += company)
@@ -28,7 +28,9 @@ class CompanyRepository extends DBProperties with BaseTables {
 object ImplCompanyRepository extends CompanyRepository
 
 class CountryRepository extends DBProperties with BaseTables {
-   lazy val countryFuture: Future[Seq[Country]] = db.run(countryQuery.result)
+   def getAllCountry: Future[Seq[Country]] ={
+      db.run(countryQuery.result)
+   }
 
    def insert(country: Country): Future[Int] = {
       db.run(countryQuery += country)
@@ -46,7 +48,7 @@ class CountryRepository extends DBProperties with BaseTables {
 object ImplCountryRepository extends CountryRepository
 
 class VehiclesRepository extends DBProperties with BaseTables {
-   lazy val vehiclesFuture: Future[Seq[Vehicle]] = db.run(vehicleQuery.result)
+   def getAllVehicles: Future[Seq[Vehicle]] = db.run(vehicleQuery.result)
 
    def insert(vehicle: Vehicle): Future[Int] = {
       db.run(vehicleQuery += vehicle)
@@ -68,7 +70,7 @@ class VehiclesRepository extends DBProperties with BaseTables {
 object ImplVehiclesRepository extends VehiclesRepository
 
 class VehicleTypeRepository extends DBProperties with BaseTables {
-   lazy val vehicleTypeFuture: Future[Seq[VehicleType]] = db.run(vehicleTypeQuery.result)
+  def getAllVehicleTypes: Future[Seq[VehicleType]] = db.run(vehicleTypeQuery.result)
 
    def insert(vehicleType: VehicleType): Future[Int] = {
       db.run(vehicleTypeQuery += vehicleType)
@@ -86,7 +88,7 @@ class VehicleTypeRepository extends DBProperties with BaseTables {
 object ImplVehicleTypeRepository extends VehicleTypeRepository
 
 class VehicleCategoryRepository extends DBProperties with BaseTables {
-   lazy val vehicleCategoryFuture: Future[Seq[VehicleCategory]] = db.run(vehicleCategoryQuery.result)
+   def getAllCategory: Future[Seq[VehicleCategory]] = db.run(vehicleCategoryQuery.result)
 
    def insert(vehicleCategory: VehicleCategory): Future[Int] = {
       db.run(vehicleCategoryQuery += vehicleCategory)

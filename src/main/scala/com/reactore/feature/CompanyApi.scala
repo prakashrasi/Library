@@ -17,8 +17,8 @@ class CompanyService {
 
    def insertCompany(company: Company): Future[String] = {
       val result = for {
-         countryList <- countryRepository.countryFuture
-         companyList <- companyRepository.companyFuture
+         countryList <- countryRepository.getAllCountry
+         companyList <- companyRepository.getAllCompany
          _ = if (company.name.isEmpty && company.licenceNumber.isEmpty) throw FieldNotDefinedException(message = "Fields are not defined!!", exception = new Exception("Fields are not defined!!"))
          _ = if (countryList.isEmpty) throw EmptyListException(message = "Country list is Empty!!", exception = new Exception("Country list is Empty!!"))
          validCountry = countryList.find(_.countryId == company.countryId)
@@ -35,7 +35,7 @@ class CompanyService {
    //get company by id
    def getCompanyById(id: Long): Future[Company] = {
       val result = for {
-         companyList <- companyRepository.companyFuture
+         companyList <- companyRepository.getAllCompany
          _ = if (companyList.isEmpty) throw EmptyListException(message = "Company list is empty!!", exception = new Exception("Company list is empty!!"))
          companyOption = companyList.find(_.companyId == id)
          res = if (companyOption.isDefined) {
@@ -50,8 +50,8 @@ class CompanyService {
    //delete company by id
    def deleteCompanyById(id: Long): Future[String] = {
       val result = for {
-         companyList <- companyRepository.companyFuture
-         vehicleList <- vehicleRepository.vehiclesFuture
+         companyList <- companyRepository.getAllCompany
+         vehicleList <- vehicleRepository.getAllVehicles
          _ = if (companyList.isEmpty) throw EmptyListException(message = "Company list is empty!!", exception = new Exception("Company list is empty!!"))
          companyOption = companyList.find(_.companyId == id)
          _ = if (companyOption.isEmpty) throw NoSuchEntityException(message = "Company not found!!", exception = new Exception("Company not found!!"))
@@ -70,8 +70,8 @@ class CompanyService {
    //update company by id
    def updateCompanyById(id: Long, updatedCompany: Company): Future[String] = {
       val result = for {
-         companyList <- companyRepository.companyFuture
-         countryList <- countryRepository.countryFuture
+         companyList <- companyRepository.getAllCompany
+         countryList <- countryRepository.getAllCountry
          _ = if (updatedCompany.name.isEmpty && updatedCompany.licenceNumber.isEmpty) throw FieldNotDefinedException(exception = new Exception("Fields not defined!!"), message = "Fields not defined!!")
          companyOption = companyList.find(_.companyId == id)
          _ = if (companyOption.isEmpty) throw NoSuchEntityException(exception = new Exception("No company found for given id!!"), message = "No company found for given id!!")
@@ -87,7 +87,7 @@ class CompanyService {
 
    def getAll: Future[Seq[Company]] = {
       val result = for {
-         companies <- companyRepository.companyFuture
+         companies <- companyRepository.getAllCompany
          _ = if (companies.isEmpty) throw EmptyListException(message = "Company list is empty!!", exception = new Exception("Company list is empty!!"))
          res = companies
       } yield res
@@ -97,8 +97,8 @@ class CompanyService {
    //delete company and its related data in other tables
    def deleteCompanyWithRelatedDataById(companyId: Long): Future[String] = {
       val result = for {
-         companyList <- companyRepository.companyFuture
-         vehicleList <- vehicleRepository.vehiclesFuture
+         companyList <- companyRepository.getAllCompany
+         vehicleList <- vehicleRepository.getAllVehicles
          _ = if (companyList.isEmpty) throw EmptyListException(message = "Company list is empty!!", exception = new Exception("Company list is empty!!"))
          companyOption = companyList.find(_.companyId == companyId)
          _ = if (companyOption.isEmpty) throw NoSuchEntityException(exception = new Exception("No country found!!"), message = "No country found!!")

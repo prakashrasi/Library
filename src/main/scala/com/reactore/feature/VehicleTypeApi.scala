@@ -17,8 +17,8 @@ class VehicleTypeService {
    // save vehicle type
    def insertVehicleType(vehicleType: VehicleType): Future[String] = {
       val result = for {
-         vehicleCategoryList <- vehicleCategoryRepository.vehicleCategoryFuture
-         vehicleTypeList <- vehicleTypeRepository.vehicleTypeFuture
+         vehicleCategoryList <- vehicleCategoryRepository.getAllCategory
+         vehicleTypeList <- vehicleTypeRepository.getAllVehicleTypes
          _ = if (vehicleType.name.isEmpty) throw FieldNotDefinedException(exception = new Exception("Name is not defined!!"), message = "Name is not defined!!")
          _ = if (vehicleCategoryList.isEmpty) throw EmptyListException(exception = new Exception("Category list is empty!!"), message = "Category list is empty!!")
          categoryOption = vehicleCategoryList.find(_.vehicleCategoryId == vehicleType.vehicleCategoryId)
@@ -37,7 +37,7 @@ class VehicleTypeService {
    // get vehicle type by id
    def getVehicleTypeById(id: Long): Future[VehicleType] = {
       val result = for {
-         vehicleTypeList <- vehicleTypeRepository.vehicleTypeFuture
+         vehicleTypeList <- vehicleTypeRepository.getAllVehicleTypes
          _ = if (vehicleTypeList.isEmpty) throw EmptyListException(exception = new Exception("Vehicle type list is empty!!"), message = "Vehicle type list is empty!!")
          vehicleTypeOption = vehicleTypeList.find(_.vehicleTypeId == id)
          res = if (vehicleTypeOption.isDefined) {
@@ -51,8 +51,8 @@ class VehicleTypeService {
    // delete vehicle type by id
    def deleteVehicleTypeById(id: Long): Future[String] = {
       val result = for {
-         vehicleList <- vehicleRepository.vehiclesFuture
-         vehicleTypeList <- vehicleTypeRepository.vehicleTypeFuture
+         vehicleList <- vehicleRepository.getAllVehicles
+         vehicleTypeList <- vehicleTypeRepository.getAllVehicleTypes
          _ = if (vehicleTypeList.isEmpty) throw EmptyListException(exception = new Exception("Vehicle type list is empty!!"), message = "Vehicle type list is empty!!")
          vehicleTypeOption = vehicleTypeList.find(_.vehicleTypeId == id)
          _ = if (vehicleTypeOption.isEmpty) throw NoSuchEntityException(exception = new Exception("Vehicle type not found for given id!!"), message = "Vehicle type not found for given id!!")
@@ -70,8 +70,8 @@ class VehicleTypeService {
    // update vehicle type by id
    def updateVehicleTypeById(id: Long, updatedVehicleType: VehicleType): Future[String] = {
       val result = for {
-         vehicleTypeList <- vehicleTypeRepository.vehicleTypeFuture
-         vehicleCategoryList <- vehicleCategoryRepository.vehicleCategoryFuture
+         vehicleTypeList <- vehicleTypeRepository.getAllVehicleTypes
+         vehicleCategoryList <- vehicleCategoryRepository.getAllCategory
          _ = if (updatedVehicleType.name.isEmpty) throw FieldNotDefinedException(exception = new Exception("Fields are not defined!!"), message = "Fields are not defined!!")
          _ = if (vehicleTypeList.isEmpty) throw EmptyListException(exception = new Exception("Vehicle type list is empty!!"), message = "Vehicle type list is empty!!")
          vehicleTypeOption = vehicleTypeList.find(_.vehicleTypeId == id)
@@ -86,7 +86,7 @@ class VehicleTypeService {
 
    def getAll: Future[Seq[VehicleType]] = {
       val result = for {
-         vehicleTypeList <- vehicleTypeRepository.vehicleTypeFuture
+         vehicleTypeList <- vehicleTypeRepository.getAllVehicleTypes
          _ = if (vehicleTypeList.isEmpty) throw EmptyListException(message = "Vehicle type list is empty!!", exception = new Exception("Vehicle type list is empty!!"))
          res = vehicleTypeList
       } yield res
