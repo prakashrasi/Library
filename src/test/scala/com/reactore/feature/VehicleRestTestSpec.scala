@@ -15,7 +15,7 @@ import org.scalatest.{Matchers, WordSpec}
 
 import scala.concurrent.Future
 
-class VehicleRestRestSpec extends WordSpec with ScalatestRouteTest with Matchers {
+class VehicleRestTestSpec extends WordSpec with ScalatestRouteTest with Matchers {
    val vehicleRest      = new VehicleRest(MockVehicleService)
    val testRoute: Route = vehicleRest.vehicleRoute
    "Vehicle Rest" should {
@@ -119,6 +119,7 @@ class VehicleRestRestSpec extends WordSpec with ScalatestRouteTest with Matchers
             responseAs[String] shouldBe "Unique model number violated!!".asJson
          }
       }
+
       "delete vehicle in delete vehicle for id 1" in {
          when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
          when(MockVehicleService.vehicleRepository.delete(anyLong)).thenReturn(Future.successful(1))
@@ -138,6 +139,7 @@ class VehicleRestRestSpec extends WordSpec with ScalatestRouteTest with Matchers
             responseAs[String] shouldBe "Vehicle not found for given id !!".asJson
          }
       }
+
       "update vehicle details" in {
          when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
          when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.vehicleTypeFuture)
@@ -193,6 +195,196 @@ class VehicleRestRestSpec extends WordSpec with ScalatestRouteTest with Matchers
             responseAs[String] shouldBe "Updated vehicle has duplicate model number!!".asJson
          }
       }
+
+      "group vehicles by company in group by company" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
+         when(MockVehicleService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
+         val expectedResult = MockVehicleRepository.vehicleByCompany.asJson
+         Get("/vehicle/company") ~> testRoute ~> check {
+            responseAs[String] shouldBe expectedResult
+         }
+      }
+      "throw exception in group vehicle for empty vehicle list" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.emptyList)
+         when(MockVehicleService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
+         Get("/vehicle/company") ~> testRoute ~> check {
+            status shouldEqual StatusCodes.BadRequest
+         }
+      }
+      "throw exception in group vehicle for empty country list" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
+         when(MockVehicleService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.emptyList)
+         Get("/vehicle/company") ~> testRoute ~> check {
+            status shouldEqual StatusCodes.BadRequest
+         }
+      }
+
+      "group vehicle by vehicle category" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
+         when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.vehicleTypeFuture)
+         when(MockVehicleService.vehicleCategoryRepository.vehicleCategoryFuture).thenReturn(MockVehicleCategoryRepository.vehicleCategoryFuture)
+         val expectedResult = Seq(VehiclesByCategoryContainer("4-Wheeler", Seq(MockVehicleRepository.vehicle1, MockVehicleRepository.vehicle3)),
+                                    VehiclesByCategoryContainer("8-Wheeler", Seq(MockVehicleRepository.vehicle2, MockVehicleRepository.vehicle4))).asJson
+         Get("/vehicle/category") ~> testRoute ~> check {
+            responseAs[String] shouldBe expectedResult
+         }
+      }
+      "throw exception in group by category if vehicle list is empty" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.emptyList)
+         when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.vehicleTypeFuture)
+         when(MockVehicleService.vehicleCategoryRepository.vehicleCategoryFuture).thenReturn(MockVehicleCategoryRepository.vehicleCategoryFuture)
+         Get("/vehicle/category") ~> testRoute ~> check {
+            status shouldEqual StatusCodes.BadRequest
+         }
+      }
+      "throw exception in group by category if vehicle type list is empty" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
+         when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.emptyList)
+         when(MockVehicleService.vehicleCategoryRepository.vehicleCategoryFuture).thenReturn(MockVehicleCategoryRepository.vehicleCategoryFuture)
+         Get("/vehicle/category") ~> testRoute ~> check {
+            status shouldEqual StatusCodes.BadRequest
+         }
+      }
+      "throw exception in group by category if vehicle category list is empty" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
+         when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.vehicleTypeFuture)
+         when(MockVehicleService.vehicleCategoryRepository.vehicleCategoryFuture).thenReturn(MockVehicleCategoryRepository.emptyList)
+         Get("/vehicle/category") ~> testRoute ~> check {
+            status shouldEqual StatusCodes.BadRequest
+         }
+      }
+
+      "get vehicles for category id as 1" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
+         when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.vehicleTypeFuture)
+         val expectedResult = Seq(MockVehicleRepository.vehicle1, MockVehicleRepository.vehicle3).asJson
+         Get("/vehicle/category/1") ~> testRoute ~> check {
+            responseAs[String] shouldBe expectedResult
+         }
+      }
+      "throw exception in get vehicle by category for empty vehicle list" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.emptyList)
+         when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.vehicleTypeFuture)
+         Get("/vehicle/category/1") ~> testRoute ~> check {
+            status shouldEqual StatusCodes.BadRequest
+         }
+      }
+      "throw exception in get vehicle by category for empty vehicle type list" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
+         when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.emptyList)
+         Get("/vehicle/category/1") ~> testRoute ~> check {
+            status shouldEqual StatusCodes.BadRequest
+         }
+      }
+      "throw exception in get vehicle by category for category id as 3" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
+         when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.vehicleTypeFuture)
+         Get("/vehicle/category/3") ~> testRoute ~> check {
+            status shouldEqual StatusCodes.BadRequest
+         }
+      }
+
+      "return count of vehicle in given country for country id as 1" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
+         when(MockVehicleService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
+         Get("/vehicle/countbycountry/1") ~> testRoute ~> check {
+            responseAs[String] shouldEqual toJson(2)
+         }
+      }
+      "throw exception in get vehicle count if vehicle list is empty" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.emptyList)
+         when(MockVehicleService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
+         Get("/vehicle/countbycountry/1") ~> testRoute ~> check {
+            status shouldEqual StatusCodes.BadRequest
+         }
+      }
+      "throw exception in get vehicle count if company list is empty" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
+         when(MockVehicleService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.emptyList)
+         Get("/vehicle/countbycountry/1") ~> testRoute ~> check {
+            status shouldEqual StatusCodes.BadRequest
+         }
+      }
+      "throw exception in get vehicle count if company not found for country id as 3" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
+         when(MockVehicleService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
+         Get("/vehicle/countbycountry/3") ~> testRoute ~> check {
+            status shouldEqual StatusCodes.BadRequest
+         }
+      }
+
+      "return list of vehicle wih company older than 35 years " in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
+         when(MockVehicleService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
+         val expectedResult = Seq(MockVehicleRepository.vehicle2, MockVehicleRepository.vehicle4).asJson
+         Get("/vehicle/company/35") ~> testRoute ~> check {
+            responseAs[String] shouldBe expectedResult
+         }
+      }
+      "throw exception if no vehicle found for company older than 40 years" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
+         when(MockVehicleService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
+         Get("/vehicle/company/40") ~> testRoute ~> check {
+            status shouldEqual StatusCodes.BadRequest
+         }
+      }
+      "throw exception if vehicle list is empty for company older than 35" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.emptyList)
+         when(MockVehicleService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
+         Get("/vehicle/company/35") ~> testRoute ~> check {
+            status shouldEqual StatusCodes.BadRequest
+         }
+      }
+      "throw exception if company list is empty for company older than 35" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
+         when(MockVehicleService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.emptyList)
+         Get("/vehicle/company/35") ~> testRoute ~> check {
+            status shouldEqual StatusCodes.BadRequest
+         }
+      }
+
+      "return list of vehicles for capacity greater than 25.00" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
+         when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.vehicleTypeFuture)
+         when(MockVehicleService.vehicleCategoryRepository.vehicleCategoryFuture).thenReturn(MockVehicleCategoryRepository.vehicleCategoryFuture)
+         val expectedResult = Seq(MockVehicleRepository.vehicle2, MockVehicleRepository.vehicle4).asJson
+         Get("/vehicle/capacity/25") ~> testRoute ~> check {
+            responseAs[String] shouldBe expectedResult
+         }
+      }
+      "throw exception in get vehicle with capacity greater than if vehicle list is empty" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.emptyList)
+         when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.vehicleTypeFuture)
+         when(MockVehicleService.vehicleCategoryRepository.vehicleCategoryFuture).thenReturn(MockVehicleCategoryRepository.vehicleCategoryFuture)
+         Get("/vehicle/capacity/25") ~> testRoute ~> check {
+            status shouldEqual StatusCodes.BadRequest
+         }
+      }
+      "throw exception in get vehicle with capacity greater than if vehicle type list is empty" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
+         when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.emptyList)
+         when(MockVehicleService.vehicleCategoryRepository.vehicleCategoryFuture).thenReturn(MockVehicleCategoryRepository.vehicleCategoryFuture)
+         Get("/vehicle/capacity/25") ~> testRoute ~> check {
+            status shouldEqual StatusCodes.BadRequest
+         }
+      }
+      "throw exception in get vehicle with capacity greater than if vehicle category list is empty" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
+         when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.vehicleTypeFuture)
+         when(MockVehicleService.vehicleCategoryRepository.vehicleCategoryFuture).thenReturn(MockVehicleCategoryRepository.emptyList)
+         Get("/vehicle/capacity/25") ~> testRoute ~> check {
+            status shouldEqual StatusCodes.BadRequest
+         }
+      }
+      "throw exception in get vehicle with capacity greater than if vehicle is not found" in {
+         when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
+         when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.vehicleTypeFuture)
+         when(MockVehicleService.vehicleCategoryRepository.vehicleCategoryFuture).thenReturn(MockVehicleCategoryRepository.vehicleCategoryFuture)
+         Get("/vehicle/capacity/45") ~> testRoute ~> check {
+            status shouldEqual StatusCodes.BadRequest
+         }
+      }
+
    }
 
 }
