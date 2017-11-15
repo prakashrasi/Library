@@ -1,5 +1,9 @@
 package com.reactore.feature
 
+/**
+  * created by Kartik on 13-11-2017
+  */
+
 import com.reactore.core._
 import org.mockito.Mockito._
 import org.mockito.Matchers._
@@ -7,10 +11,6 @@ import org.scalatest.{Matchers, WordSpec}
 import org.scalatest.concurrent.ScalaFutures
 
 import scala.concurrent.Future
-
-/**
-  * created by Kartik on 13-11-2017
-  */
 class VehicleTypeServiceTestSpec extends WordSpec with Matchers with ScalaFutures {
    "Vehicle Type Service" should {
       // test cases for getAll method

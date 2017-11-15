@@ -1,10 +1,10 @@
 package com.reactore.generator
 
-import com.reactore.core.DBProperties
-
 /**
   * created by Kartik on 10-11-2017
   */
+
+import com.reactore.core.DBProperties
 
 object CodeGenerator extends App with DBProperties {
    val canonicalPath = new java.io.File(".").getCanonicalPath

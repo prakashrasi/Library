@@ -3,6 +3,7 @@ package com.reactore.core
 /**
   * created by Kartik on 10-11-2017
   */
+
 import slick.jdbc.PostgresProfile.api._
 
 trait DBProperties {

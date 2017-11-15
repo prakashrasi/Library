@@ -1,5 +1,9 @@
 package com.reactore.feature
 
+/**
+  * created by Kartik on 11-11-2017
+  */
+
 import java.sql.Timestamp
 
 import akka.http.scaladsl.server.Route
@@ -14,9 +18,6 @@ import scala.concurrent.Future
 
 case class VehicleDetails(quantity: Long, weight: Long, description: Option[String])
 
-/**
-  * created by Kartik on 11-11-2017
-  */
 class VehicleService {
    self: VehicleFacadeComponent =>
 
@@ -201,7 +202,7 @@ class VehicleService {
 
    //get vehicles by company older than given years
    def getVehiclesByCompanyOlderThan(years: Long): Future[Seq[Vehicle]] = {
-      val currentTimeStamp= new Timestamp(System.currentTimeMillis())
+      val currentTimeStamp = new Timestamp(System.currentTimeMillis())
       val currentTime = DateTime.now()
       val result = for {
          vehicleList <- vehicleRepository.vehiclesFuture
@@ -209,7 +210,7 @@ class VehicleService {
          _ = if (vehicleList.isEmpty) throw EmptyListException(message = "Vehicle list is empty", exception = new Exception("Vehicle list is empty"))
          _ = if (companyList.isEmpty) throw EmptyListException(exception = new Exception("Company list is empty!!"), message = "Company list is empty!!")
          companyIdList = companyList.filter { company =>
-            (currentTimeStamp.getYear - company.startYear.getYear)>years
+            (currentTimeStamp.getYear - company.startYear.getYear) > years
             //val startYear = DateTime.parse(company.startYear.toString, DateTimeFormat.forPattern("yyyy-MM-dd HH:mm:ss.sss"))
             //Years.yearsBetween(startYear, currentTime).getYears > years
          }.map(_.companyId)

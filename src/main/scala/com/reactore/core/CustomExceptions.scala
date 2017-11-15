@@ -1,10 +1,10 @@
 package com.reactore.core
 
-import java.sql.{BatchUpdateException, SQLException}
-
 /**
   * created by Kartik on 10-11-2017
   */
+
+import java.sql.{BatchUpdateException, SQLException}
 
 case class NoSuchEntityException(errorCode: String = "1000", message: String = "ENTITY_NOT_FOUND", exception: Throwable) extends Exception
 

@@ -1,5 +1,9 @@
 package com.reactore.feature
 
+/**
+  * created by Kartik on 11-11-2017
+  */
+
 import org.json4s.native.Serialization._
 import com.reactore.core._
 import HandleExceptions._
@@ -8,9 +12,6 @@ import akka.http.scaladsl.server.Route
 import scala.concurrent.Future
 import scala.concurrent.ExecutionContext.Implicits.global
 
-/**
-  * created by Kartik on 11-11-2017
-  */
 class VehicleCategoryService {
    self: VehicleCategoryFacadeComponent =>
 
