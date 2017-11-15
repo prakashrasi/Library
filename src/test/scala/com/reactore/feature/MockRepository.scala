@@ -21,9 +21,9 @@ object MockCountryRepository {
 object MockCompanyRepository {
    val emptyList: Future[Nil.type] = Future.successful(Nil)
 
-   val company1                            = Company(1, "TATA", licenceNumber = "TA001", country = 1, startYear = Timestamp.valueOf("1985-01-01 00:00:00"))
-   val company2                            = Company(2, "VOLVO", licenceNumber = "VO001", country = 2, startYear = Timestamp.valueOf("1980-01-01 00:00:00"))
-   val company3                            = Company(3, "PETERBILT", licenceNumber = "PB001", country = 2, startYear = Timestamp.valueOf("1990-01-01 00:00:00"))
+   val company1                            = Company(1, "TATA", licenceNumber = "TA001", countryId = 1, startYear = Timestamp.valueOf("1985-01-01 00:00:00"))
+   val company2                            = Company(2, "VOLVO", licenceNumber = "VO001", countryId = 2, startYear = Timestamp.valueOf("1980-01-01 00:00:00"))
+   val company3                            = Company(3, "PETERBILT", licenceNumber = "PB001", countryId = 2, startYear = Timestamp.valueOf("1990-01-01 00:00:00"))
    val companyList                         = Seq(company1, company2, company3)
    val companyFuture: Future[Seq[Company]] = Future.successful(Seq(company1, company2, company3))
 }
@@ -54,10 +54,10 @@ object MockVehicleTypeRepository {
 object MockVehicleRepository {
    val emptyList: Future[Nil.type] = Future.successful(Nil)
 
-   val vehicle1                            = Vehicle(1, "Tiago", modelNumber = "TIAGO", vehicleType = 1, company = 1)
-   val vehicle2                            = Vehicle(2, "GlobeTrotter", modelNumber = "GLOBETROTTER", vehicleType = 2, company = 2)
-   val vehicle3                            = Vehicle(3, "Winger", modelNumber = "WINGER", vehicleType = 3, company = 1)
-   val vehicle4                            = Vehicle(4, "MineDumper", modelNumber = "MINE DUMPER", vehicleType = 4, company = 2)
+   val vehicle1                            = Vehicle(1, "Tiago", modelNumber = "TIAGO", vehicleTypeId = 1, companyId = 1)
+   val vehicle2                            = Vehicle(2, "GlobeTrotter", modelNumber = "GLOBETROTTER", vehicleTypeId = 2, companyId = 2)
+   val vehicle3                            = Vehicle(3, "Winger", modelNumber = "WINGER", vehicleTypeId = 3, companyId = 1)
+   val vehicle4                            = Vehicle(4, "MineDumper", modelNumber = "MINE DUMPER", vehicleTypeId = 4, companyId = 2)
    val vehicleList                         = Seq(vehicle1, vehicle2, vehicle3, vehicle4)
    val vehicleFuture: Future[Seq[Vehicle]] = Future.successful(Seq(vehicle1, vehicle2, vehicle3, vehicle4))
 

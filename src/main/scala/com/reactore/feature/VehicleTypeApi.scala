@@ -57,7 +57,7 @@ class VehicleTypeService {
          vehicleTypeOption = vehicleTypeList.find(_.vehicleTypeId == id)
          _ = if (vehicleTypeOption.isEmpty) throw NoSuchEntityException(exception = new Exception("Vehicle type not found for given id!!"), message = "Vehicle type not found for given id!!")
          res <- {
-            val vehicleForGivenType = vehicleList.filter(_.vehicleType == id)
+            val vehicleForGivenType = vehicleList.filter(_.vehicleTypeId == id)
             if (vehicleForGivenType.isEmpty) {
                vehicleTypeRepository.delete(id).map { x => "Deleted vehicle type successfully" }
             } else Future.failed(ForeignKeyRelationFoundException(exception = new Exception("Foreign key relation found in vehicle table!!"), message = "Foreign key relation found in vehicle table!!"))

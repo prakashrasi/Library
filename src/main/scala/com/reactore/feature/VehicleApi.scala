@@ -29,10 +29,10 @@ class VehicleService {
          companyList <- companyRepository.companyFuture
          _ = if (vehicle.name.isEmpty && vehicle.modelNumber.isEmpty) throw FieldNotDefinedException(exception = new Exception("Fields are not defined!!"), message = "Fields are not defined!!")
          _ = if (companyList.isEmpty) throw EmptyListException(exception = new Exception("Company list is empty!!"), message = "Company list is empty!!")
-         companyOption = companyList.find(_.companyId == vehicle.company)
+         companyOption = companyList.find(_.companyId == vehicle.companyId)
          _ = if (companyOption.isEmpty) throw NoSuchEntityException(exception = new Exception("Company not found!!"), message = "Company not found!!")
          _ = if (vehicleTypeList.isEmpty) throw EmptyListException(exception = new Exception("Vehicle type list is empty!!"), message = "Vehicle type list is empty!!")
-         vehicleTypeOption = vehicleTypeList.find(_.vehicleTypeId == vehicle.vehicleType)
+         vehicleTypeOption = vehicleTypeList.find(_.vehicleTypeId == vehicle.vehicleTypeId)
          _ = if (vehicleTypeOption.isEmpty) throw NoSuchEntityException(exception = new Exception("Vehicle type not found!!"), message = "Vehicle type not found!!")
          res <- if (vehicleList.nonEmpty) {
             val uniqueModelNumber = vehicleList.find(_.modelNumber.equalsIgnoreCase(vehicle.modelNumber))
@@ -77,9 +77,9 @@ class VehicleService {
          _ = if (updatedVehicle.name.isEmpty && updatedVehicle.modelNumber.isEmpty) throw FieldNotDefinedException(exception = new Exception("All fields are not defined!!"), message = "All fields are not defined!!")
          vehicleOption = vehicleList.find(vehicle => vehicle.vehicleId == id)
          _ = if (vehicleOption.isEmpty) throw NoSuchEntityException(exception = new Exception("Vehicle not found for given id!!"), message = "Vehicle not found for given id!!")
-         validCompany = companyList.find(_.companyId == updatedVehicle.company)
+         validCompany = companyList.find(_.companyId == updatedVehicle.companyId)
          _ = if (validCompany.isEmpty) throw NoSuchEntityException(exception = new Exception("Company not found for updated data!!"), message = "Company not found for updated data!!")
-         validVehicleType = vehicleTypeList.find(_.vehicleTypeId == updatedVehicle.vehicleType)
+         validVehicleType = vehicleTypeList.find(_.vehicleTypeId == updatedVehicle.vehicleTypeId)
          _ = if (validVehicleType.isEmpty) throw NoSuchEntityException(exception = new Exception("Vehicle Type not found for updated data!!"), message = "Vehicle Type not found for updated data!!")
          uniqueVehicle = vehicleList.find(_.modelNumber.equalsIgnoreCase(updatedVehicle.modelNumber))
          _ = if (uniqueVehicle.isDefined) throw UniqueKeyViolationException(exception = new Exception("Updated vehicle has duplicate model number!!"), message = "Updated vehicle has duplicate model number!!")
@@ -105,7 +105,7 @@ class VehicleService {
          companyList <- companyRepository.companyFuture
          _ = if (vehicleList.isEmpty) throw EmptyListException(message = "Vehicle list is empty", exception = new Exception("Vehicle list is empty"))
          _ = if (companyList.isEmpty) throw EmptyListException(message = "Company list is empty", exception = new Exception("Company list is empty"))
-         res = vehicleList.groupBy(_.company).map {
+         res = vehicleList.groupBy(_.companyId).map {
             case (company, vehicles) =>
                val companyOption = companyList.find(_.companyId == company)
                val companyName = if (companyOption.isDefined) {companyOption.get.name} else throw NoSuchEntityException(message = "Company not found", exception = new Exception("Company not found"))
@@ -122,9 +122,9 @@ class VehicleService {
          vehicleTypeList <- vehicleTypeRepository.vehicleTypeFuture
          _ = if (vehicleList.isEmpty) throw EmptyListException(message = "Vehicle list is empty", exception = new Exception("Vehicle list is empty"))
          _ = if (vehicleTypeList.isEmpty) throw EmptyListException(message = "Vehicle type list is empty", exception = new Exception("Vehicle type list is empty"))
-         vehicleTypes = vehicleTypeList.filter(_.vehicleCategoryId == categoryId).map(_.vehicleTypeId)
-         _ = if (vehicleTypes.isEmpty) throw NoSuchEntityException(message = "Vehicles not found for given category", exception = new Exception("Vehicles not found for given category"))
-         vehiclesForType = vehicleList.filter(vehicle => vehicleTypes.contains(vehicle.vehicleType))
+         vehicleTypeIdList = vehicleTypeList.filter(_.vehicleCategoryId == categoryId).map(_.vehicleTypeId)
+         _ = if (vehicleTypeIdList.isEmpty) throw NoSuchEntityException(message = "Vehicles not found for given category", exception = new Exception("Vehicles not found for given category"))
+         vehiclesForType = vehicleList.filter(vehicle => vehicleTypeIdList.contains(vehicle.vehicleTypeId))
          res = if (vehiclesForType.nonEmpty) {vehiclesForType} else throw NoSuchEntityException(message = "Vehicles not found for given category", exception = new Exception("Vehicles not found for given category"))
       } yield res
       result.recover { case ex => handleExceptions(ex) }
@@ -144,7 +144,7 @@ class VehicleService {
                val categoryOption = vehicleCategoryList.find(_.vehicleCategoryId == vehicleCategoryId)
                val categoryName = if (categoryOption.isDefined) categoryOption.get.name else throw NoSuchEntityException(message = "No category found for given id", exception = new Exception("No category found for given id"))
                val vehicleTypeIdList = vehicleTypes.map(_.vehicleTypeId)
-               val vehiclesForCategory = vehicleList.filter(vehicle => vehicleTypeIdList.contains(vehicle.vehicleType))
+               val vehiclesForCategory = vehicleList.filter(vehicle => vehicleTypeIdList.contains(vehicle.vehicleTypeId))
                VehiclesByCategoryContainer(categoryName, vehiclesForCategory.sortBy(_.vehicleId))
          }.toSeq.sortBy(_.categoryName)
       } yield res
@@ -164,7 +164,7 @@ class VehicleService {
          _ = if (categoriesWithMaxCapacity.isEmpty) throw NoSuchEntityException(message = "No categories found", exception = new Exception("No categories found"))
          vehicleTypesWithMaxCapacity = vehicleTypeList.filter(vehicleType => categoriesWithMaxCapacity.contains(vehicleType.vehicleCategoryId)).map(_.vehicleTypeId)
          _ = if (vehicleTypesWithMaxCapacity.isEmpty) throw NoSuchEntityException(message = "No vehicle types found", exception = new Exception("No vehicle types found"))
-         vehiclesWithMaxCapacity = vehicleList.filter(vehicle => vehicleTypesWithMaxCapacity.contains(vehicle.vehicleType))
+         vehiclesWithMaxCapacity = vehicleList.filter(vehicle => vehicleTypesWithMaxCapacity.contains(vehicle.vehicleTypeId))
          _ = if (vehiclesWithMaxCapacity.isEmpty) throw NoSuchEntityException(message = "No vehicles found", exception = new Exception("No vehicles found"))
          res = vehiclesWithMaxCapacity.sortBy(_.vehicleId)
       } yield res
@@ -178,9 +178,9 @@ class VehicleService {
          companyList <- companyRepository.companyFuture
          _ = if (vehicleList.isEmpty) throw EmptyListException(message = "Vehicle list is empty", exception = new Exception("Vehicle list is empty"))
          _ = if (companyList.isEmpty) throw EmptyListException(message = "Company list is empty", exception = new Exception("Company list is empty"))
-         companiesForGivenCountry = companyList.filter(_.country == countryId).map(_.companyId)
+         companiesForGivenCountry = companyList.filter(_.countryId == countryId).map(_.companyId)
          _ = if (companiesForGivenCountry.isEmpty) throw NoSuchEntityException(message = "No companies found", exception = new Exception("No companies found"))
-         vehiclesForGivenCountry = vehicleList.filter(vehicle => companiesForGivenCountry.contains(vehicle.company))
+         vehiclesForGivenCountry = vehicleList.filter(vehicle => companiesForGivenCountry.contains(vehicle.companyId))
          _ = if (vehiclesForGivenCountry.isEmpty) throw NoSuchEntityException(message = "No vehicles found", exception = new Exception("No vehicles found"))
          res = vehiclesForGivenCountry.size
       } yield res
@@ -215,7 +215,7 @@ class VehicleService {
             //Years.yearsBetween(startYear, currentTime).getYears > years
          }.map(_.companyId)
          _ = if (companyIdList.isEmpty) throw NoSuchEntityException(message = "No Companies found", exception = new Exception("No Companies found"))
-         vehiclesForCompany = vehicleList.filter(vehicle => companyIdList.contains(vehicle.company))
+         vehiclesForCompany = vehicleList.filter(vehicle => companyIdList.contains(vehicle.companyId))
          res = if (vehiclesForCompany.nonEmpty) {vehiclesForCompany.sortBy(_.vehicleId)} else throw NoSuchEntityException(message = "No Vehicles found", exception = new Exception("No Vehicles found"))
       } yield res
       result.recover { case ex => handleExceptions(ex) }

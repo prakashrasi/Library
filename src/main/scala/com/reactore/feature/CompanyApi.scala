@@ -21,7 +21,7 @@ class CompanyService {
          companyList <- companyRepository.companyFuture
          _ = if (company.name.isEmpty && company.licenceNumber.isEmpty) throw FieldNotDefinedException(message = "Fields are not defined!!", exception = new Exception("Fields are not defined!!"))
          _ = if (countryList.isEmpty) throw EmptyListException(message = "Country list is Empty!!", exception = new Exception("Country list is Empty!!"))
-         validCountry = countryList.find(_.countryId == company.country)
+         validCountry = countryList.find(_.countryId == company.countryId)
          _ = if (validCountry.isEmpty) throw NoSuchEntityException(message = "Country does not exists!!", exception = new Exception("Country does not exists!!"))
          _ = if (companyList.isEmpty) companyRepository.insert(company).map { x => "Inserted company successfully!!" }
          uniqueCountry = companyList.find(comp => comp.name.toLowerCase == company.name.toLowerCase && comp.licenceNumber.toLowerCase == company.licenceNumber.toLowerCase)
@@ -55,7 +55,7 @@ class CompanyService {
          _ = if (companyList.isEmpty) throw EmptyListException(message = "Company list is empty!!", exception = new Exception("Company list is empty!!"))
          companyOption = companyList.find(_.companyId == id)
          _ = if (companyOption.isEmpty) throw NoSuchEntityException(message = "Company not found!!", exception = new Exception("Company not found!!"))
-         vehiclesForGivenCompany = vehicleList.filter(_.company == id)
+         vehiclesForGivenCompany = vehicleList.filter(_.companyId == id)
          res <- if (vehiclesForGivenCompany.isEmpty) {
             companyRepository.delete(id).map {
                x => "Deleted company successfully"
@@ -75,9 +75,9 @@ class CompanyService {
          _ = if (updatedCompany.name.isEmpty && updatedCompany.licenceNumber.isEmpty) throw FieldNotDefinedException(exception = new Exception("Fields not defined!!"), message = "Fields not defined!!")
          companyOption = companyList.find(_.companyId == id)
          _ = if (companyOption.isEmpty) throw NoSuchEntityException(exception = new Exception("No company found for given id!!"), message = "No company found for given id!!")
-         validCountry = countryList.find(_.countryId == updatedCompany.country)
+         validCountry = countryList.find(_.countryId == updatedCompany.countryId)
          _ = if (validCountry.isEmpty) throw NoSuchEntityException(exception = new Exception("No country found!!"), message = "No country found!!")
-         uniqueCompany = companyList.find(company => company.name.equalsIgnoreCase(updatedCompany.name) && company.licenceNumber.equalsIgnoreCase(updatedCompany.licenceNumber) && company.country == updatedCompany.country)
+         uniqueCompany = companyList.find(company => company.name.equalsIgnoreCase(updatedCompany.name) && company.licenceNumber.equalsIgnoreCase(updatedCompany.licenceNumber) && company.countryId == updatedCompany.countryId)
          res <- if (uniqueCompany.isEmpty) {
             companyRepository.update(id, updatedCompany).map { x => "Updated company successfully" }
          } else Future.failed(DuplicateEntityException(message = "Updated company is already present!!", exception = new Exception("Updated company is already present!!")))
@@ -105,7 +105,7 @@ class CompanyService {
          res <- if (vehicleList.isEmpty) {
             companyRepository.delete(companyId).map { x => "Deleted company successfully" }
          } else {
-            val vehicleIdList = vehicleList.filter(_.company == companyId).map(_.vehicleId)
+            val vehicleIdList = vehicleList.filter(_.companyId == companyId).map(_.vehicleId)
             if (vehicleIdList.isEmpty) {
                companyRepository.delete(companyId).map { x => "Deleted company successfully" }
             } else {

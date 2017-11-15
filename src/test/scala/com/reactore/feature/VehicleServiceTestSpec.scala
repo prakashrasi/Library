@@ -48,7 +48,7 @@ class VehicleServiceTestSpec extends WordSpec with ScalaFutures with Matchers {
          when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
          when(MockVehicleService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
          when(MockVehicleService.vehicleRepository.insert(any[Vehicle])).thenReturn(Future.successful(1))
-         val newVehicle = Vehicle(5, "Bike", modelNumber = "BIKE", vehicleType = 3, company = 1)
+         val newVehicle = Vehicle(5, "Bike", modelNumber = "BIKE", vehicleTypeId = 3, companyId = 1)
          val result = MockVehicleService.insertVehicle(newVehicle)
          result.futureValue shouldBe "Inserted vehicle successfully"
       }
@@ -56,7 +56,7 @@ class VehicleServiceTestSpec extends WordSpec with ScalaFutures with Matchers {
          when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
          when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.vehicleTypeFuture)
          when(MockVehicleService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
-         val newVehicle = Vehicle(5, "", modelNumber = "", vehicleType = 3, company = 1)
+         val newVehicle = Vehicle(5, "", modelNumber = "", vehicleTypeId = 3, companyId = 1)
          val result = MockVehicleService.insertVehicle(newVehicle)
          result.failed.futureValue shouldBe an[FieldNotDefinedException]
       }
@@ -64,7 +64,7 @@ class VehicleServiceTestSpec extends WordSpec with ScalaFutures with Matchers {
          when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
          when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.vehicleTypeFuture)
          when(MockVehicleService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.emptyList)
-         val newVehicle = Vehicle(5, "Bike", modelNumber = "BIKE", vehicleType = 3, company = 1)
+         val newVehicle = Vehicle(5, "Bike", modelNumber = "BIKE", vehicleTypeId = 3, companyId = 1)
          val result = MockVehicleService.insertVehicle(newVehicle)
          result.failed.futureValue shouldBe an[EmptyListException]
       }
@@ -72,7 +72,7 @@ class VehicleServiceTestSpec extends WordSpec with ScalaFutures with Matchers {
          when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
          when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.emptyList)
          when(MockVehicleService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
-         val newVehicle = Vehicle(5, "Bike", modelNumber = "BIKE", vehicleType = 3, company = 1)
+         val newVehicle = Vehicle(5, "Bike", modelNumber = "BIKE", vehicleTypeId = 3, companyId = 1)
          val result = MockVehicleService.insertVehicle(newVehicle)
          result.failed.futureValue shouldBe an[EmptyListException]
       }
@@ -80,7 +80,7 @@ class VehicleServiceTestSpec extends WordSpec with ScalaFutures with Matchers {
          when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
          when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.vehicleTypeFuture)
          when(MockVehicleService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
-         val newVehicle = Vehicle(5, "Bike", modelNumber = "BIKE", vehicleType = 3, company = 4)
+         val newVehicle = Vehicle(5, "Bike", modelNumber = "BIKE", vehicleTypeId = 3, companyId = 4)
          val result = MockVehicleService.insertVehicle(newVehicle)
          result.failed.futureValue shouldBe an[NoSuchEntityException]
       }
@@ -88,7 +88,7 @@ class VehicleServiceTestSpec extends WordSpec with ScalaFutures with Matchers {
          when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
          when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.vehicleTypeFuture)
          when(MockVehicleService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
-         val newVehicle = Vehicle(5, "Bike", modelNumber = "BIKE", vehicleType = 6, company = 2)
+         val newVehicle = Vehicle(5, "Bike", modelNumber = "BIKE", vehicleTypeId = 6, companyId = 2)
          val result = MockVehicleService.insertVehicle(newVehicle)
          result.failed.futureValue shouldBe an[NoSuchEntityException]
       }
@@ -96,7 +96,7 @@ class VehicleServiceTestSpec extends WordSpec with ScalaFutures with Matchers {
          when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
          when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.vehicleTypeFuture)
          when(MockVehicleService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
-         val newVehicle = Vehicle(5, "Winger", modelNumber = "WINGER", vehicleType = 4, company = 2)
+         val newVehicle = Vehicle(5, "Winger", modelNumber = "WINGER", vehicleTypeId = 4, companyId = 2)
          val result = MockVehicleService.insertVehicle(newVehicle)
          result.failed.futureValue shouldBe an[UniqueKeyViolationException]
       }
@@ -125,7 +125,7 @@ class VehicleServiceTestSpec extends WordSpec with ScalaFutures with Matchers {
          when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.vehicleTypeFuture)
          when(MockVehicleService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
          when(MockVehicleService.vehicleRepository.update(anyLong, any[Vehicle])).thenReturn(Future.successful(1))
-         val updatedVehicle = Vehicle(1, "Bike", modelNumber = "BIKE", vehicleType = 3, company = 3)
+         val updatedVehicle = Vehicle(1, "Bike", modelNumber = "BIKE", vehicleTypeId = 3, companyId = 3)
          val result = MockVehicleService.updateVehicleById(1, updatedVehicle)
          result.futureValue shouldBe "Updated vehicle successfully"
       }
@@ -133,7 +133,7 @@ class VehicleServiceTestSpec extends WordSpec with ScalaFutures with Matchers {
          when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
          when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.vehicleTypeFuture)
          when(MockVehicleService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
-         val updatedVehicle = Vehicle(1, "", modelNumber = "", vehicleType = 3, company = 3)
+         val updatedVehicle = Vehicle(1, "", modelNumber = "", vehicleTypeId = 3, companyId = 3)
          val result = MockVehicleService.updateVehicleById(1, updatedVehicle)
          result.failed.futureValue shouldBe an[FieldNotDefinedException]
       }
@@ -141,7 +141,7 @@ class VehicleServiceTestSpec extends WordSpec with ScalaFutures with Matchers {
          when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
          when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.vehicleTypeFuture)
          when(MockVehicleService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
-         val updatedVehicle = Vehicle(5, "Bike", modelNumber = "BIKE", vehicleType = 3, company = 3)
+         val updatedVehicle = Vehicle(5, "Bike", modelNumber = "BIKE", vehicleTypeId = 3, companyId = 3)
          val result = MockVehicleService.updateVehicleById(5, updatedVehicle)
          result.failed.futureValue shouldBe an[NoSuchEntityException]
       }
@@ -149,7 +149,7 @@ class VehicleServiceTestSpec extends WordSpec with ScalaFutures with Matchers {
          when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
          when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.vehicleTypeFuture)
          when(MockVehicleService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
-         val updatedVehicle = Vehicle(1, "Bike", modelNumber = "BIKE", vehicleType = 3, company = 5)
+         val updatedVehicle = Vehicle(1, "Bike", modelNumber = "BIKE", vehicleTypeId = 3, companyId = 5)
          val result = MockVehicleService.updateVehicleById(1, updatedVehicle)
          result.failed.futureValue shouldBe an[NoSuchEntityException]
       }
@@ -157,7 +157,7 @@ class VehicleServiceTestSpec extends WordSpec with ScalaFutures with Matchers {
          when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
          when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.vehicleTypeFuture)
          when(MockVehicleService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
-         val updatedVehicle = Vehicle(1, "Bike", modelNumber = "BIKE", vehicleType = 6, company = 1)
+         val updatedVehicle = Vehicle(1, "Bike", modelNumber = "BIKE", vehicleTypeId = 6, companyId = 1)
          val result = MockVehicleService.updateVehicleById(1, updatedVehicle)
          result.failed.futureValue shouldBe an[NoSuchEntityException]
       }
@@ -165,7 +165,7 @@ class VehicleServiceTestSpec extends WordSpec with ScalaFutures with Matchers {
          when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.vehicleTypeFuture)
          when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
          when(MockVehicleService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
-         val updatedVehicle = Vehicle(1, "TIAGO-R", modelNumber = "TIAGO", vehicleType = 1, company = 1)
+         val updatedVehicle = Vehicle(1, "TIAGO-R", modelNumber = "TIAGO", vehicleTypeId = 1, companyId = 1)
          val result = MockVehicleService.updateVehicleById(1, updatedVehicle)
          result.failed.futureValue shouldBe an[UniqueKeyViolationException]
       }

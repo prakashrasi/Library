@@ -9,16 +9,16 @@ import slick.jdbc.PostgresProfile.api._
 trait BaseTables {
 
    class CompanyTable(_tableTag: Tag) extends Table[Company](_tableTag, Some("vehicle"), "Company") {
-      def * = (companyId, name, description, licenceNumber, country,startYear) <> (Company.tupled, Company.unapply)
+      def * = (companyId, name, description, licenceNumber, countryId,startYear) <> (Company.tupled, Company.unapply)
 
-      val companyId    : Rep[Long]           = column[Long]("companyId", O.AutoInc, O.PrimaryKey)
-      val name         : Rep[String]         = column[String]("name", O.Length(200, varying = true))
-      val description  : Rep[Option[String]] = column[Option[String]]("description", O.Length(200, varying = true), O.Default(None))
-      val licenceNumber: Rep[String]         = column[String]("licenceNumber", O.Length(200, varying = true))
-      val country      : Rep[Long]           = column[Long]("country")
-      val startYear    : Rep[java.sql.Timestamp]       = column[java.sql.Timestamp]("startYear")
+      val companyId    : Rep[Long]               = column[Long]("companyId", O.AutoInc, O.PrimaryKey)
+      val name         : Rep[String]             = column[String]("name", O.Length(200, varying = true))
+      val description  : Rep[Option[String]]     = column[Option[String]]("description", O.Length(200, varying = true), O.Default(None))
+      val licenceNumber: Rep[String]             = column[String]("licenceNumber", O.Length(200, varying = true))
+      val countryId    : Rep[Long]               = column[Long]("country")
+      val startYear    : Rep[java.sql.Timestamp] = column[java.sql.Timestamp]("startYear")
 
-      lazy val countryFk = foreignKey("Company_country_fkey", country, countryQuery)(r => r.countryId, onUpdate = ForeignKeyAction.NoAction, onDelete = ForeignKeyAction.NoAction)
+      lazy val countryFk = foreignKey("Company_country_fkey", countryId, countryQuery)(r => r.countryId, onUpdate = ForeignKeyAction.NoAction, onDelete = ForeignKeyAction.NoAction)
    }
 
    lazy val companyQuery = new TableQuery(tag => new CompanyTable(tag))
@@ -37,19 +37,19 @@ trait BaseTables {
 
 
    class VehicleTable(_tableTag: Tag) extends Table[Vehicle](_tableTag, Some("vehicle"), "Vehicle") {
-      def * = (vehicleId, name, description, modelNumber, vehicleType, company, quantity, weight) <> (Vehicle.tupled, Vehicle.unapply)
+      def * = (vehicleId, name, description, modelNumber, vehicleTypeId, company, quantity, weight) <> (Vehicle.tupled, Vehicle.unapply)
 
-      val vehicleId  : Rep[Long]           = column[Long]("vehicleId", O.AutoInc, O.PrimaryKey)
-      val name       : Rep[String]         = column[String]("name", O.Length(200, varying = true))
-      val description: Rep[Option[String]] = column[Option[String]]("description", O.Length(200, varying = true), O.Default(None))
-      val modelNumber: Rep[String]         = column[String]("modelNumber", O.Length(200, varying = true))
-      val vehicleType: Rep[Long]           = column[Long]("vehicleType")
-      val company    : Rep[Long]           = column[Long]("company")
-      val quantity   : Rep[Long]           = column[Long]("quantity",O.Default(0))
-      val weight     : Rep[Long]           = column[Long]("weight",O.Default(0))
+      val vehicleId    : Rep[Long]           = column[Long]("vehicleId", O.AutoInc, O.PrimaryKey)
+      val name         : Rep[String]         = column[String]("name", O.Length(200, varying = true))
+      val description  : Rep[Option[String]] = column[Option[String]]("description", O.Length(200, varying = true), O.Default(None))
+      val modelNumber  : Rep[String]         = column[String]("modelNumber", O.Length(200, varying = true))
+      val vehicleTypeId: Rep[Long]           = column[Long]("vehicleType")
+      val company      : Rep[Long]           = column[Long]("company")
+      val quantity     : Rep[Long]           = column[Long]("quantity",O.Default(0))
+      val weight       : Rep[Long]           = column[Long]("weight",O.Default(0))
 
       lazy val companyFk     = foreignKey("Vehicle_company_fkey", company, companyQuery)(r => r.companyId, onUpdate = ForeignKeyAction.NoAction, onDelete = ForeignKeyAction.NoAction)
-      lazy val vehicleTypeFk = foreignKey("Vehicle_vehicleType_fkey", vehicleType, vehicleTypeQuery)(r => r.vehicleTypeId, onUpdate = ForeignKeyAction.NoAction, onDelete = ForeignKeyAction.NoAction)
+      lazy val vehicleTypeFk = foreignKey("Vehicle_vehicleType_fkey", vehicleTypeId, vehicleTypeQuery)(r => r.vehicleTypeId, onUpdate = ForeignKeyAction.NoAction, onDelete = ForeignKeyAction.NoAction)
    }
 
    lazy val vehicleQuery = new TableQuery(tag => new VehicleTable(tag))

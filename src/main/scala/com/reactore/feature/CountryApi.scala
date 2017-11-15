@@ -51,7 +51,7 @@ class CountryService {
          _ = if (countryList.isEmpty) throw EmptyListException(exception = new Exception("Country list is empty!!"), message = "Country list is empty!!")
          countryOption = countryList.find(_.countryId == id)
          _ = if (countryOption.isEmpty) throw NoSuchEntityException(exception = new Exception("Country for given id doesn't exists!!"), message = "Country for given id doesn't exists!!")
-         companiesForGivenCountry = companyList.filter(_.country == id)
+         companiesForGivenCountry = companyList.filter(_.countryId == id)
          _ = if (companiesForGivenCountry.nonEmpty) throw ForeignKeyRelationFoundException(exception = new Exception("Foreign key relation found in company table!!"), message = "Foreign key relation found in company table!!")
          res <- countryRepository.delete(id).map { x => "Deleted country successfully" }
       } yield res

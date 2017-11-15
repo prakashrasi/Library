@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="07e0413e-6afb-4dc9-9527-7ca5752d77ec" name="Default" comment="local changes added">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/reactore/feature/test.sc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/scala/com/reactore/feature/MockServices.scala" />
+    <list default="true" id="07e0413e-6afb-4dc9-9527-7ca5752d77ec" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/reactore/feature/CompanyApi.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/reactore/feature/CompanyApi.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/reactore/feature/CountryApi.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/reactore/feature/CountryApi.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleApi.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleApi.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleTypeApi.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleTypeApi.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/com/reactore/feature/CompanyRestTestSpec.scala" afterPath="$PROJECT_DIR$/src/test/scala/com/reactore/feature/CompanyRestTestSpec.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/com/reactore/feature/CompanyServiceTestSpec.scala" afterPath="$PROJECT_DIR$/src/test/scala/com/reactore/feature/CompanyServiceTestSpec.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/com/reactore/feature/CountryServiceTestSpec.scala" afterPath="$PROJECT_DIR$/src/test/scala/com/reactore/feature/CountryServiceTestSpec.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleCategoryServiceTestSpec.scala" afterPath="$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleCategoryServiceTestSpec.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/com/reactore/feature/MockRepository.scala" afterPath="$PROJECT_DIR$/src/test/scala/com/reactore/feature/MockRepository.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleRestTestSpec.scala" afterPath="$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleRestTestSpec.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleServiceTestSpec.scala" afterPath="$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleServiceTestSpec.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleTypeServiceTestSpec.scala" afterPath="$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleTypeServiceTestSpec.scala" />
     </list>
     <ignored path="$PROJECT_DIR$/project/project/target/" />
     <ignored path="$PROJECT_DIR$/project/target/" />
@@ -51,156 +52,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="VehicleApi.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="VehicleApi.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleApi.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+            <state relative-caret-position="194">
+              <caret line="31" column="71" lean-forward="false" selection-start-line="31" selection-start-column="71" selection-end-line="31" selection-end-column="71" />
               <folding>
-                <element signature="e#30#55#0" expanded="true" />
-                <element signature="e#2485#3146#0" expanded="false" />
-                <element signature="e#3151#3873#0" expanded="false" />
-                <element signature="e#3878#5712#0" expanded="false" />
-                <element signature="e#5717#6119#0" expanded="false" />
-                <element signature="e#6124#7234#0" expanded="false" />
-                <element signature="e#7239#8487#0" expanded="false" />
-                <element signature="e#8492#10177#0" expanded="false" />
-                <element signature="e#10182#12073#0" expanded="false" />
-                <element signature="e#12078#13270#0" expanded="false" />
+                <element signature="e#76#101#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VehicleServiceTestSpec.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleServiceTestSpec.scala">
+      <file leaf-file-name="BaseEntities.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/core/BaseEntities.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="369" column="0" lean-forward="false" selection-start-line="369" selection-start-column="0" selection-end-line="369" selection-end-column="0" />
-              <folding>
-                <element signature="e#359#27228#0" expanded="false" />
-                <element signature="e#465#753#0" expanded="false" />
-                <element signature="e#815#1050#0" expanded="false" />
-                <element signature="e#1107#1403#0" expanded="false" />
-                <element signature="e#1466#1719#0" expanded="false" />
-                <element signature="e#1786#2032#0" expanded="false" />
-                <element signature="e#2890#3487#0" expanded="false" />
-                <element signature="e#3558#4153#0" expanded="false" />
-                <element signature="e#4229#4820#0" expanded="false" />
-                <element signature="e#4893#5495#0" expanded="false" />
-                <element signature="e#5573#6175#0" expanded="false" />
-                <element signature="e#6256#6868#0" expanded="false" />
-                <element signature="e#6971#7326#0" expanded="false" />
-                <element signature="e#7397#7646#0" expanded="false" />
-                <element signature="e#7728#7984#0" expanded="false" />
-                <element signature="e#8068#8798#0" expanded="false" />
-                <element signature="e#8870#9482#0" expanded="false" />
-                <element signature="e#9571#10188#0" expanded="false" />
-                <element signature="e#10255#10872#0" expanded="false" />
-                <element signature="e#10944#11561#0" expanded="false" />
-                <element signature="e#11646#12273#0" expanded="false" />
-                <element signature="e#12384#12806#0" expanded="false" />
-                <element signature="e#12874#13238#0" expanded="false" />
-                <element signature="e#13306#13670#0" expanded="false" />
-                <element signature="e#13769#14239#0" expanded="false" />
-                <element signature="e#14317#14700#0" expanded="false" />
-                <element signature="e#14783#15162#0" expanded="false" />
-                <element signature="e#15238#15628#0" expanded="false" />
-                <element signature="e#15762#16395#0" expanded="false" />
-                <element signature="e#16490#17036#0" expanded="false" />
-                <element signature="e#17136#17678#0" expanded="false" />
-                <element signature="e#17782#18320#0" expanded="false" />
-                <element signature="e#18414#18967#0" expanded="false" />
-                <element signature="e#19096#19442#0" expanded="false" />
-                <element signature="e#19516#19886#0" expanded="false" />
-                <element signature="e#19960#20330#0" expanded="false" />
-                <element signature="e#20420#20797#0" expanded="false" />
-                <element signature="e#20898#21707#0" expanded="false" />
-                <element signature="e#21781#22309#0" expanded="false" />
-                <element signature="e#22388#22912#0" expanded="false" />
-                <element signature="e#22995#23515#0" expanded="false" />
-                <element signature="e#24187#24570#0" expanded="false" />
-                <element signature="e#24649#25025#0" expanded="false" />
-                <element signature="e#25104#25480#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MockServices.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/scala/com/reactore/feature/MockServices.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="14" column="42" lean-forward="true" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
+            <state relative-caret-position="195">
+              <caret line="14" column="118" lean-forward="false" selection-start-line="14" selection-start-column="118" selection-end-line="14" selection-end-column="118" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VehicleTypeServiceTestSpec.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleTypeServiceTestSpec.scala">
+      <file leaf-file-name="BaseTables.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/core/BaseTables.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="150" column="0" lean-forward="false" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
-              <folding>
-                <element signature="e#398#10439#0" expanded="false" />
-                <element signature="e#1216#1547#0" expanded="false" />
-                <element signature="e#1618#1887#0" expanded="false" />
-                <element signature="e#1955#2235#0" expanded="false" />
-                <element signature="e#3022#3525#0" expanded="false" />
-                <element signature="e#3599#4102#0" expanded="false" />
-                <element signature="e#4171#4659#0" expanded="false" />
-                <element signature="e#4734#5240#0" expanded="false" />
-                <element signature="e#6882#7295#0" expanded="false" />
-                <element signature="e#8125#8636#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VehicleCategoryServiceTestSpec.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleCategoryServiceTestSpec.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
-              <folding>
-                <element signature="e#367#8354#0" expanded="false" />
-                <element signature="e#1288#1655#0" expanded="false" />
-                <element signature="e#1717#2025#0" expanded="false" />
-                <element signature="e#2093#2386#0" expanded="false" />
-                <element signature="e#2495#3028#0" expanded="false" />
-                <element signature="e#3572#3971#0" expanded="false" />
-                <element signature="e#4085#4660#0" expanded="false" />
-                <element signature="e#4736#5185#0" expanded="false" />
-                <element signature="e#5272#5706#0" expanded="false" />
-                <element signature="e#5792#6252#0" expanded="false" />
-                <element signature="e#6370#6929#0" expanded="false" />
-                <element signature="e#6997#7401#0" expanded="false" />
-                <element signature="e#7469#7880#0" expanded="false" />
-                <element signature="e#7951#8347#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CountryServiceTestSpec.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/scala/com/reactore/feature/CountryServiceTestSpec.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="129" column="0" lean-forward="false" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
-              <folding>
-                <element signature="e#359#7638#0" expanded="false" />
-                <element signature="e#1141#1436#0" expanded="false" />
-                <element signature="e#1499#1751#0" expanded="false" />
-                <element signature="e#2670#2985#0" expanded="false" />
-                <element signature="e#3058#3392#0" expanded="false" />
-                <element signature="e#4537#4878#0" expanded="false" />
-                <element signature="e#4954#5288#0" expanded="false" />
-                <element signature="e#5368#5717#0" expanded="false" />
-                <element signature="e#6370#6732#0" expanded="false" />
-                <element signature="e#6799#7168#0" expanded="false" />
-                <element signature="e#7251#7631#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="-107">
+              <caret line="45" column="15" lean-forward="false" selection-start-line="45" selection-start-column="15" selection-end-line="45" selection-end-column="15" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -234,34 +113,36 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/scala/com/reactore/core/CustomSerializers.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/reactore/feature/ApiBoot.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/reactore/core/CustomExceptions.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/reactore/core/CustomDirectives.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleTypeApi.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleTypeRestTestSpec.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleRestRestSpec.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/reactore/feature/CountryApi.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/com/reactore/feature/CountryRestTestSpec.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleCategoryApi.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleCategoryRestTestSpec.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehiclesByCompanyContainer.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/reactore/feature/BaseFacade.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/com/reactore/feature/MockFacades.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/reactore/core/BaseEntities.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/reactore/core/BaseTables.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/com/reactore/feature/MockRepository.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/com/reactore/feature/CompanyRestTestSpec.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/reactore/feature/BaseRepository.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/reactore/feature/CompanyApi.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleRestTestSpec.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/reactore/feature/test.sc" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleApi.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/com/reactore/feature/CompanyServiceTestSpec.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleServiceTestSpec.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/com/reactore/feature/CountryServiceTestSpec.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleCategoryServiceTestSpec.scala" />
-        <option value="$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleTypeServiceTestSpec.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/com/reactore/feature/MockServices.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleTypeServiceTestSpec.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/reactore/feature/CompanyApi.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/reactore/core/CustomExceptions.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/reactore/core/DBProperties.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/reactore/feature/ApiBoot.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/reactore/feature/CountryApi.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleCategoryApi.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/reactore/generator/CodeGenerator.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleApi.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/reactore/core/BaseEntities.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/reactore/core/BaseTables.scala" />
       </list>
     </option>
   </component>
@@ -337,7 +218,25 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="scala" type="462c0819:PsiDirectoryNode" />
               <item name="reactore" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SlickAssignments" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SlickAssignments" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="reactore" type="462c0819:PsiDirectoryNode" />
               <item name="feature" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SlickAssignments" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SlickAssignments" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="reactore" type="462c0819:PsiDirectoryNode" />
+              <item name="generator" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SlickAssignments" type="b2602c69:ProjectViewProjectNode" />
@@ -351,14 +250,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="scala" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SlickAssignments" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SlickAssignments" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="feature" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -387,7 +278,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="ScalaTest.ksd">
+  <component name="RunManager" selected="Application.ApiBoot">
     <configuration name="ApiBoot" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -806,7 +697,21 @@
       <option name="project" value="LOCAL" />
       <updated>1510722972760</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="local changes added">
+      <created>1510734277912</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1510734277913</updated>
+    </task>
+    <task id="LOCAL-00025" summary="local changes added">
+      <created>1510735961566</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1510735961566</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -869,7 +774,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19364598" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.120272316" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="sbt-shell-toolwindow" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -926,29 +831,12 @@
     <option name="LAST_COMMIT_MESSAGE" value="local changes added" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="5" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleApi.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="25" column="55" lean-forward="false" selection-start-line="25" selection-start-column="55" selection-end-line="25" selection-end-column="55" />
-          <folding>
-            <element signature="e#30#55#0" expanded="true" />
-            <element signature="e#2485#3146#0" expanded="false" />
-            <element signature="e#3151#3873#0" expanded="false" />
-            <element signature="e#3878#5712#0" expanded="false" />
-            <element signature="e#5717#6119#0" expanded="false" />
-            <element signature="e#6124#7234#0" expanded="false" />
-            <element signature="e#7239#8487#0" expanded="false" />
-            <element signature="e#8492#10177#0" expanded="false" />
-            <element signature="e#10182#12073#0" expanded="false" />
-            <element signature="e#12078#13270#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/ApiBoot.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -967,45 +855,45 @@
             <element signature="e#1107#1403#0" expanded="false" />
             <element signature="e#1466#1719#0" expanded="false" />
             <element signature="e#1786#2032#0" expanded="false" />
-            <element signature="e#2890#3487#0" expanded="false" />
-            <element signature="e#3558#4153#0" expanded="false" />
-            <element signature="e#4229#4820#0" expanded="false" />
-            <element signature="e#4893#5495#0" expanded="false" />
-            <element signature="e#5573#6175#0" expanded="false" />
-            <element signature="e#6256#6868#0" expanded="false" />
-            <element signature="e#6971#7326#0" expanded="false" />
-            <element signature="e#7397#7646#0" expanded="false" />
-            <element signature="e#7728#7984#0" expanded="false" />
-            <element signature="e#8068#8798#0" expanded="false" />
-            <element signature="e#8870#9482#0" expanded="false" />
-            <element signature="e#9571#10188#0" expanded="false" />
-            <element signature="e#10255#10872#0" expanded="false" />
-            <element signature="e#10944#11561#0" expanded="false" />
-            <element signature="e#11646#12273#0" expanded="false" />
-            <element signature="e#12384#12806#0" expanded="false" />
-            <element signature="e#12874#13238#0" expanded="false" />
-            <element signature="e#13306#13670#0" expanded="false" />
-            <element signature="e#13769#14239#0" expanded="false" />
-            <element signature="e#14317#14700#0" expanded="false" />
-            <element signature="e#14783#15162#0" expanded="false" />
-            <element signature="e#15238#15628#0" expanded="false" />
-            <element signature="e#15762#16395#0" expanded="false" />
-            <element signature="e#16490#17036#0" expanded="false" />
-            <element signature="e#17136#17678#0" expanded="false" />
-            <element signature="e#17782#18320#0" expanded="false" />
-            <element signature="e#18414#18967#0" expanded="false" />
-            <element signature="e#19096#19442#0" expanded="false" />
-            <element signature="e#19516#19886#0" expanded="false" />
-            <element signature="e#19960#20330#0" expanded="false" />
-            <element signature="e#20420#20797#0" expanded="false" />
-            <element signature="e#20898#21707#0" expanded="false" />
-            <element signature="e#21781#22309#0" expanded="false" />
-            <element signature="e#22388#22912#0" expanded="false" />
-            <element signature="e#22995#23515#0" expanded="false" />
-            <element signature="e#23644#24107#0" expanded="false" />
-            <element signature="e#24187#24570#0" expanded="false" />
-            <element signature="e#24649#25025#0" expanded="false" />
-            <element signature="e#25104#25480#0" expanded="false" />
+            <element signature="e#2894#3495#0" expanded="false" />
+            <element signature="e#3566#4165#0" expanded="false" />
+            <element signature="e#4241#4836#0" expanded="false" />
+            <element signature="e#4909#5515#0" expanded="false" />
+            <element signature="e#5593#6199#0" expanded="false" />
+            <element signature="e#6280#6896#0" expanded="false" />
+            <element signature="e#6999#7354#0" expanded="false" />
+            <element signature="e#7425#7674#0" expanded="false" />
+            <element signature="e#7756#8012#0" expanded="false" />
+            <element signature="e#8096#8830#0" expanded="false" />
+            <element signature="e#8902#9518#0" expanded="false" />
+            <element signature="e#9607#10228#0" expanded="false" />
+            <element signature="e#10295#10916#0" expanded="false" />
+            <element signature="e#10988#11609#0" expanded="false" />
+            <element signature="e#11694#12325#0" expanded="false" />
+            <element signature="e#12436#12858#0" expanded="false" />
+            <element signature="e#12926#13290#0" expanded="false" />
+            <element signature="e#13358#13722#0" expanded="false" />
+            <element signature="e#13821#14291#0" expanded="false" />
+            <element signature="e#14369#14752#0" expanded="false" />
+            <element signature="e#14835#15214#0" expanded="false" />
+            <element signature="e#15290#15680#0" expanded="false" />
+            <element signature="e#15814#16447#0" expanded="false" />
+            <element signature="e#16542#17088#0" expanded="false" />
+            <element signature="e#17188#17730#0" expanded="false" />
+            <element signature="e#17834#18372#0" expanded="false" />
+            <element signature="e#18466#19019#0" expanded="false" />
+            <element signature="e#19148#19494#0" expanded="false" />
+            <element signature="e#19568#19938#0" expanded="false" />
+            <element signature="e#20012#20382#0" expanded="false" />
+            <element signature="e#20472#20849#0" expanded="false" />
+            <element signature="e#20950#21759#0" expanded="false" />
+            <element signature="e#21833#22361#0" expanded="false" />
+            <element signature="e#22440#22964#0" expanded="false" />
+            <element signature="e#23047#23567#0" expanded="false" />
+            <element signature="e#23696#24159#0" expanded="false" />
+            <element signature="e#24239#24622#0" expanded="false" />
+            <element signature="e#24701#25077#0" expanded="false" />
+            <element signature="e#25156#25532#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1019,38 +907,38 @@
             <element signature="e#1405#1714#0" expanded="false" />
             <element signature="e#1777#2100#0" expanded="false" />
             <element signature="e#2166#2475#0" expanded="false" />
-            <element signature="e#2510#3251#0" expanded="false" />
-            <element signature="e#3323#3945#0" expanded="false" />
-            <element signature="e#4016#4641#0" expanded="false" />
-            <element signature="e#4717#5343#0" expanded="false" />
-            <element signature="e#5416#6041#0" expanded="false" />
-            <element signature="e#6119#6749#0" expanded="false" />
-            <element signature="e#6830#7470#0" expanded="false" />
-            <element signature="e#7525#7893#0" expanded="false" />
-            <element signature="e#7964#8222#0" expanded="false" />
-            <element signature="e#8304#8576#0" expanded="false" />
-            <element signature="e#8612#9370#0" expanded="false" />
-            <element signature="e#9442#10077#0" expanded="false" />
-            <element signature="e#10166#10813#0" expanded="false" />
-            <element signature="e#10880#11531#0" expanded="false" />
-            <element signature="e#11603#12259#0" expanded="false" />
-            <element signature="e#12344#13007#0" expanded="false" />
-            <element signature="e#13066#13503#0" expanded="false" />
-            <element signature="e#13571#13927#0" expanded="false" />
-            <element signature="e#13995#14351#0" expanded="false" />
-            <element signature="e#14398#15221#0" expanded="false" />
-            <element signature="e#15295#15814#0" expanded="false" />
-            <element signature="e#15893#16408#0" expanded="false" />
-            <element signature="e#16491#17002#0" expanded="false" />
-            <element signature="e#17049#17534#0" expanded="false" />
-            <element signature="e#17612#17987#0" expanded="false" />
-            <element signature="e#18070#18441#0" expanded="false" />
-            <element signature="e#18517#18896#0" expanded="false" />
-            <element signature="e#19412#19777#0" expanded="false" />
-            <element signature="e#19851#20216#0" expanded="false" />
-            <element signature="e#20306#20675#0" expanded="false" />
-            <element signature="e#21293#21656#0" expanded="false" />
-            <element signature="e#21735#22094#0" expanded="false" />
+            <element signature="e#2510#3255#0" expanded="false" />
+            <element signature="e#3327#3953#0" expanded="false" />
+            <element signature="e#4024#4653#0" expanded="false" />
+            <element signature="e#4729#5359#0" expanded="false" />
+            <element signature="e#5432#6061#0" expanded="false" />
+            <element signature="e#6139#6773#0" expanded="false" />
+            <element signature="e#6854#7498#0" expanded="false" />
+            <element signature="e#7553#7921#0" expanded="false" />
+            <element signature="e#7992#8250#0" expanded="false" />
+            <element signature="e#8332#8604#0" expanded="false" />
+            <element signature="e#8640#9402#0" expanded="false" />
+            <element signature="e#9474#10113#0" expanded="false" />
+            <element signature="e#10202#10853#0" expanded="false" />
+            <element signature="e#10920#11575#0" expanded="false" />
+            <element signature="e#11647#12307#0" expanded="false" />
+            <element signature="e#12392#13059#0" expanded="false" />
+            <element signature="e#13118#13555#0" expanded="false" />
+            <element signature="e#13623#13979#0" expanded="false" />
+            <element signature="e#14047#14403#0" expanded="false" />
+            <element signature="e#14450#15273#0" expanded="false" />
+            <element signature="e#15347#15866#0" expanded="false" />
+            <element signature="e#15945#16460#0" expanded="false" />
+            <element signature="e#16543#17054#0" expanded="false" />
+            <element signature="e#17101#17586#0" expanded="false" />
+            <element signature="e#17664#18039#0" expanded="false" />
+            <element signature="e#18122#18493#0" expanded="false" />
+            <element signature="e#18569#18948#0" expanded="false" />
+            <element signature="e#19464#19829#0" expanded="false" />
+            <element signature="e#19903#20268#0" expanded="false" />
+            <element signature="e#20358#20727#0" expanded="false" />
+            <element signature="e#21345#21708#0" expanded="false" />
+            <element signature="e#21787#22146#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1068,16 +956,16 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#30#55#0" expanded="true" />
-            <element signature="e#2485#3146#0" expanded="false" />
-            <element signature="e#3151#3873#0" expanded="false" />
-            <element signature="e#3878#5712#0" expanded="false" />
-            <element signature="e#5717#6119#0" expanded="false" />
-            <element signature="e#6124#7234#0" expanded="false" />
-            <element signature="e#7239#8487#0" expanded="false" />
-            <element signature="e#8492#10177#0" expanded="false" />
-            <element signature="e#10182#12073#0" expanded="false" />
-            <element signature="e#12078#13270#0" expanded="false" />
+            <element signature="e#76#101#0" expanded="true" />
+            <element signature="e#2490#3151#0" expanded="false" />
+            <element signature="e#3156#3878#0" expanded="false" />
+            <element signature="e#3883#5721#0" expanded="false" />
+            <element signature="e#5726#6128#0" expanded="false" />
+            <element signature="e#6133#7245#0" expanded="false" />
+            <element signature="e#7250#8515#0" expanded="false" />
+            <element signature="e#8520#10207#0" expanded="false" />
+            <element signature="e#10212#12105#0" expanded="false" />
+            <element signature="e#12110#13306#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1092,45 +980,45 @@
             <element signature="e#1107#1403#0" expanded="false" />
             <element signature="e#1466#1719#0" expanded="false" />
             <element signature="e#1786#2032#0" expanded="false" />
-            <element signature="e#2890#3487#0" expanded="false" />
-            <element signature="e#3558#4153#0" expanded="false" />
-            <element signature="e#4229#4820#0" expanded="false" />
-            <element signature="e#4893#5495#0" expanded="false" />
-            <element signature="e#5573#6175#0" expanded="false" />
-            <element signature="e#6256#6868#0" expanded="false" />
-            <element signature="e#6971#7326#0" expanded="false" />
-            <element signature="e#7397#7646#0" expanded="false" />
-            <element signature="e#7728#7984#0" expanded="false" />
-            <element signature="e#8068#8798#0" expanded="false" />
-            <element signature="e#8870#9482#0" expanded="false" />
-            <element signature="e#9571#10188#0" expanded="false" />
-            <element signature="e#10255#10872#0" expanded="false" />
-            <element signature="e#10944#11561#0" expanded="false" />
-            <element signature="e#11646#12273#0" expanded="false" />
-            <element signature="e#12384#12806#0" expanded="false" />
-            <element signature="e#12874#13238#0" expanded="false" />
-            <element signature="e#13306#13670#0" expanded="false" />
-            <element signature="e#13769#14239#0" expanded="false" />
-            <element signature="e#14317#14700#0" expanded="false" />
-            <element signature="e#14783#15162#0" expanded="false" />
-            <element signature="e#15238#15628#0" expanded="false" />
-            <element signature="e#15762#16395#0" expanded="false" />
-            <element signature="e#16490#17036#0" expanded="false" />
-            <element signature="e#17136#17678#0" expanded="false" />
-            <element signature="e#17782#18320#0" expanded="false" />
-            <element signature="e#18414#18967#0" expanded="false" />
-            <element signature="e#19096#19442#0" expanded="false" />
-            <element signature="e#19516#19886#0" expanded="false" />
-            <element signature="e#19960#20330#0" expanded="false" />
-            <element signature="e#20420#20797#0" expanded="false" />
-            <element signature="e#20898#21707#0" expanded="false" />
-            <element signature="e#21781#22309#0" expanded="false" />
-            <element signature="e#22388#22912#0" expanded="false" />
-            <element signature="e#22995#23515#0" expanded="false" />
-            <element signature="e#23644#24107#0" expanded="false" />
-            <element signature="e#24187#24570#0" expanded="false" />
-            <element signature="e#24649#25025#0" expanded="false" />
-            <element signature="e#25104#25480#0" expanded="false" />
+            <element signature="e#2894#3495#0" expanded="false" />
+            <element signature="e#3566#4165#0" expanded="false" />
+            <element signature="e#4241#4836#0" expanded="false" />
+            <element signature="e#4909#5515#0" expanded="false" />
+            <element signature="e#5593#6199#0" expanded="false" />
+            <element signature="e#6280#6896#0" expanded="false" />
+            <element signature="e#6999#7354#0" expanded="false" />
+            <element signature="e#7425#7674#0" expanded="false" />
+            <element signature="e#7756#8012#0" expanded="false" />
+            <element signature="e#8096#8830#0" expanded="false" />
+            <element signature="e#8902#9518#0" expanded="false" />
+            <element signature="e#9607#10228#0" expanded="false" />
+            <element signature="e#10295#10916#0" expanded="false" />
+            <element signature="e#10988#11609#0" expanded="false" />
+            <element signature="e#11694#12325#0" expanded="false" />
+            <element signature="e#12436#12858#0" expanded="false" />
+            <element signature="e#12926#13290#0" expanded="false" />
+            <element signature="e#13358#13722#0" expanded="false" />
+            <element signature="e#13821#14291#0" expanded="false" />
+            <element signature="e#14369#14752#0" expanded="false" />
+            <element signature="e#14835#15214#0" expanded="false" />
+            <element signature="e#15290#15680#0" expanded="false" />
+            <element signature="e#15814#16447#0" expanded="false" />
+            <element signature="e#16542#17088#0" expanded="false" />
+            <element signature="e#17188#17730#0" expanded="false" />
+            <element signature="e#17834#18372#0" expanded="false" />
+            <element signature="e#18466#19019#0" expanded="false" />
+            <element signature="e#19148#19494#0" expanded="false" />
+            <element signature="e#19568#19938#0" expanded="false" />
+            <element signature="e#20012#20382#0" expanded="false" />
+            <element signature="e#20472#20849#0" expanded="false" />
+            <element signature="e#20950#21759#0" expanded="false" />
+            <element signature="e#21833#22361#0" expanded="false" />
+            <element signature="e#22440#22964#0" expanded="false" />
+            <element signature="e#23047#23567#0" expanded="false" />
+            <element signature="e#23696#24159#0" expanded="false" />
+            <element signature="e#24239#24622#0" expanded="false" />
+            <element signature="e#24701#25077#0" expanded="false" />
+            <element signature="e#25156#25532#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1144,38 +1032,38 @@
             <element signature="e#1405#1714#0" expanded="false" />
             <element signature="e#1777#2100#0" expanded="false" />
             <element signature="e#2166#2475#0" expanded="false" />
-            <element signature="e#2510#3251#0" expanded="false" />
-            <element signature="e#3323#3945#0" expanded="false" />
-            <element signature="e#4016#4641#0" expanded="false" />
-            <element signature="e#4717#5343#0" expanded="false" />
-            <element signature="e#5416#6041#0" expanded="false" />
-            <element signature="e#6119#6749#0" expanded="false" />
-            <element signature="e#6830#7470#0" expanded="false" />
-            <element signature="e#7525#7893#0" expanded="false" />
-            <element signature="e#7964#8222#0" expanded="false" />
-            <element signature="e#8304#8576#0" expanded="false" />
-            <element signature="e#8612#9370#0" expanded="false" />
-            <element signature="e#9442#10077#0" expanded="false" />
-            <element signature="e#10166#10813#0" expanded="false" />
-            <element signature="e#10880#11531#0" expanded="false" />
-            <element signature="e#11603#12259#0" expanded="false" />
-            <element signature="e#12344#13007#0" expanded="false" />
-            <element signature="e#13066#13503#0" expanded="false" />
-            <element signature="e#13571#13927#0" expanded="false" />
-            <element signature="e#13995#14351#0" expanded="false" />
-            <element signature="e#14398#15221#0" expanded="false" />
-            <element signature="e#15295#15814#0" expanded="false" />
-            <element signature="e#15893#16408#0" expanded="false" />
-            <element signature="e#16491#17002#0" expanded="false" />
-            <element signature="e#17049#17534#0" expanded="false" />
-            <element signature="e#17612#17987#0" expanded="false" />
-            <element signature="e#18070#18441#0" expanded="false" />
-            <element signature="e#18517#18896#0" expanded="false" />
-            <element signature="e#19412#19777#0" expanded="false" />
-            <element signature="e#19851#20216#0" expanded="false" />
-            <element signature="e#20306#20675#0" expanded="false" />
-            <element signature="e#21293#21656#0" expanded="false" />
-            <element signature="e#21735#22094#0" expanded="false" />
+            <element signature="e#2510#3255#0" expanded="false" />
+            <element signature="e#3327#3953#0" expanded="false" />
+            <element signature="e#4024#4653#0" expanded="false" />
+            <element signature="e#4729#5359#0" expanded="false" />
+            <element signature="e#5432#6061#0" expanded="false" />
+            <element signature="e#6139#6773#0" expanded="false" />
+            <element signature="e#6854#7498#0" expanded="false" />
+            <element signature="e#7553#7921#0" expanded="false" />
+            <element signature="e#7992#8250#0" expanded="false" />
+            <element signature="e#8332#8604#0" expanded="false" />
+            <element signature="e#8640#9402#0" expanded="false" />
+            <element signature="e#9474#10113#0" expanded="false" />
+            <element signature="e#10202#10853#0" expanded="false" />
+            <element signature="e#10920#11575#0" expanded="false" />
+            <element signature="e#11647#12307#0" expanded="false" />
+            <element signature="e#12392#13059#0" expanded="false" />
+            <element signature="e#13118#13555#0" expanded="false" />
+            <element signature="e#13623#13979#0" expanded="false" />
+            <element signature="e#14047#14403#0" expanded="false" />
+            <element signature="e#14450#15273#0" expanded="false" />
+            <element signature="e#15347#15866#0" expanded="false" />
+            <element signature="e#15945#16460#0" expanded="false" />
+            <element signature="e#16543#17054#0" expanded="false" />
+            <element signature="e#17101#17586#0" expanded="false" />
+            <element signature="e#17664#18039#0" expanded="false" />
+            <element signature="e#18122#18493#0" expanded="false" />
+            <element signature="e#18569#18948#0" expanded="false" />
+            <element signature="e#19464#19829#0" expanded="false" />
+            <element signature="e#19903#20268#0" expanded="false" />
+            <element signature="e#20358#20727#0" expanded="false" />
+            <element signature="e#21345#21708#0" expanded="false" />
+            <element signature="e#21787#22146#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1185,16 +1073,16 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#30#55#0" expanded="true" />
-            <element signature="e#2485#3146#0" expanded="false" />
-            <element signature="e#3151#3873#0" expanded="false" />
-            <element signature="e#3878#5712#0" expanded="false" />
-            <element signature="e#5717#6119#0" expanded="false" />
-            <element signature="e#6124#7234#0" expanded="false" />
-            <element signature="e#7239#8487#0" expanded="false" />
-            <element signature="e#8492#10177#0" expanded="false" />
-            <element signature="e#10182#12073#0" expanded="false" />
-            <element signature="e#12078#13270#0" expanded="false" />
+            <element signature="e#76#101#0" expanded="true" />
+            <element signature="e#2490#3151#0" expanded="false" />
+            <element signature="e#3156#3878#0" expanded="false" />
+            <element signature="e#3883#5721#0" expanded="false" />
+            <element signature="e#5726#6128#0" expanded="false" />
+            <element signature="e#6133#7245#0" expanded="false" />
+            <element signature="e#7250#8515#0" expanded="false" />
+            <element signature="e#8520#10207#0" expanded="false" />
+            <element signature="e#10212#12105#0" expanded="false" />
+            <element signature="e#12110#13306#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1211,6 +1099,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1219,16 +1108,16 @@
         <state relative-caret-position="930">
           <caret line="70" column="172" lean-forward="false" selection-start-line="70" selection-start-column="172" selection-end-line="70" selection-end-column="172" />
           <folding>
-            <element signature="e#30#55#0" expanded="true" />
-            <element signature="e#2485#3146#0" expanded="false" />
-            <element signature="e#3151#3873#0" expanded="false" />
-            <element signature="e#3878#5712#0" expanded="false" />
-            <element signature="e#5717#6119#0" expanded="false" />
-            <element signature="e#6124#7234#0" expanded="false" />
-            <element signature="e#7239#8487#0" expanded="false" />
-            <element signature="e#8492#10177#0" expanded="false" />
-            <element signature="e#10182#12073#0" expanded="false" />
-            <element signature="e#12078#13270#0" expanded="false" />
+            <element signature="e#76#101#0" expanded="true" />
+            <element signature="e#2490#3151#0" expanded="false" />
+            <element signature="e#3156#3878#0" expanded="false" />
+            <element signature="e#3883#5721#0" expanded="false" />
+            <element signature="e#5726#6128#0" expanded="false" />
+            <element signature="e#6133#7245#0" expanded="false" />
+            <element signature="e#7250#8515#0" expanded="false" />
+            <element signature="e#8520#10207#0" expanded="false" />
+            <element signature="e#10212#12105#0" expanded="false" />
+            <element signature="e#12110#13306#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1242,38 +1131,38 @@
             <element signature="e#1405#1714#0" expanded="false" />
             <element signature="e#1777#2100#0" expanded="false" />
             <element signature="e#2166#2475#0" expanded="false" />
-            <element signature="e#2510#3251#0" expanded="false" />
-            <element signature="e#3323#3945#0" expanded="false" />
-            <element signature="e#4016#4641#0" expanded="false" />
-            <element signature="e#4717#5343#0" expanded="false" />
-            <element signature="e#5416#6041#0" expanded="false" />
-            <element signature="e#6119#6749#0" expanded="false" />
-            <element signature="e#6830#7470#0" expanded="false" />
-            <element signature="e#7525#7893#0" expanded="false" />
-            <element signature="e#7964#8222#0" expanded="false" />
-            <element signature="e#8304#8576#0" expanded="false" />
-            <element signature="e#8612#9370#0" expanded="false" />
-            <element signature="e#9442#10077#0" expanded="false" />
-            <element signature="e#10166#10813#0" expanded="false" />
-            <element signature="e#10880#11531#0" expanded="false" />
-            <element signature="e#11603#12259#0" expanded="false" />
-            <element signature="e#12344#13007#0" expanded="false" />
-            <element signature="e#13066#13503#0" expanded="false" />
-            <element signature="e#13571#13927#0" expanded="false" />
-            <element signature="e#13995#14351#0" expanded="false" />
-            <element signature="e#14398#15221#0" expanded="false" />
-            <element signature="e#15295#15814#0" expanded="false" />
-            <element signature="e#15893#16408#0" expanded="false" />
-            <element signature="e#16491#17002#0" expanded="false" />
-            <element signature="e#17049#17534#0" expanded="false" />
-            <element signature="e#17612#17987#0" expanded="false" />
-            <element signature="e#18070#18441#0" expanded="false" />
-            <element signature="e#18517#18896#0" expanded="false" />
-            <element signature="e#19412#19777#0" expanded="false" />
-            <element signature="e#19851#20216#0" expanded="false" />
-            <element signature="e#20306#20675#0" expanded="false" />
-            <element signature="e#21293#21656#0" expanded="false" />
-            <element signature="e#21735#22094#0" expanded="false" />
+            <element signature="e#2510#3255#0" expanded="false" />
+            <element signature="e#3327#3953#0" expanded="false" />
+            <element signature="e#4024#4653#0" expanded="false" />
+            <element signature="e#4729#5359#0" expanded="false" />
+            <element signature="e#5432#6061#0" expanded="false" />
+            <element signature="e#6139#6773#0" expanded="false" />
+            <element signature="e#6854#7498#0" expanded="false" />
+            <element signature="e#7553#7921#0" expanded="false" />
+            <element signature="e#7992#8250#0" expanded="false" />
+            <element signature="e#8332#8604#0" expanded="false" />
+            <element signature="e#8640#9402#0" expanded="false" />
+            <element signature="e#9474#10113#0" expanded="false" />
+            <element signature="e#10202#10853#0" expanded="false" />
+            <element signature="e#10920#11575#0" expanded="false" />
+            <element signature="e#11647#12307#0" expanded="false" />
+            <element signature="e#12392#13059#0" expanded="false" />
+            <element signature="e#13118#13555#0" expanded="false" />
+            <element signature="e#13623#13979#0" expanded="false" />
+            <element signature="e#14047#14403#0" expanded="false" />
+            <element signature="e#14450#15273#0" expanded="false" />
+            <element signature="e#15347#15866#0" expanded="false" />
+            <element signature="e#15945#16460#0" expanded="false" />
+            <element signature="e#16543#17054#0" expanded="false" />
+            <element signature="e#17101#17586#0" expanded="false" />
+            <element signature="e#17664#18039#0" expanded="false" />
+            <element signature="e#18122#18493#0" expanded="false" />
+            <element signature="e#18569#18948#0" expanded="false" />
+            <element signature="e#19464#19829#0" expanded="false" />
+            <element signature="e#19903#20268#0" expanded="false" />
+            <element signature="e#20358#20727#0" expanded="false" />
+            <element signature="e#21345#21708#0" expanded="false" />
+            <element signature="e#21787#22146#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1288,45 +1177,45 @@
             <element signature="e#1107#1403#0" expanded="false" />
             <element signature="e#1466#1719#0" expanded="false" />
             <element signature="e#1786#2032#0" expanded="false" />
-            <element signature="e#2890#3487#0" expanded="false" />
-            <element signature="e#3558#4153#0" expanded="false" />
-            <element signature="e#4229#4820#0" expanded="false" />
-            <element signature="e#4893#5495#0" expanded="false" />
-            <element signature="e#5573#6175#0" expanded="false" />
-            <element signature="e#6256#6868#0" expanded="false" />
-            <element signature="e#6971#7326#0" expanded="false" />
-            <element signature="e#7397#7646#0" expanded="false" />
-            <element signature="e#7728#7984#0" expanded="false" />
-            <element signature="e#8068#8798#0" expanded="false" />
-            <element signature="e#8870#9482#0" expanded="false" />
-            <element signature="e#9571#10188#0" expanded="false" />
-            <element signature="e#10255#10872#0" expanded="false" />
-            <element signature="e#10944#11561#0" expanded="false" />
-            <element signature="e#11646#12273#0" expanded="false" />
-            <element signature="e#12384#12806#0" expanded="false" />
-            <element signature="e#12874#13238#0" expanded="false" />
-            <element signature="e#13306#13670#0" expanded="false" />
-            <element signature="e#13769#14239#0" expanded="false" />
-            <element signature="e#14317#14700#0" expanded="false" />
-            <element signature="e#14783#15162#0" expanded="false" />
-            <element signature="e#15238#15628#0" expanded="false" />
-            <element signature="e#15762#16395#0" expanded="false" />
-            <element signature="e#16490#17036#0" expanded="false" />
-            <element signature="e#17136#17678#0" expanded="false" />
-            <element signature="e#17782#18320#0" expanded="false" />
-            <element signature="e#18414#18967#0" expanded="false" />
-            <element signature="e#19096#19442#0" expanded="false" />
-            <element signature="e#19516#19886#0" expanded="false" />
-            <element signature="e#19960#20330#0" expanded="false" />
-            <element signature="e#20420#20797#0" expanded="false" />
-            <element signature="e#20898#21707#0" expanded="false" />
-            <element signature="e#21781#22309#0" expanded="false" />
-            <element signature="e#22388#22912#0" expanded="false" />
-            <element signature="e#22995#23515#0" expanded="false" />
-            <element signature="e#23644#24107#0" expanded="false" />
-            <element signature="e#24187#24570#0" expanded="false" />
-            <element signature="e#24649#25025#0" expanded="false" />
-            <element signature="e#25104#25480#0" expanded="false" />
+            <element signature="e#2894#3495#0" expanded="false" />
+            <element signature="e#3566#4165#0" expanded="false" />
+            <element signature="e#4241#4836#0" expanded="false" />
+            <element signature="e#4909#5515#0" expanded="false" />
+            <element signature="e#5593#6199#0" expanded="false" />
+            <element signature="e#6280#6896#0" expanded="false" />
+            <element signature="e#6999#7354#0" expanded="false" />
+            <element signature="e#7425#7674#0" expanded="false" />
+            <element signature="e#7756#8012#0" expanded="false" />
+            <element signature="e#8096#8830#0" expanded="false" />
+            <element signature="e#8902#9518#0" expanded="false" />
+            <element signature="e#9607#10228#0" expanded="false" />
+            <element signature="e#10295#10916#0" expanded="false" />
+            <element signature="e#10988#11609#0" expanded="false" />
+            <element signature="e#11694#12325#0" expanded="false" />
+            <element signature="e#12436#12858#0" expanded="false" />
+            <element signature="e#12926#13290#0" expanded="false" />
+            <element signature="e#13358#13722#0" expanded="false" />
+            <element signature="e#13821#14291#0" expanded="false" />
+            <element signature="e#14369#14752#0" expanded="false" />
+            <element signature="e#14835#15214#0" expanded="false" />
+            <element signature="e#15290#15680#0" expanded="false" />
+            <element signature="e#15814#16447#0" expanded="false" />
+            <element signature="e#16542#17088#0" expanded="false" />
+            <element signature="e#17188#17730#0" expanded="false" />
+            <element signature="e#17834#18372#0" expanded="false" />
+            <element signature="e#18466#19019#0" expanded="false" />
+            <element signature="e#19148#19494#0" expanded="false" />
+            <element signature="e#19568#19938#0" expanded="false" />
+            <element signature="e#20012#20382#0" expanded="false" />
+            <element signature="e#20472#20849#0" expanded="false" />
+            <element signature="e#20950#21759#0" expanded="false" />
+            <element signature="e#21833#22361#0" expanded="false" />
+            <element signature="e#22440#22964#0" expanded="false" />
+            <element signature="e#23047#23567#0" expanded="false" />
+            <element signature="e#23696#24159#0" expanded="false" />
+            <element signature="e#24239#24622#0" expanded="false" />
+            <element signature="e#24701#25077#0" expanded="false" />
+            <element signature="e#25156#25532#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1355,16 +1244,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/core/CustomSerializers.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="e#73#115#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.ivy2/cache/com.typesafe.akka/akka-http-core_2.12/srcs/akka-http-core_2.12-10.0.10-sources.jar!/akka/http/scaladsl/model/StatusCode.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
@@ -1386,55 +1265,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleTypeApi.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="89" column="167" lean-forward="true" selection-start-line="89" selection-start-column="167" selection-end-line="89" selection-end-column="167" />
-          <folding>
-            <element signature="e#76#116#0" expanded="false" />
-            <element signature="e#369#1917#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehiclesByCompanyContainer.scala" />
-    <entry file="file://$PROJECT_DIR$/src/test/scala/com/reactore/feature/MockFacades.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="18" column="17" lean-forward="false" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/generator/CodeGenerator.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" column="7" lean-forward="false" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/core/BaseTables.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" column="77" lean-forward="false" selection-start-line="11" selection-start-column="77" selection-end-line="11" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/generated/Tables.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="99" column="41" lean-forward="false" selection-start-line="99" selection-start-column="23" selection-end-line="99" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/core/BaseEntities.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="14" column="14" lean-forward="true" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/com/reactore/feature/CompanyRestTestSpec.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1445,7 +1276,7 @@
             <element signature="e#1379#1642#0" expanded="false" />
             <element signature="e#1708#2016#0" expanded="false" />
             <element signature="e#2067#2375#0" expanded="false" />
-            <element signature="e#5657#6139#0" expanded="false" />
+            <element signature="e#5667#6149#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1501,131 +1332,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/core/CustomDirectives.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="25" column="7" lean-forward="false" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/com/reactore/feature/MockRepository.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="448">
           <caret line="63" column="7" lean-forward="false" selection-start-line="63" selection-start-column="7" selection-end-line="63" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleRestTestSpec.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1890">
-          <caret line="387" column="6" lean-forward="false" selection-start-line="387" selection-start-column="6" selection-end-line="387" selection-end-column="6" />
-          <folding>
-            <element signature="e#1041#1348#0" expanded="false" />
-            <element signature="e#1405#1714#0" expanded="false" />
-            <element signature="e#1777#2100#0" expanded="false" />
-            <element signature="e#2166#2475#0" expanded="false" />
-            <element signature="e#2510#3251#0" expanded="false" />
-            <element signature="e#3323#3945#0" expanded="false" />
-            <element signature="e#4016#4641#0" expanded="false" />
-            <element signature="e#4717#5343#0" expanded="false" />
-            <element signature="e#5416#6041#0" expanded="false" />
-            <element signature="e#6119#6749#0" expanded="false" />
-            <element signature="e#6830#7470#0" expanded="false" />
-            <element signature="e#7525#7893#0" expanded="false" />
-            <element signature="e#7964#8222#0" expanded="false" />
-            <element signature="e#8304#8576#0" expanded="false" />
-            <element signature="e#8612#9370#0" expanded="false" />
-            <element signature="e#9442#10077#0" expanded="false" />
-            <element signature="e#10166#10813#0" expanded="false" />
-            <element signature="e#10880#11531#0" expanded="false" />
-            <element signature="e#11603#12259#0" expanded="false" />
-            <element signature="e#12344#13007#0" expanded="false" />
-            <element signature="e#13066#13503#0" expanded="false" />
-            <element signature="e#13571#13927#0" expanded="false" />
-            <element signature="e#13995#14351#0" expanded="false" />
-            <element signature="e#14398#15221#0" expanded="false" />
-            <element signature="e#15295#15814#0" expanded="false" />
-            <element signature="e#15893#16408#0" expanded="false" />
-            <element signature="e#16491#17002#0" expanded="false" />
-            <element signature="e#17049#17534#0" expanded="false" />
-            <element signature="e#17612#17987#0" expanded="false" />
-            <element signature="e#18070#18441#0" expanded="false" />
-            <element signature="e#18517#18896#0" expanded="false" />
-            <element signature="e#19412#19777#0" expanded="false" />
-            <element signature="e#19851#20216#0" expanded="false" />
-            <element signature="e#20306#20675#0" expanded="false" />
-            <element signature="e#21293#21656#0" expanded="false" />
-            <element signature="e#21735#22094#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/BaseRepository.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="11" column="6" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/BaseFacade.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="25" column="39" lean-forward="false" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/core/CustomExceptions.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="14" column="11" lean-forward="false" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/CountryApi.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="107" column="37" lean-forward="false" selection-start-line="107" selection-start-column="37" selection-end-line="107" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/ApiBoot.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="22" column="23" lean-forward="false" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleCategoryApi.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="87" column="7" lean-forward="false" selection-start-line="87" selection-start-column="7" selection-end-line="87" selection-end-column="7" />
-          <folding>
-            <element signature="e#377#1413#0" expanded="false" />
-            <element signature="e#1418#2225#0" expanded="false" />
-            <element signature="e#2230#3497#0" expanded="false" />
-            <element signature="e#3502#4627#0" expanded="false" />
-            <element signature="e#4632#5055#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/CompanyApi.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1860">
-          <caret line="124" column="7" lean-forward="false" selection-start-line="124" selection-start-column="7" selection-end-line="124" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/test.sc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1637,80 +1347,7 @@
           <folding>
             <element signature="e#1549#1794#0" expanded="false" />
             <element signature="e#1860#2112#0" expanded="false" />
-            <element signature="e#6714#7095#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleServiceTestSpec.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="369" column="0" lean-forward="false" selection-start-line="369" selection-start-column="0" selection-end-line="369" selection-end-column="0" />
-          <folding>
-            <element signature="e#359#27228#0" expanded="false" />
-            <element signature="e#465#753#0" expanded="false" />
-            <element signature="e#815#1050#0" expanded="false" />
-            <element signature="e#1107#1403#0" expanded="false" />
-            <element signature="e#1466#1719#0" expanded="false" />
-            <element signature="e#1786#2032#0" expanded="false" />
-            <element signature="e#2890#3487#0" expanded="false" />
-            <element signature="e#3558#4153#0" expanded="false" />
-            <element signature="e#4229#4820#0" expanded="false" />
-            <element signature="e#4893#5495#0" expanded="false" />
-            <element signature="e#5573#6175#0" expanded="false" />
-            <element signature="e#6256#6868#0" expanded="false" />
-            <element signature="e#6971#7326#0" expanded="false" />
-            <element signature="e#7397#7646#0" expanded="false" />
-            <element signature="e#7728#7984#0" expanded="false" />
-            <element signature="e#8068#8798#0" expanded="false" />
-            <element signature="e#8870#9482#0" expanded="false" />
-            <element signature="e#9571#10188#0" expanded="false" />
-            <element signature="e#10255#10872#0" expanded="false" />
-            <element signature="e#10944#11561#0" expanded="false" />
-            <element signature="e#11646#12273#0" expanded="false" />
-            <element signature="e#12384#12806#0" expanded="false" />
-            <element signature="e#12874#13238#0" expanded="false" />
-            <element signature="e#13306#13670#0" expanded="false" />
-            <element signature="e#13769#14239#0" expanded="false" />
-            <element signature="e#14317#14700#0" expanded="false" />
-            <element signature="e#14783#15162#0" expanded="false" />
-            <element signature="e#15238#15628#0" expanded="false" />
-            <element signature="e#15762#16395#0" expanded="false" />
-            <element signature="e#16490#17036#0" expanded="false" />
-            <element signature="e#17136#17678#0" expanded="false" />
-            <element signature="e#17782#18320#0" expanded="false" />
-            <element signature="e#18414#18967#0" expanded="false" />
-            <element signature="e#19096#19442#0" expanded="false" />
-            <element signature="e#19516#19886#0" expanded="false" />
-            <element signature="e#19960#20330#0" expanded="false" />
-            <element signature="e#20420#20797#0" expanded="false" />
-            <element signature="e#20898#21707#0" expanded="false" />
-            <element signature="e#21781#22309#0" expanded="false" />
-            <element signature="e#22388#22912#0" expanded="false" />
-            <element signature="e#22995#23515#0" expanded="false" />
-            <element signature="e#24187#24570#0" expanded="false" />
-            <element signature="e#24649#25025#0" expanded="false" />
-            <element signature="e#25104#25480#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/com/reactore/feature/CountryServiceTestSpec.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="129" column="0" lean-forward="false" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
-          <folding>
-            <element signature="e#359#7638#0" expanded="false" />
-            <element signature="e#1141#1436#0" expanded="false" />
-            <element signature="e#1499#1751#0" expanded="false" />
-            <element signature="e#2670#2985#0" expanded="false" />
-            <element signature="e#3058#3392#0" expanded="false" />
-            <element signature="e#4537#4878#0" expanded="false" />
-            <element signature="e#4954#5288#0" expanded="false" />
-            <element signature="e#5368#5717#0" expanded="false" />
-            <element signature="e#6370#6732#0" expanded="false" />
-            <element signature="e#6799#7168#0" expanded="false" />
-            <element signature="e#7251#7631#0" expanded="false" />
+            <element signature="e#6724#7105#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1740,10 +1377,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleTypeServiceTestSpec.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="150" column="0" lean-forward="false" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
+        <state relative-caret-position="1500">
+          <caret line="150" column="0" lean-forward="true" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
           <folding>
-            <element signature="e#398#10439#0" expanded="false" />
+            <element signature="e#76#102#0" expanded="false" />
             <element signature="e#1216#1547#0" expanded="false" />
             <element signature="e#1618#1887#0" expanded="false" />
             <element signature="e#1955#2235#0" expanded="false" />
@@ -1757,30 +1394,284 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/com/reactore/feature/CountryServiceTestSpec.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="129" column="0" lean-forward="false" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+          <folding>
+            <element signature="e#359#7638#0" expanded="false" />
+            <element signature="e#1141#1436#0" expanded="false" />
+            <element signature="e#1499#1751#0" expanded="false" />
+            <element signature="e#2670#2985#0" expanded="false" />
+            <element signature="e#3058#3392#0" expanded="false" />
+            <element signature="e#4537#4878#0" expanded="false" />
+            <element signature="e#4954#5288#0" expanded="false" />
+            <element signature="e#5368#5717#0" expanded="false" />
+            <element signature="e#6370#6732#0" expanded="false" />
+            <element signature="e#6799#7168#0" expanded="false" />
+            <element signature="e#7251#7631#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/test.sc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/generated/Tables.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-345">
+          <caret line="22" column="76" lean-forward="true" selection-start-line="22" selection-start-column="76" selection-end-line="22" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/generator/CodeGenerator.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleServiceTestSpec.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="28" lean-forward="true" selection-start-line="0" selection-start-column="28" selection-end-line="0" selection-end-column="28" />
+          <folding>
+            <element signature="e#465#753#0" expanded="false" />
+            <element signature="e#815#1050#0" expanded="false" />
+            <element signature="e#1107#1403#0" expanded="false" />
+            <element signature="e#1466#1719#0" expanded="false" />
+            <element signature="e#1786#2032#0" expanded="false" />
+            <element signature="e#2894#3495#0" expanded="false" />
+            <element signature="e#3566#4165#0" expanded="false" />
+            <element signature="e#4241#4836#0" expanded="false" />
+            <element signature="e#4909#5515#0" expanded="false" />
+            <element signature="e#5593#6199#0" expanded="false" />
+            <element signature="e#6280#6896#0" expanded="false" />
+            <element signature="e#6999#7354#0" expanded="false" />
+            <element signature="e#7425#7674#0" expanded="false" />
+            <element signature="e#7756#8012#0" expanded="false" />
+            <element signature="e#8096#8830#0" expanded="false" />
+            <element signature="e#8902#9518#0" expanded="false" />
+            <element signature="e#9607#10228#0" expanded="false" />
+            <element signature="e#10295#10916#0" expanded="false" />
+            <element signature="e#10988#11609#0" expanded="false" />
+            <element signature="e#11694#12325#0" expanded="false" />
+            <element signature="e#12436#12858#0" expanded="false" />
+            <element signature="e#12926#13290#0" expanded="false" />
+            <element signature="e#13358#13722#0" expanded="false" />
+            <element signature="e#13821#14291#0" expanded="false" />
+            <element signature="e#14369#14752#0" expanded="false" />
+            <element signature="e#14835#15214#0" expanded="false" />
+            <element signature="e#15290#15680#0" expanded="false" />
+            <element signature="e#15814#16447#0" expanded="false" />
+            <element signature="e#16542#17088#0" expanded="false" />
+            <element signature="e#17188#17730#0" expanded="false" />
+            <element signature="e#17834#18372#0" expanded="false" />
+            <element signature="e#18466#19019#0" expanded="false" />
+            <element signature="e#19148#19494#0" expanded="false" />
+            <element signature="e#19568#19938#0" expanded="false" />
+            <element signature="e#20012#20382#0" expanded="false" />
+            <element signature="e#20472#20849#0" expanded="false" />
+            <element signature="e#20950#21759#0" expanded="false" />
+            <element signature="e#21833#22361#0" expanded="false" />
+            <element signature="e#22440#22964#0" expanded="false" />
+            <element signature="e#23047#23567#0" expanded="false" />
+            <element signature="e#24239#24622#0" expanded="false" />
+            <element signature="e#24701#25077#0" expanded="false" />
+            <element signature="e#25156#25532#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/com/reactore/feature/MockServices.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="14" column="42" lean-forward="true" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
+        <state relative-caret-position="60">
+          <caret line="6" column="64" lean-forward="false" selection-start-line="6" selection-start-column="64" selection-end-line="6" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/com/reactore/feature/MockFacades.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="4" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/com/reactore/feature/VehicleRestTestSpec.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="363" column="21" lean-forward="true" selection-start-line="363" selection-start-column="21" selection-end-line="363" selection-end-column="21" />
+          <folding>
+            <element signature="e#1041#1348#0" expanded="false" />
+            <element signature="e#1405#1714#0" expanded="false" />
+            <element signature="e#1777#2100#0" expanded="false" />
+            <element signature="e#2166#2475#0" expanded="false" />
+            <element signature="e#2510#3255#0" expanded="false" />
+            <element signature="e#3327#3953#0" expanded="false" />
+            <element signature="e#4024#4653#0" expanded="false" />
+            <element signature="e#4729#5359#0" expanded="false" />
+            <element signature="e#5432#6061#0" expanded="false" />
+            <element signature="e#6139#6773#0" expanded="false" />
+            <element signature="e#6854#7498#0" expanded="false" />
+            <element signature="e#7553#7921#0" expanded="false" />
+            <element signature="e#7992#8250#0" expanded="false" />
+            <element signature="e#8332#8604#0" expanded="false" />
+            <element signature="e#8640#9402#0" expanded="false" />
+            <element signature="e#9474#10113#0" expanded="false" />
+            <element signature="e#10202#10853#0" expanded="false" />
+            <element signature="e#10920#11575#0" expanded="false" />
+            <element signature="e#11647#12307#0" expanded="false" />
+            <element signature="e#12392#13059#0" expanded="false" />
+            <element signature="e#13118#13555#0" expanded="false" />
+            <element signature="e#13623#13979#0" expanded="false" />
+            <element signature="e#14047#14403#0" expanded="false" />
+            <element signature="e#14450#15273#0" expanded="false" />
+            <element signature="e#15347#15866#0" expanded="false" />
+            <element signature="e#15945#16460#0" expanded="false" />
+            <element signature="e#16543#17054#0" expanded="false" />
+            <element signature="e#17101#17586#0" expanded="false" />
+            <element signature="e#17664#18039#0" expanded="false" />
+            <element signature="e#18122#18493#0" expanded="false" />
+            <element signature="e#18569#18948#0" expanded="false" />
+            <element signature="e#19464#19829#0" expanded="false" />
+            <element signature="e#19903#20268#0" expanded="false" />
+            <element signature="e#20358#20727#0" expanded="false" />
+            <element signature="e#21345#21708#0" expanded="false" />
+            <element signature="e#21787#22146#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/ApiBoot.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="17" column="45" lean-forward="false" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/BaseFacade.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="24" column="6" lean-forward="false" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/CompanyApi.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1575">
+          <caret line="14" column="6" lean-forward="false" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/BaseRepository.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-855">
+          <caret line="11" column="6" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/CountryApi.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1277">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleCategoryApi.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleTypeApi.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-137">
+          <caret line="89" column="167" lean-forward="true" selection-start-line="89" selection-start-column="167" selection-end-line="89" selection-end-column="167" />
+          <folding>
+            <element signature="e#369#1917#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/core/DBProperties.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/core/CustomSerializers.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/core/CustomExceptions.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/core/CustomDirectives.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="25" column="7" lean-forward="false" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/core/BaseEntity.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/feature/VehicleApi.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+        <state relative-caret-position="194">
+          <caret line="31" column="71" lean-forward="false" selection-start-line="31" selection-start-column="71" selection-end-line="31" selection-end-column="71" />
           <folding>
-            <element signature="e#30#55#0" expanded="true" />
-            <element signature="e#2485#3146#0" expanded="false" />
-            <element signature="e#3151#3873#0" expanded="false" />
-            <element signature="e#3878#5712#0" expanded="false" />
-            <element signature="e#5717#6119#0" expanded="false" />
-            <element signature="e#6124#7234#0" expanded="false" />
-            <element signature="e#7239#8487#0" expanded="false" />
-            <element signature="e#8492#10177#0" expanded="false" />
-            <element signature="e#10182#12073#0" expanded="false" />
-            <element signature="e#12078#13270#0" expanded="false" />
+            <element signature="e#76#101#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/core/BaseEntities.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="14" column="118" lean-forward="false" selection-start-line="14" selection-start-column="118" selection-end-line="14" selection-end-column="118" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/reactore/core/BaseTables.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-107">
+          <caret line="45" column="15" lean-forward="false" selection-start-line="45" selection-start-column="15" selection-end-line="45" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>

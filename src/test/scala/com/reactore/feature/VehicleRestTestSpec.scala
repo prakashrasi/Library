@@ -60,7 +60,7 @@ class VehicleRestTestSpec extends WordSpec with ScalatestRouteTest with Matchers
          when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.vehicleTypeFuture)
          when(MockVehicleService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
          when(MockVehicleService.vehicleRepository.insert(any[Vehicle])).thenReturn(Future.successful(1))
-         val newVehicle = Vehicle(5, "Bike", modelNumber = "BIKE", vehicleType = 3, company = 1).asJson
+         val newVehicle = Vehicle(5, "Bike", modelNumber = "BIKE", vehicleTypeId = 3, companyId = 1).asJson
          Post("/vehicle").withEntity(newVehicle) ~> testRoute ~> check {
             responseAs[String] shouldBe "Inserted vehicle successfully".asJson
          }
@@ -69,7 +69,7 @@ class VehicleRestTestSpec extends WordSpec with ScalatestRouteTest with Matchers
          when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
          when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.vehicleTypeFuture)
          when(MockVehicleService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
-         val newVehicle = Vehicle(5, "", modelNumber = "", vehicleType = 3, company = 1).asJson
+         val newVehicle = Vehicle(5, "", modelNumber = "", vehicleTypeId = 3, companyId = 1).asJson
          Post("/vehicle").withEntity(newVehicle) ~> testRoute ~> check {
             responseAs[String] shouldBe "Fields are not defined!!".asJson
          }
@@ -78,7 +78,7 @@ class VehicleRestTestSpec extends WordSpec with ScalatestRouteTest with Matchers
          when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
          when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.vehicleTypeFuture)
          when(MockVehicleService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.emptyList)
-         val newVehicle = Vehicle(5, "Bike", modelNumber = "BIKE", vehicleType = 3, company = 1).asJson
+         val newVehicle = Vehicle(5, "Bike", modelNumber = "BIKE", vehicleTypeId = 3, companyId = 1).asJson
          Post("/vehicle").withEntity(newVehicle) ~> testRoute ~> check {
             responseAs[String] shouldBe "Company list is empty!!".asJson
          }
@@ -87,7 +87,7 @@ class VehicleRestTestSpec extends WordSpec with ScalatestRouteTest with Matchers
          when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
          when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.emptyList)
          when(MockVehicleService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
-         val newVehicle = Vehicle(5, "Bike", modelNumber = "BIKE", vehicleType = 3, company = 1).asJson
+         val newVehicle = Vehicle(5, "Bike", modelNumber = "BIKE", vehicleTypeId = 3, companyId = 1).asJson
          Post("/vehicle").withEntity(newVehicle) ~> testRoute ~> check {
             responseAs[String] shouldBe "Vehicle type list is empty!!".asJson
          }
@@ -96,7 +96,7 @@ class VehicleRestTestSpec extends WordSpec with ScalatestRouteTest with Matchers
          when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
          when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.vehicleTypeFuture)
          when(MockVehicleService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
-         val newVehicle = Vehicle(5, "Bike", modelNumber = "BIKE", vehicleType = 3, company = 4).asJson
+         val newVehicle = Vehicle(5, "Bike", modelNumber = "BIKE", vehicleTypeId = 3, companyId = 4).asJson
          Post("/vehicle").withEntity(newVehicle) ~> testRoute ~> check {
             responseAs[String] shouldBe "Company not found!!".asJson
          }
@@ -105,7 +105,7 @@ class VehicleRestTestSpec extends WordSpec with ScalatestRouteTest with Matchers
          when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
          when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.vehicleTypeFuture)
          when(MockVehicleService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
-         val newVehicle = Vehicle(5, "Bike", modelNumber = "BIKE", vehicleType = 6, company = 2).asJson
+         val newVehicle = Vehicle(5, "Bike", modelNumber = "BIKE", vehicleTypeId = 6, companyId = 2).asJson
          Post("/vehicle").withEntity(newVehicle) ~> testRoute ~> check {
             responseAs[String] shouldBe "Vehicle type not found!!".asJson
          }
@@ -114,7 +114,7 @@ class VehicleRestTestSpec extends WordSpec with ScalatestRouteTest with Matchers
          when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
          when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.vehicleTypeFuture)
          when(MockVehicleService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
-         val newVehicle = Vehicle(5, "Winger", modelNumber = "WINGER", vehicleType = 4, company = 2).asJson
+         val newVehicle = Vehicle(5, "Winger", modelNumber = "WINGER", vehicleTypeId = 4, companyId = 2).asJson
          Post("/vehicle").withEntity(newVehicle) ~> testRoute ~> check {
             responseAs[String] shouldBe "Unique model number violated!!".asJson
          }
@@ -145,7 +145,7 @@ class VehicleRestTestSpec extends WordSpec with ScalatestRouteTest with Matchers
          when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.vehicleTypeFuture)
          when(MockVehicleService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
          when(MockVehicleService.vehicleRepository.update(anyLong, any[Vehicle])).thenReturn(Future.successful(1))
-         val updatedVehicle = Vehicle(1, "Bike", modelNumber = "BIKE", vehicleType = 3, company = 3).asJson
+         val updatedVehicle = Vehicle(1, "Bike", modelNumber = "BIKE", vehicleTypeId = 3, companyId = 3).asJson
          Put("/vehicle/1").withEntity(updatedVehicle) ~> testRoute ~> check {
             responseAs[String] shouldBe "Updated vehicle successfully".asJson
          }
@@ -154,7 +154,7 @@ class VehicleRestTestSpec extends WordSpec with ScalatestRouteTest with Matchers
          when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
          when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.vehicleTypeFuture)
          when(MockVehicleService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
-         val updatedVehicle = Vehicle(1, "", modelNumber = "", vehicleType = 3, company = 3).asJson
+         val updatedVehicle = Vehicle(1, "", modelNumber = "", vehicleTypeId = 3, companyId = 3).asJson
          Put("/vehicle/1").withEntity(updatedVehicle) ~> testRoute ~> check {
             responseAs[String] shouldBe "All fields are not defined!!".asJson
          }
@@ -163,7 +163,7 @@ class VehicleRestTestSpec extends WordSpec with ScalatestRouteTest with Matchers
          when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
          when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.vehicleTypeFuture)
          when(MockVehicleService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
-         val updatedVehicle = Vehicle(5, "Bike", modelNumber = "BIKE", vehicleType = 3, company = 3).asJson
+         val updatedVehicle = Vehicle(5, "Bike", modelNumber = "BIKE", vehicleTypeId = 3, companyId = 3).asJson
          Put("/vehicle/5").withEntity(updatedVehicle) ~> testRoute ~> check {
             responseAs[String] shouldBe "Vehicle not found for given id!!".asJson
          }
@@ -172,7 +172,7 @@ class VehicleRestTestSpec extends WordSpec with ScalatestRouteTest with Matchers
          when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
          when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.vehicleTypeFuture)
          when(MockVehicleService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
-         val updatedVehicle = Vehicle(1, "Bike", modelNumber = "BIKE", vehicleType = 3, company = 5).asJson
+         val updatedVehicle = Vehicle(1, "Bike", modelNumber = "BIKE", vehicleTypeId = 3, companyId = 5).asJson
          Put("/vehicle/1").withEntity(updatedVehicle) ~> testRoute ~> check {
             responseAs[String] shouldBe "Company not found for updated data!!".asJson
          }
@@ -181,7 +181,7 @@ class VehicleRestTestSpec extends WordSpec with ScalatestRouteTest with Matchers
          when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
          when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.vehicleTypeFuture)
          when(MockVehicleService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
-         val updatedVehicle = Vehicle(1, "Bike", modelNumber = "BIKE", vehicleType = 6, company = 1).asJson
+         val updatedVehicle = Vehicle(1, "Bike", modelNumber = "BIKE", vehicleTypeId = 6, companyId = 1).asJson
          Put("/vehicle/1").withEntity(updatedVehicle) ~> testRoute ~> check {
             responseAs[String] shouldBe "Vehicle Type not found for updated data!!".asJson
          }
@@ -190,7 +190,7 @@ class VehicleRestTestSpec extends WordSpec with ScalatestRouteTest with Matchers
          when(MockVehicleService.vehicleRepository.vehiclesFuture).thenReturn(MockVehicleRepository.vehicleFuture)
          when(MockVehicleService.vehicleTypeRepository.vehicleTypeFuture).thenReturn(MockVehicleTypeRepository.vehicleTypeFuture)
          when(MockVehicleService.companyRepository.companyFuture).thenReturn(MockCompanyRepository.companyFuture)
-         val updatedVehicle = Vehicle(1, "TIAGO-R", modelNumber = "TIAGO", vehicleType = 1, company = 1).asJson
+         val updatedVehicle = Vehicle(1, "TIAGO-R", modelNumber = "TIAGO", vehicleTypeId = 1, companyId = 1).asJson
          Put("/vehicle/1").withEntity(updatedVehicle) ~> testRoute ~> check {
             responseAs[String] shouldBe "Updated vehicle has duplicate model number!!".asJson
          }
