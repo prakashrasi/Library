@@ -10,6 +10,8 @@ import org.json4s.native.Serialization._
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
 
+case class VehicleDetails(quantity: Long, weight: Long, description: Option[String])
+
 /**
   * created by Kartik on 11-11-2017
   */
@@ -296,6 +298,5 @@ class VehicleRest(vehicleService: VehicleService) extends CustomDirectives {
 
 }
 
-case class VehicleDetails(quantity: Long, weight: Long, description: Option[String])
 
 
