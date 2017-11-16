@@ -26,6 +26,6 @@ object ApiBoot extends App with Directives {
    val binding             = Http().bindAndHandle(finalRoute, "localhost", 8085)
    binding.onComplete {
       case Success(res) => println("Bind Success>>>" + res)
-      case Failure(ex)  => println("Bind Failed>>"); ex.printStackTrace()
+      case Failure(ex)  => println("Binding  Failed>>"); ex.printStackTrace()
    }
 }
